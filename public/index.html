@@ -709,85 +709,262 @@
 .gge-btn-audio, #btnVideoSound {
     display: none !important;
 }
+
+
+/* ======================================================== */
+/* MODERN NAVIGATION HEADER STYLES (MATCHING IMAGE 1)       */
+/* ======================================================== */
+.str2 {
+    display: none !important;
+}
+.modern-site-header {
+    background: #ffffff !important;
+    border-top: 3px solid #102771 !important;
+    border-bottom: 3px solid #102771 !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    box-shadow: 0 4px 18px rgba(16, 39, 113, 0.08) !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+}
+.modern-header-container {
+    display: -webkit-flex !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
+    width: 100% !important;
+}
+.modern-logo-link {
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+}
+.modern-logo-img {
+    width: 54px !important;
+    height: 54px !important;
+    border-radius: 50% !important;
+    object-fit: contain !important;
+    border: 1.5px solid rgba(251, 176, 25, 0.5) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12) !important;
+    background: #ffffff !important;
+    padding: 2px !important;
+    transition: transform 0.3s ease !important;
+    display: block !important;
+}
+.modern-logo-link:hover .modern-logo-img {
+    transform: scale(1.08) rotate(4deg) !important;
+}
+.modern-main-nav {
+    display: -webkit-flex !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-grow: 1 !important;
+    justify-content: center !important;
+}
+.modern-nav-list {
+    display: -webkit-flex !important;
+    display: flex !important;
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 8px !important;
+}
+.modern-nav-item {
+    position: relative !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.modern-nav-link {
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    padding: 8px 14px !important;
+    color: #1a2744 !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    transition: all 0.25s ease !important;
+    line-height: 1.2 !important;
+}
+.modern-nav-link .modern-icon {
+    font-size: 15px !important;
+    color: #102771 !important;
+}
+.modern-nav-link .modern-arrow {
+    font-size: 12px !important;
+    opacity: 0.7 !important;
+    transition: transform 0.25s ease !important;
+}
+.modern-nav-link:hover {
+    color: #102771 !important;
+    background: #edf2fe !important;
+}
+.modern-nav-link.active {
+    background: #edf2fe !important;
+    color: #102771 !important;
+}
+.modern-dropdown:hover .modern-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    display: block !important;
+}
+.modern-dropdown:hover .modern-arrow {
+    transform: rotate(180deg) !important;
+}
+.modern-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    min-width: 270px !important;
+    background: #ffffff !important;
+    border: 1px solid #e1e7f0 !important;
+    border-top: 3.5px solid #f59e0b !important;
+    border-radius: 0 0 10px 10px !important;
+    box-shadow: 0 12px 35px rgba(16, 39, 113, 0.16) !important;
+    padding: 8px 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(10px) !important;
+    transition: all 0.25s cubic-bezier(0.2, 0.7, 0.3, 1) !important;
+    z-index: 1000 !important;
+}
+.modern-dropdown-menu li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.modern-dropdown-menu li a {
+    display: block !important;
+    padding: 9px 18px !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: #24343a !important;
+    text-decoration: none !important;
+    transition: background 0.2s, color 0.2s, padding-left 0.2s !important;
+}
+.modern-dropdown-menu li a:hover {
+    background: #f4f7fe !important;
+    color: #102771 !important;
+    padding-left: 22px !important;
+}
+.modern-header-cta-wrap {
+    flex-shrink: 0 !important;
+}
+.modern-header-wa-btn {
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: linear-gradient(135deg, #102771 0%, #0b1a37 100%) !important;
+    color: #ffffff !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    padding: 10px 22px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(16, 39, 113, 0.35) !important;
+    transition: all 0.25s ease !important;
+}
+.modern-header-wa-btn .fa-whatsapp {
+    font-size: 17px !important;
+    color: #25d366 !important;
+}
+.modern-header-wa-btn:hover {
+    background: linear-gradient(135deg, #0b1a37 0%, #102771 100%) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(16, 39, 113, 0.45) !important;
+}
 </style>
 </head>
 <body>
-<div class="str2">
-<div class="str">
-<header>
-<!-- Start Header Middle -->
-<div class="container header-middle">
-<div class="row">
-<div class="float-left col-md-3"><a href="/"><img alt="" class="img-responsive logo" src="/assets/images/logo.png"/></a>
-</div>
-<!-- <div class="col-xs-3 col-sm-3 bg-danger"></div> -->
-<div class="float-right col-md-9 padding-class">
-<nav class="navbar">
-<!-- <div class="container"> -->
-<!-- BRAND -->
-<div class="navbar-header">
-<button aria-expanded="false" class="navbar-toggle collapsed menu-button" data-target="#alignment-example" data-toggle="collapse" type="button">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="#" style="color:#fff">GGE Menu</a>
-</div>
-<!-- COLLAPSIBLE NAVBAR -->
-<div class="collapse navbar-collapse" id="alignment-example">
-<ul class="new_nav">
-<li><a href="/">Home</a></li>
-<li class="dropdown"> <a data-toggle="dropdown" href="#">Study Destinations <i aria-hidden="true" class="fa fa-angle-down"></i></a>
-<ul class="dropdown-menu">
-<li style="width:100%"><a href="/study-in-uk">Study In United Kingdom</a></li>
-<li style="width:100%"><a href="/study-in-usa">Study In United States of America </a></li>
-<li style="width:100%"><a href="/study-in-canada">Study In Canada</a></li>
-<li style="width:100%"><a href="/study-in-australia">Study In Australia </a></li>
-<li style="width:100%"><a href="/study-in-hungary">Study In Hungary </a></li>
-<li style="width:100%"><a href="/study-in-uae">Study In United Arab of Emirates</a></li>
+
+<!-- ======================================================== -->
+<!-- MODERN NAVIGATION HEADER (MATCHING IMAGE 1)              -->
+<!-- ======================================================== -->
+<header class="modern-site-header" id="mainHeader">
+<div class="container modern-header-container">
+<!-- Round Circular Logo -->
+<a aria-label="Global Group of Education Home" class="modern-logo-link" href="/">
+<img alt="Global Group of Education Logo" class="modern-logo-img" src="/assets/logo.png"/>
+</a>
+<!-- Navigation Menu Items -->
+<nav aria-label="Main Navigation" class="modern-main-nav">
+<ul class="modern-nav-list">
+<!-- Home (Active Pill) -->
+<li class="modern-nav-item">
+<a class="modern-nav-link active" href="/">
+<i class="fa fa-home modern-icon"></i> <span>Home</span>
+</a>
+</li>
+<!-- Study Destinations Dropdown -->
+<li class="modern-nav-item modern-dropdown">
+<a class="modern-nav-link" href="#destinations">
+<i class="fa fa-globe modern-icon"></i> <span>Study Destinations</span> <i class="fa fa-angle-down modern-arrow"></i>
+</a>
+<ul class="modern-dropdown-menu">
+<li><a href="/study-in-uk">Study In United Kingdom</a></li>
+<li><a href="/study-in-usa">Study In United States of America</a></li>
+<li><a href="/study-in-canada">Study In Canada</a></li>
+<li><a href="/study-in-australia">Study In Australia</a></li>
+<li><a href="/study-in-hungary">Study In Hungary</a></li>
+<li><a href="/study-in-uae">Study In United Arab of Emirates</a></li>
 </ul>
 </li>
-<li class="dropdown"> <a data-toggle="dropdown" href="#">Courses <i aria-hidden="true" class="fa fa-angle-down"></i></a>
-<ul class="dropdown-menu">
-<li style="width:100%"><a href="/doctorate-courses">DOCTORATE COURSES</a></li>
-<li style="width:100%"><a href="/postgraduate-courses">POSTGRADUATE COURSES</a></li>
-<li style="width:100%"><a href="/pre-master-courses">PRE-MASTER COURSES</a></li>
-<li style="width:100%"><a href="/undergraduate-courses">UNDERGRADUATE COURSES</a></li>
-<li style="width:100%"><a href="/foundation-courses">FOUNDATION COURSES</a></li>
-<li style="width:100%"><a href="/english-language-courses">ENGLISH LANGUAGE COURSES</a></li>
+<!-- Courses Dropdown -->
+<li class="modern-nav-item modern-dropdown">
+<a class="modern-nav-link" href="#courses">
+<i class="fa fa-graduation-cap modern-icon"></i> <span>Courses</span> <i class="fa fa-angle-down modern-arrow"></i>
+</a>
+<ul class="modern-dropdown-menu">
+<li><a href="/doctorate-courses">Doctorate Courses</a></li>
+<li><a href="/postgraduate-courses">Postgraduate Courses</a></li>
+<li><a href="/undergraduate-courses">Undergraduate Courses</a></li>
+<li><a href="/pre-master-courses">Pre-Master Courses</a></li>
+<li><a href="/foundation-courses">Foundation Courses</a></li>
+<li><a href="/english-language-courses">English Language Courses</a></li>
 </ul>
 </li>
-<li><a href="/our-services">Our Services</a></li>
-<li><a href="/about-us">About Us</a></li>
-<li><a href="/contact-us">Contact Us</a></li>
-<li><a href="https://wa.me/447586589659?text=I'm%20interested" style="width:180px !important; line-height:20px !important;" target="_blank"><!--<span style="color:#808080 !important; font-weight:400 !important;  ">TOLL FREE</span></br>--><!--+44 7586589659  --> <i class="fa fa-whatsapp whatsapp-icon"></i>  +44 7586589659</a></li>
+<!-- Our Services -->
+<li class="modern-nav-item">
+<a class="modern-nav-link" href="/our-services">
+<i class="fa fa-briefcase modern-icon"></i> <span>Our Services</span>
+</a>
+</li>
+<!-- About Us -->
+<li class="modern-nav-item">
+<a class="modern-nav-link" href="/about-us">
+<i class="fa fa-university modern-icon"></i> <span>About Us</span>
+</a>
+</li>
+<!-- Contact Us -->
+<li class="modern-nav-item">
+<a class="modern-nav-link" href="/contact-us">
+<i class="fa fa-phone modern-icon"></i> <span>Contact Us</span>
+</a>
+</li>
 </ul>
-</div>
-<!-- </div> -->
 </nav>
+<!-- Right WhatsApp Contact CTA Button -->
+<div class="modern-header-cta-wrap">
+<a class="modern-header-wa-btn" href="https://wa.me/447586589659?text=Hello%20Global%20Group%20of%20Education" rel="noopener" target="_blank">
+<i class="fa fa-whatsapp"></i> +44 7586589659
+      </a>
 </div>
 </div>
-</div>
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1298152493871185');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" src="https://www.facebook.com/tr?id=1298152493871185&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
-<!-- End Facebook Pixel Code -->
 </header>
-<!-- End Header -->
-</div>
-</div>
+
 <!-- Start Preloader -->
 <!-- loading removed -->
 <!-- End Preloader -->
@@ -2070,6 +2247,5 @@ $('.owl-carousel').owlCarousel({
 	}
 });
 </script>
-
 </body>
 </html>
