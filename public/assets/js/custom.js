@@ -33,6 +33,22 @@ function show_enquire_modal(course_id = null){
 (function ($) {
     
     "use strict";
+    // FAST IMMEDIATE SLIDER INIT
+    $(function() {
+        var $banner = $('.banner-slider');
+        if ($banner.length > 0 && typeof $banner.bxSlider === 'function') {
+            $banner.bxSlider({
+                controls: false,
+                auto: true,
+                mode: 'fade',
+                speed: 600,
+                pause: 4500,
+                adaptiveHeight: false,
+                touchEnabled: true
+            });
+        }
+    });
+
     var $wn =  $(window);
     $wn.on('load',function () {
 
@@ -109,18 +125,7 @@ function show_enquire_modal(course_id = null){
             $wn.on('resize', dropdown);
             dropdown();
 
-            /*********************
-             *  Banner Carousel  *
-             *********************/
-            var $element = $('.banner-slider');
-            if ($element.length > 0) {
-                $element.bxSlider({
-                    controls: false,
-                    auto: true,
-                    mode: 'fade',
-					speed: 800,
-                });
-            }
+            /* bxSlider moved to immediate document ready */
 
             /***********************
              *   Cources Carousel  *
