@@ -492,6 +492,185 @@
     background: #ffffff !important;
     color: #0b1530 !important;
 }
+
+
+/* ======================================================== */
+/* WORLD-CLASS EDUCATION HUBS / STUDY DESTINATIONS STYLES   */
+/* ======================================================== */
+.dest-hubs-section {
+    padding: 65px 0 55px 0 !important;
+    background: #ffffff !important;
+    position: relative !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+.dest-section-head {
+    max-width: 800px !important;
+    margin: 0 auto 40px auto !important;
+    text-align: center !important;
+}
+.dest-hub-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: #edf3fc !important;
+    color: #1e3a8a !important;
+    border: 1px solid #d0e0f8 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.2px !important;
+    text-transform: uppercase !important;
+    padding: 7px 22px !important;
+    border-radius: 50px !important;
+    margin-bottom: 16px !important;
+}
+.dest-main-title {
+    color: #1e293b !important;
+    font-size: 38px !important;
+    font-weight: 800 !important;
+    margin-bottom: 14px !important;
+    line-height: 1.25 !important;
+    font-family: inherit !important;
+}
+.dest-main-title span {
+    color: #f59e0b !important;
+}
+.dest-main-desc {
+    color: #64748b !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin: 0 auto !important;
+}
+.dest-grid-wrap {
+    display: -ms-grid !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)) !important;
+    gap: 26px !important;
+    width: 100% !important;
+}
+@media (max-width: 768px) {
+    .dest-grid-wrap {
+        grid-template-columns: 1fr !important;
+    }
+}
+.dest-card-box {
+    position: relative !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    min-height: 350px !important;
+    background-color: #0b1a37 !important;
+    background-image: var(--dest-bg) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-direction: column !important;
+    flex-direction: column !important;
+    -webkit-justify-content: space-between !important;
+    justify-content: space-between !important;
+    padding: 26px !important;
+    text-decoration: none !important;
+    box-shadow: 0 10px 30px rgba(11, 26, 55, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.4s cubic-bezier(0.2, 0.7, 0.3, 1), border-color 0.4s ease !important;
+    cursor: pointer !important;
+}
+.dest-card-box::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(180deg, rgba(11, 26, 55, 0.20) 0%, rgba(11, 26, 55, 0.65) 55%, rgba(11, 26, 55, 0.95) 100%) !important;
+    z-index: 1 !important;
+    transition: all 0.4s ease !important;
+}
+.dest-card-box:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 45px rgba(11, 26, 55, 0.35) !important;
+    border-color: rgba(245, 158, 11, 0.6) !important;
+}
+.dest-card-box:hover::before {
+    background: linear-gradient(180deg, rgba(16, 39, 113, 0.3) 0%, rgba(11, 26, 55, 0.75) 50%, rgba(11, 26, 55, 0.98) 100%) !important;
+}
+.dest-card-top-badge {
+    position: relative !important;
+    z-index: 2 !important;
+    align-self: flex-start !important;
+    background: rgba(11, 26, 55, 0.85) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding: 6px 14px !important;
+    border-radius: 50px !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+.dest-flag-icon {
+    font-size: 15px !important;
+}
+.dest-card-content {
+    position: relative !important;
+    z-index: 2 !important;
+    color: #ffffff !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-direction: column !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+.dest-partners-tag {
+    color: #f59e0b !important;
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    letter-spacing: 1.2px !important;
+    text-transform: uppercase !important;
+    display: block !important;
+}
+.dest-country-title {
+    color: #ffffff !important;
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    margin: 2px 0 0 0 !important;
+    display: block !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5) !important;
+}
+.dest-card-summary {
+    color: #d1d9e6 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin: 4px 0 10px 0 !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
+}
+.dest-action-btn {
+    align-self: flex-start !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.45) !important;
+    transition: all 0.25s ease !important;
+}
+.dest-card-box:hover .dest-action-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+    transform: translateX(4px) !important;
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.6) !important;
+}
 </style>
 </head>
 <body>
@@ -1048,6 +1227,125 @@ fbq('track', 'PageView');
 </div>
 </div>
 </section>
+<!-- ======================================================== -->
+<!-- WORLD-CLASS EDUCATION HUBS / STUDY DESTINATIONS           -->
+<!-- ======================================================== -->
+<section class="section dest-hubs-section" id="destinations">
+<div class="container">
+<!-- Section Head for Destinations -->
+<div class="dest-section-head text-center">
+<span class="dest-hub-badge">
+<i class="fa fa-globe"></i> WORLD-CLASS EDUCATION HUBS
+      </span>
+<h2 class="dest-main-title">
+        Explore Our <span>Study Destinations</span>
+</h2>
+<p class="dest-main-desc">
+        Official partnerships with accredited universities across 6 premier countries. Complete visa support and admission guidance.
+      </p>
+</div>
+<!-- 6 Study Destinations Grid -->
+<div class="dest-grid-wrap">
+<!-- 1. United Kingdom -->
+<a class="dest-card-box" href="/study-in-uk" style="--dest-bg: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇬🇧</span> United Kingdom
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">400+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United Kingdom</strong>
+<p class="dest-card-summary">
+            2-Year Graduate Route Visa, 1-Year Master's degrees &amp; British Council certified admissions.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 2. USA -->
+<a class="dest-card-box" href="/study-in-usa" style="--dest-bg: url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇺🇸</span> USA
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">350+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United States of America</strong>
+<p class="dest-card-summary">
+            Top world university rankings, up to 3 years STEM OPT work permit &amp; generous merit scholarships.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 3. Canada -->
+<a class="dest-card-box" href="/study-in-canada" style="--dest-bg: url('https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇨🇦</span> Canada
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">280+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Canada</strong>
+<p class="dest-card-summary">
+            Post-Graduation Work Permit (PGWP) up to 3 years, direct pathway to PR &amp; affordable tuition.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 4. Australia -->
+<a class="dest-card-box" href="/study-in-australia" style="--dest-bg: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇦🇺</span> Australia
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">240+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Australia</strong>
+<p class="dest-card-summary">
+            Subclass 485 post-study work rights up to 4-5 years, high student hourly wages &amp; Group of Eight unis.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 5. Hungary -->
+<a class="dest-card-box" href="/study-in-hungary" style="--dest-bg: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇭🇺</span> Hungary
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">120+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Hungary</strong>
+<p class="dest-card-summary">
+            Schengen visa travel across 27 EU nations, low European living costs &amp; accredited degrees.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 6. UAE -->
+<a class="dest-card-box" href="/study-in-uae" style="--dest-bg: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇦🇪</span> UAE
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">160+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United Arab of Emirates</strong>
+<p class="dest-card-summary">
+            100% tax-free income, dynamic global corporate hub &amp; prestigious British/Australian branch campuses.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+
 <section class="why-choose padding-lg">
 <div class="container">
 <br/><br/>
@@ -1081,7 +1379,6 @@ fbq('track', 'PageView');
 <div class="container">
 <h2><span>Our campus have a lot to offer for our students</span>TAKE A CAMPUS TOUR</h2>
 </div>
-
 <div aria-label="Campus Tour Moving Line" class="tour-marquee-container">
 <div class="tour-marquee-track">
 <div class="tour-card-item">
@@ -1306,7 +1603,6 @@ fbq('track', 'PageView');
 </div>
 </div>
 </div>
-
 </section>
 <section class="testimonial padding-lg">
 <div class="container">
