@@ -3,6 +3,10 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/student-registration(.*)",
+      "destination": "/public/pages/contact-us.html"
+    },
+    {
       "source": "/",
       "destination": "/index.html"
     },

@@ -671,6 +671,44 @@
     transform: translateX(4px) !important;
     box-shadow: 0 6px 18px rgba(245, 158, 11, 0.6) !important;
 }
+
+
+/* Banner Slide 1 Clean Display (No double buttons) */
+.banner-outer .slide1 {
+    background: url(../images/banner1.jpg) no-repeat center center / cover !important;
+    min-height: 480px !important;
+    height: 480px !important;
+    position: relative !important;
+    cursor: pointer !important;
+}
+.banner-outer .slide1 .content {
+    display: none !important;
+}
+.banner-outer .slide1 a.btn {
+    display: none !important;
+}
+
+/* Center Apply for Free in Video Hero */
+.gge-video-actions {
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+.gge-btn-cta {
+    margin: 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.gge-btn-audio, #btnVideoSound {
+    display: none !important;
+}
 </style>
 </head>
 <body>
@@ -778,29 +816,19 @@ fbq('track', 'PageView');
 <p class="gge-hero-video-desc">
         Official admission guidance from British Council certified consultants for UK, USA, Canada, Australia, Hungary &amp; UAE
       </p>
-<div class="gge-video-actions">
-<a class="gge-btn-cta" href="/our-services">
+<div class="gge-video-actions" style="display:flex !important;justify-content:center !important;align-items:center !important;width:100% !important;text-align:center !important;margin:0 auto !important;">
+<a class="gge-btn-cta" href="/our-services" style="margin:0 auto !important;">
 <i class="fa fa-graduation-cap"></i> Apply for Free <i class="fa fa-arrow-right"></i>
 </a>
-<button class="gge-btn-audio" id="btnVideoSound" title="Unmute / Mute Sound" type="button">
-<i class="fa fa-volume-off" id="iconSound"></i> <span id="textSound">Sound Off</span>
-</button>
 </div>
 </div>
 </div>
 </section><div class="banner-outer">
 <div class="banner-slider">
-<div class="slide1">
+<div class="slide1" style="position:relative;cursor:pointer;">
 <div class="container">
-<div class="content animated fadeInRight">
-<div class="fl-right">
-<h1 class="animated fadeInRight">Explore the World of <span class="animated fadeInRight">Our
-                                        Graduates</span> </h1>
-<a class="btn animated fadeInRight" href="/our-services">Know More <span class="icon-more-icon"></span></a>
 </div>
-</div>
-</div>
-</div>
+<a href="/our-services" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:10;text-decoration:none;"></a></div>
 <div class="slide2">
 <div class="container">
 <div class="content">
@@ -1345,7 +1373,6 @@ fbq('track', 'PageView');
 </div>
 </div>
 </section>
-
 <section class="why-choose padding-lg">
 <div class="container">
 <br/><br/>
@@ -2043,26 +2070,6 @@ $('.owl-carousel').owlCarousel({
 	}
 });
 </script>
-<script id="video-sound-toggle-js">
-document.addEventListener('DOMContentLoaded', function() {
-    var vid = document.getElementById('ggeHeroVideo');
-    var btnSound = document.getElementById('btnVideoSound');
-    var iconSound = document.getElementById('iconSound');
-    var textSound = document.getElementById('textSound');
 
-    if (vid && btnSound) {
-        btnSound.addEventListener('click', function() {
-            vid.muted = !vid.muted;
-            if (vid.muted) {
-                if (iconSound) iconSound.className = 'fa fa-volume-off';
-                if (textSound) textSound.textContent = 'Sound Off';
-            } else {
-                if (iconSound) iconSound.className = 'fa fa-volume-up';
-                if (textSound) textSound.textContent = 'Sound On';
-            }
-        });
-    }
-});
-</script>
 </body>
 </html>
