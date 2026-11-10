@@ -1,126 +1,15 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/student-registration(.*)",
-      "destination": "/public/pages/contact-us.html"
+      "source": "/student-registration",
+      "destination": "/contact-us.html"
     },
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/about-us",
-      "destination": "/public/pages/about-us.html"
-    },
-    {
-      "source": "/our-services",
-      "destination": "/public/pages/our-services.html"
-    },
-    {
-      "source": "/contact-us",
-      "destination": "/public/pages/contact-us.html"
-    },
-    {
-      "source": "/why-gge-abroad",
-      "destination": "/public/pages/why-gge-abroad.html"
-    },
-    {
-      "source": "/faq",
-      "destination": "/public/pages/faq.html"
-    },
-    {
-      "source": "/all-universities",
-      "destination": "/public/pages/all-universities.html"
-    },
-    {
-      "source": "/choose-your-destination",
-      "destination": "/public/pages/choose-your-destination.html"
-    },
-    {
-      "source": "/study-in-uk",
-      "destination": "/public/pages/study-in-uk.html"
-    },
-    {
-      "source": "/study-in-usa",
-      "destination": "/public/pages/study-in-usa.html"
-    },
-    {
-      "source": "/study-in-canada",
-      "destination": "/public/pages/study-in-canada.html"
-    },
-    {
-      "source": "/study-in-australia",
-      "destination": "/public/pages/study-in-australia.html"
-    },
-    {
-      "source": "/study-in-hungary",
-      "destination": "/public/pages/study-in-hungary.html"
-    },
-    {
-      "source": "/study-in-uae",
-      "destination": "/public/pages/study-in-uae.html"
-    },
-    {
-      "source": "/doctorate-courses",
-      "destination": "/public/pages/doctorate-courses.html"
-    },
-    {
-      "source": "/postgraduate-courses",
-      "destination": "/public/pages/postgraduate-courses.html"
-    },
-    {
-      "source": "/undergraduate-courses",
-      "destination": "/public/pages/undergraduate-courses.html"
-    },
-    {
-      "source": "/pre-master-courses",
-      "destination": "/public/pages/pre-master-courses.html"
-    },
-    {
-      "source": "/foundation-courses",
-      "destination": "/public/pages/foundation-courses.html"
-    },
-    {
-      "source": "/english-language-courses",
-      "destination": "/public/pages/english-language-courses.html"
-    },
-    {
-      "source": "/scholarship-advice",
-      "destination": "/public/pages/scholarship-advice.html"
-    },
-    {
-      "source": "/career-counselling",
-      "destination": "/public/pages/career-counselling.html"
-    },
-    {
-      "source": "/guide-for-parents",
-      "destination": "/public/pages/guide-for-parents.html"
-    },
-    {
-      "source": "/cost-of-studing-abroad",
-      "destination": "/public/pages/cost-of-studing-abroad.html"
-    },
-    {
-      "source": "/student-intakes",
-      "destination": "/public/pages/student-intakes.html"
-    },
-    {
-      "source": "/university-rankings",
-      "destination": "/public/pages/university-rankings.html"
-    },
-    {
-      "source": "/universities/:slug",
-      "destination": "/public/pages/universities_:slug.html"
-    },
-    {
-      "source": "/course/:slug/:level",
-      "destination": "/public/pages/course_:slug_:level.html"
-    },
-    {
-      "source": "/:slug",
-      "destination": "/public/pages/:slug.html"
+      "source": "/student-registration/(.*)",
+      "destination": "/contact-us.html"
     }
   ]
 }
