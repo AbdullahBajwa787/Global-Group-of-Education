@@ -7061,26 +7061,10 @@ a.btn-circle:hover {
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 24px 0 10px 0;
+    padding: 24px 0 12px 0;
     margin-top: 25px;
-}
-.alumni-people-marquee-container::before,
-.alumni-people-marquee-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 80px;
-    z-index: 3;
-    pointer-events: none;
-}
-.alumni-people-marquee-container::before {
-    left: 0;
-    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-}
-.alumni-people-marquee-container::after {
-    right: 0;
-    background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
 }
 .testimonial #bx-pager {
     display: flex !important;
@@ -7144,4 +7128,75 @@ a.btn-circle:hover {
 .testimonial #bx-pager a:hover .alumni-person-badge {
     background: #ff8500;
     color: #ffffff;
+}
+
+
+/* Responsive Mobile Header & Hero Banner Polish */
+.modern-mobile-toggle {
+    display: none;
+    background: #102771;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+@media (max-width: 991px) {
+    .modern-mobile-toggle {
+        display: inline-flex !important;
+    }
+    .modern-header-container {
+        flex-wrap: wrap !important;
+    }
+    .modern-main-nav {
+        display: none !important;
+        width: 100% !important;
+        order: 4 !important;
+        padding-top: 12px !important;
+        border-top: 1px solid #e2e8f0 !important;
+        margin-top: 8px !important;
+    }
+    .modern-main-nav.open {
+        display: block !important;
+    }
+    .modern-nav-list {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 4px !important;
+    }
+    .modern-dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding-left: 20px !important;
+        display: none !important;
+    }
+    .modern-dropdown.open .modern-dropdown-menu {
+        display: block !important;
+    }
+    .modern-header-wa-btn {
+        padding: 8px 14px !important;
+        font-size: 13px !important;
+    }
+    .gge-video-bg-hero {
+        min-height: 400px !important;
+    }
+    .gge-hero-video-title {
+        font-size: 26px !important;
+    }
+    .banner-outer,
+    .banner-outer .banner-slider,
+    .banner-outer .slide1,
+    .banner-outer .slide2,
+    .banner-outer .slide3 {
+        min-height: 260px !important;
+        height: 260px !important;
+    }
 }
