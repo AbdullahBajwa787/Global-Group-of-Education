@@ -767,3 +767,60 @@ function show_enquire_modal(course_id = null){
     });
 
 })(jQuery);
+
+/* === GGE FOOTER MODE & REWIND CONTROLLER START === */
+(function () {
+    var STORAGE_KEY = 'gge_footer_mode';
+
+    function setFooterMode(mode, shouldScroll) {
+        var nextMode = mode === 'classic' ? 'classic' : 'modern';
+        var footers = document.querySelectorAll('footer.gge-footer-shell');
+        for (var i = 0; i < footers.length; i++) {
+            footers[i].setAttribute('data-footer-mode', nextMode);
+            var rewindBtns = footers[i].querySelectorAll('[data-gge-footer-toggle="classic"]');
+            for (var r = 0; r < rewindBtns.length; r++) {
+                rewindBtns[r].setAttribute('aria-pressed', nextMode === 'classic' ? 'true' : 'false');
+            }
+            var modernBtns = footers[i].querySelectorAll('[data-gge-footer-toggle="modern"]');
+            for (var m = 0; m < modernBtns.length; m++) {
+                modernBtns[m].setAttribute('aria-pressed', nextMode === 'modern' ? 'true' : 'false');
+            }
+        }
+        try {
+            localStorage.setItem(STORAGE_KEY, nextMode);
+        } catch (err) {}
+
+        if (shouldScroll && footers.length > 0) {
+            try {
+                window.dispatchEvent(new Event('resize'));
+                footers[0].scrollIntoView({ behavior: 'smooth', block: 'end' });
+            } catch (err) {}
+        }
+    }
+
+    function initFooterMode() {
+        var saved = 'modern';
+        try {
+            var raw = localStorage.getItem(STORAGE_KEY);
+            if (raw === 'classic' || raw === 'modern') {
+                saved = raw;
+            }
+        } catch (err) {}
+        setFooterMode(saved, false);
+    }
+
+    document.addEventListener('click', function (e) {
+        var btn = e.target && e.target.closest ? e.target.closest('[data-gge-footer-toggle]') : null;
+        if (!btn) return;
+        e.preventDefault();
+        var targetMode = btn.getAttribute('data-gge-footer-toggle');
+        setFooterMode(targetMode, true);
+    });
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFooterMode);
+    } else {
+        initFooterMode();
+    }
+})();
+/* === GGE FOOTER MODE & REWIND CONTROLLER END === */
