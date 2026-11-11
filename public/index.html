@@ -272,43 +272,47 @@
     margin: 0 !important;
     text-align: left !important;
 }
-.gge-video-badge {
-    display: inline-block !important;
-    background: rgba(254, 186, 2, 0.22) !important;
-    color: #feba02 !important;
-    border: 1px solid rgba(254, 186, 2, 0.5) !important;
-    font-size: 13px !important;
+.gge-welcome-line {
+    margin: 0 0 14px 0 !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
-    letter-spacing: 1.5px !important;
-    text-transform: uppercase !important;
-    padding: 7px 22px !important;
-    border-radius: 50px !important;
-    margin-bottom: 16px !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+}
+.gge-join-underline {
+    color: #ffffff !important;
+    border-bottom: 2.5px solid #f5a614 !important;
+    padding-bottom: 3px !important;
+    display: inline-block !important;
 }
 .gge-hero-video-title {
     color: #ffffff !important;
-    font-size: 38px !important;
+    font-size: 46px !important;
     font-weight: 800 !important;
-    letter-spacing: 0.5px !important;
-    text-transform: uppercase !important;
-    line-height: 1.2 !important;
-    margin-bottom: 16px !important;
+    letter-spacing: -0.3px !important;
+    text-transform: none !important;
+    line-height: 1.16 !important;
+    margin: 0 0 16px 0 !important;
     text-align: left !important;
-    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.75) !important;
     font-family: inherit !important;
 }
-.gge-hero-video-title span {
-    color: #feba02 !important;
+@media (max-width: 991px) {
+    .gge-hero-video-title {
+        font-size: 32px !important;
+    }
 }
 .gge-hero-video-desc {
-    color: #e4edf8 !important;
-    font-size: 16px !important;
+    color: #e9eff8 !important;
+    font-size: 15.5px !important;
+    font-weight: 500 !important;
     line-height: 1.6 !important;
     max-width: 560px !important;
     margin: 0 0 26px 0 !important;
     text-align: left !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
 }
 .gge-video-actions {
     display: -webkit-flex !important;
@@ -318,26 +322,53 @@
     gap: 15px !important;
     flex-wrap: wrap !important;
 }
-.gge-btn-cta {
+.gge-btn-partner {
     margin: 0 !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 8px !important;
-    background: #feba02 !important;
-    color: #0b1530 !important;
+    justify-content: center !important;
+    gap: 9px !important;
+    background: #f5a614 !important;
+    color: #ffffff !important;
+    border: 1px solid #f5a614 !important;
     font-size: 15px !important;
     font-weight: 700 !important;
-    padding: 12px 30px !important;
+    padding: 13px 26px !important;
     border-radius: 6px !important;
     text-decoration: none !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 6px 20px rgba(254, 186, 2, 0.4) !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 18px rgba(245, 166, 20, 0.35) !important;
 }
-.gge-btn-cta:hover {
-    background: #ffffff !important;
-    color: #0b1530 !important;
+.gge-btn-partner:hover, .gge-btn-partner:focus {
+    background: #e0940b !important;
+    border-color: #e0940b !important;
+    color: #ffffff !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 8px 22px rgba(245, 166, 20, 0.45) !important;
+}
+.gge-btn-student {
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+    background: #f4f7fb !important;
+    color: #162238 !important;
+    border: 1px solid #e2e8f0 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    padding: 13px 26px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18) !important;
+}
+.gge-btn-student:hover, .gge-btn-student:focus {
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #102771 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(255, 255, 255, 0.35) !important;
 }
 .gge-btn-audio {
     display: inline-flex !important;
@@ -712,11 +743,9 @@
     margin: 0 !important;
     width: 100% !important;
 }
-.gge-btn-cta {
-    margin: 0 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+.gge-video-actions {
+    gap: 14px !important;
+    flex-wrap: wrap !important;
 }
 .gge-btn-audio, #btnVideoSound {
     display: none !important;
@@ -1034,12 +1063,12 @@
 <i class="fa fa-graduation-cap modern-icon"></i> <span>Courses</span> <i class="fa fa-angle-down modern-arrow"></i>
 </a>
 <ul class="modern-dropdown-menu">
-<li><a href="/doctorate-courses">Doctorate Courses</a></li>
-<li><a href="/postgraduate-courses">Postgraduate Courses</a></li>
-<li><a href="/undergraduate-courses">Undergraduate Courses</a></li>
-<li><a href="/pre-master-courses">Pre-Master Courses</a></li>
-<li><a href="/foundation-courses">Foundation Courses</a></li>
-<li><a href="/english-language-courses">English Language Courses</a></li>
+<li><a href="https://globalgroupofeducationportal.com/partner-registration">Doctorate Courses</a></li>
+<li><a href="https://globalgroupofeducationportal.com/partner-registration">Postgraduate Courses</a></li>
+<li><a href="https://globalgroupofeducationportal.com/partner-registration">Undergraduate Courses</a></li>
+<li><a href="https://globalgroupofeducationportal.com/partner-registration">Pre-Master Courses</a></li>
+<li><a href="https://globalgroupofeducationportal.com/partner-registration">Foundation Courses</a></li>
+<li><a href="https://globalgroupofeducationportal.com/partner-registration">English Language Courses</a></li>
 </ul>
 </li>
 <!-- Our Services -->
@@ -1092,19 +1121,20 @@
 <div class="container gge-video-text-container">
 <div class="gge-video-inner-content">
 <div class="gge-badge-wrap">
-<span class="gge-video-badge">
-<i class="fa fa-graduation-cap"></i> LIFE AT GLOBAL UNIVERSITIES
-        </span>
+<p class="gge-welcome-line">Welcome and <span class="gge-join-underline">Join Us for Success</span></p>
 </div>
 <h2 class="gge-hero-video-title">
-        EXPERIENCE LIFE &amp; ADMISSIONS ACROSS <span>TOP GLOBAL CAMPUSES</span>
+        Your Gateway to<br/>Studying Abroad
 </h2>
 <p class="gge-hero-video-desc">
-        Official admission guidance from British Council certified consultants for UK, USA, Canada, Australia, Hungary &amp; UAE
+        We provide a complete admissions services for Australia, Canada, Europe, UK, USA and other countries.
       </p>
 <div class="gge-video-actions">
-<a class="gge-btn-cta" href="/our-services">
-<i class="fa fa-graduation-cap"></i> Apply for Free <i class="fa fa-arrow-right"></i>
+<a class="gge-btn-partner" href="https://globalgroupofeducationportal.com/partner-registration">
+<i class="fa fa-user-o"></i> Be a Partner
+</a>
+<a class="gge-btn-student" href="https://globalgroupofeducationportal.com/student-registration">
+<i class="fa fa-graduation-cap"></i> Be a Student
 </a>
 </div>
 </div>
