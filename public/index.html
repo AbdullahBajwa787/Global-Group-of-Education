@@ -29,7 +29,7 @@
 <!-- Animate -->
 <link href="/assets/css/animate.css" rel="stylesheet"/>
 <!-- Custom Style -->
-<link href="/assets/css/custom.css?v=20261111_v2" rel="stylesheet"/>
+<link href="/assets/css/custom.css?v=20261111_v3" rel="stylesheet"/>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
@@ -546,7 +546,7 @@
 }
 .dest-section-head {
     max-width: 800px !important;
-    margin: 0 auto 40px auto !important;
+    margin: 0 auto 24px auto !important;
     text-align: center !important;
 }
 .dest-hub-badge {
@@ -581,40 +581,113 @@
     line-height: 1.6 !important;
     margin: 0 auto !important;
 }
-.dest-grid-wrap {
-    display: -ms-grid !important;
-    display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)) !important;
-    gap: 26px !important;
+.dest-marquee-container {
     width: 100% !important;
+    overflow: hidden !important;
+    position: relative !important;
+    padding: 20px 0 32px 0 !important;
+    white-space: nowrap !important;
 }
-@media (max-width: 768px) {
-    .dest-grid-wrap {
-        grid-template-columns: 1fr !important;
-    }
+.dest-marquee-container::before,
+.dest-marquee-container::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 90px !important;
+    z-index: 5 !important;
+    pointer-events: none !important;
+}
+.dest-marquee-container::before {
+    left: 0 !important;
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%) !important;
+}
+.dest-marquee-container::after {
+    right: 0 !important;
+    background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%) !important;
+}
+.dest-marquee-track {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-direction: row !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    -webkit-flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    width: -webkit-max-content !important;
+    width: -moz-max-content !important;
+    width: max-content !important;
+    -webkit-animation: destScrollLinear 52s linear infinite !important;
+    animation: destScrollLinear 52s linear infinite !important;
+    will-change: transform !important;
+    backface-visibility: hidden !important;
+}
+.dest-marquee-container:hover .dest-marquee-track {
+    -webkit-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+}
+@-webkit-keyframes destScrollLinear {
+    0% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    100% { -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
+}
+@keyframes destScrollLinear {
+    0% { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    100% { -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
 }
 .dest-card-box {
     position: relative !important;
     border-radius: 20px !important;
     overflow: hidden !important;
-    min-height: 350px !important;
+    -webkit-flex: 0 0 350px !important;
+    -ms-flex: 0 0 350px !important;
+    flex: 0 0 350px !important;
+    width: 350px !important;
+    min-width: 350px !important;
+    max-width: 350px !important;
+    min-height: 365px !important;
+    height: 365px !important;
+    margin: 0 12px !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
     background-color: #0b1a37 !important;
     background-image: var(--dest-bg) !important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    display: -webkit-flex !important;
-    display: flex !important;
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
     -webkit-flex-direction: column !important;
     flex-direction: column !important;
     -webkit-justify-content: space-between !important;
     justify-content: space-between !important;
-    padding: 26px !important;
+    padding: 24px !important;
     text-decoration: none !important;
-    box-shadow: 0 10px 30px rgba(11, 26, 55, 0.12) !important;
+    box-shadow: 0 10px 26px rgba(11, 26, 55, 0.14) !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.4s cubic-bezier(0.2, 0.7, 0.3, 1), border-color 0.4s ease !important;
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.35s cubic-bezier(0.2, 0.7, 0.3, 1), border-color 0.35s ease !important;
     cursor: pointer !important;
+}
+@media (max-width: 767px) {
+    .dest-card-box {
+        -webkit-flex: 0 0 295px !important;
+        -ms-flex: 0 0 295px !important;
+        flex: 0 0 295px !important;
+        width: 295px !important;
+        min-width: 295px !important;
+        max-width: 295px !important;
+        min-height: 335px !important;
+        height: 335px !important;
+        margin: 0 10px !important;
+        padding: 20px !important;
+    }
+    .dest-marquee-container::before,
+    .dest-marquee-container::after {
+        width: 36px !important;
+    }
 }
 .dest-card-box::before {
     content: "" !important;
@@ -1021,6 +1094,20 @@
         min-height: 240px !important;
         height: 240px !important;
     }
+}
+.footer .footer-logo {
+    padding-bottom: 20px !important;
+}
+.footer .footer-logo img {
+    width: 86px !important;
+    height: 86px !important;
+    border-radius: 50% !important;
+    object-fit: contain !important;
+    background: #ffffff !important;
+    padding: 3px !important;
+    border: 2px solid rgba(251, 176, 25, 0.65) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+    display: inline-block !important;
 }
 </style>
 </head>
@@ -1676,8 +1763,12 @@
         Official partnerships with accredited universities across 6 premier countries. Complete visa support and admission guidance.
       </p>
 </div>
-<!-- 6 Study Destinations Grid -->
-<div class="dest-grid-wrap">
+<!-- Close heading container so marquee spans cleanly edge-to-edge -->
+</div>
+<!-- Study Destinations Continuous Line Marquee -->
+<div aria-label="Study Destinations Continuous Line" class="dest-marquee-container">
+<div class="dest-marquee-track">
+<!-- Set 1 (Half A) -->
 <!-- 1. United Kingdom -->
 <a class="dest-card-box" href="/study-in-uk" style="--dest-bg: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
 <div class="dest-card-top-badge">
@@ -1760,6 +1851,297 @@
 </a>
 <!-- 6. UAE -->
 <a class="dest-card-box" href="/study-in-uae" style="--dest-bg: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇦🇪</span> UAE
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">160+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United Arab of Emirates</strong>
+<p class="dest-card-summary">
+            100% tax-free income, dynamic global corporate hub &amp; prestigious British/Australian branch campuses.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- Set 2 (Half A seamless buffer) -->
+<!-- 1. United Kingdom -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-uk" style="--dest-bg: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇬🇧</span> United Kingdom
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">400+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United Kingdom</strong>
+<p class="dest-card-summary">
+            2-Year Graduate Route Visa, 1-Year Master's degrees &amp; British Council certified admissions.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 2. USA -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-usa" style="--dest-bg: url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇺🇸</span> USA
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">350+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United States of America</strong>
+<p class="dest-card-summary">
+            Top world university rankings, up to 3 years STEM OPT work permit &amp; generous merit scholarships.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 3. Canada -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-canada" style="--dest-bg: url('https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇨🇦</span> Canada
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">280+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Canada</strong>
+<p class="dest-card-summary">
+            Post-Graduation Work Permit (PGWP) up to 3 years, direct pathway to PR &amp; affordable tuition.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 4. Australia -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-australia" style="--dest-bg: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇦🇺</span> Australia
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">240+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Australia</strong>
+<p class="dest-card-summary">
+            Subclass 485 post-study work rights up to 4-5 years, high student hourly wages &amp; Group of Eight unis.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 5. Hungary -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-hungary" style="--dest-bg: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇭🇺</span> Hungary
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">120+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Hungary</strong>
+<p class="dest-card-summary">
+            Schengen visa travel across 27 EU nations, low European living costs &amp; accredited degrees.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 6. UAE -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-uae" style="--dest-bg: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇦🇪</span> UAE
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">160+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United Arab of Emirates</strong>
+<p class="dest-card-summary">
+            100% tax-free income, dynamic global corporate hub &amp; prestigious British/Australian branch campuses.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- Set 3 (Half B) -->
+<!-- 1. United Kingdom -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-uk" style="--dest-bg: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇬🇧</span> United Kingdom
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">400+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United Kingdom</strong>
+<p class="dest-card-summary">
+            2-Year Graduate Route Visa, 1-Year Master's degrees &amp; British Council certified admissions.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 2. USA -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-usa" style="--dest-bg: url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇺🇸</span> USA
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">350+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United States of America</strong>
+<p class="dest-card-summary">
+            Top world university rankings, up to 3 years STEM OPT work permit &amp; generous merit scholarships.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 3. Canada -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-canada" style="--dest-bg: url('https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇨🇦</span> Canada
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">280+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Canada</strong>
+<p class="dest-card-summary">
+            Post-Graduation Work Permit (PGWP) up to 3 years, direct pathway to PR &amp; affordable tuition.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 4. Australia -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-australia" style="--dest-bg: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇦🇺</span> Australia
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">240+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Australia</strong>
+<p class="dest-card-summary">
+            Subclass 485 post-study work rights up to 4-5 years, high student hourly wages &amp; Group of Eight unis.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 5. Hungary -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-hungary" style="--dest-bg: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇭🇺</span> Hungary
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">120+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Hungary</strong>
+<p class="dest-card-summary">
+            Schengen visa travel across 27 EU nations, low European living costs &amp; accredited degrees.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 6. UAE -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-uae" style="--dest-bg: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇦🇪</span> UAE
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">160+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United Arab of Emirates</strong>
+<p class="dest-card-summary">
+            100% tax-free income, dynamic global corporate hub &amp; prestigious British/Australian branch campuses.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- Set 4 (Half B seamless buffer) -->
+<!-- 1. United Kingdom -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-uk" style="--dest-bg: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇬🇧</span> United Kingdom
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">400+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United Kingdom</strong>
+<p class="dest-card-summary">
+            2-Year Graduate Route Visa, 1-Year Master's degrees &amp; British Council certified admissions.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 2. USA -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-usa" style="--dest-bg: url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇺🇸</span> USA
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">350+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In United States of America</strong>
+<p class="dest-card-summary">
+            Top world university rankings, up to 3 years STEM OPT work permit &amp; generous merit scholarships.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 3. Canada -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-canada" style="--dest-bg: url('https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇨🇦</span> Canada
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">280+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Canada</strong>
+<p class="dest-card-summary">
+            Post-Graduation Work Permit (PGWP) up to 3 years, direct pathway to PR &amp; affordable tuition.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 4. Australia -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-australia" style="--dest-bg: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇦🇺</span> Australia
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">240+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Australia</strong>
+<p class="dest-card-summary">
+            Subclass 485 post-study work rights up to 4-5 years, high student hourly wages &amp; Group of Eight unis.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 5. Hungary -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-hungary" style="--dest-bg: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
+<div class="dest-card-top-badge">
+<span class="dest-flag-icon">🇭🇺</span> Hungary
+        </div>
+<div class="dest-card-content">
+<span class="dest-partners-tag">120+ PARTNER UNIVERSITIES</span>
+<strong class="dest-country-title">Study In Hungary</strong>
+<p class="dest-card-summary">
+            Schengen visa travel across 27 EU nations, low European living costs &amp; accredited degrees.
+          </p>
+<div class="dest-action-btn">
+<span>VIEW DETAILS</span> <i class="fa fa-arrow-right"></i>
+</div>
+</div>
+</a>
+<!-- 6. UAE -->
+<a aria-hidden="true" class="dest-card-box" tabindex="-1" href="/study-in-uae" style="--dest-bg: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=800&amp;q=75')">
 <div class="dest-card-top-badge">
 <span class="dest-flag-icon">🇦🇪</span> UAE
         </div>
@@ -2245,7 +2627,7 @@
 </div>
 </div>
 <div class="col-sm-3">
-<div class="footer-logo hidden-xs"><a href="/"><img alt="" class="img-responsive" src="/assets/images/footer-logo.png"/></a></div>
+<div class="footer-logo hidden-xs"><a href="/"><img alt="Global Group of Education Logo" class="img-responsive" src="/assets/logo.png"/></a></div>
 <p>© 2020 <span>Global Group of Education</span>. All rights reserved</p>
 <ul class="terms clearfix">
 <li><a href="/term-of-use">TERMS OF USE</a></li>
