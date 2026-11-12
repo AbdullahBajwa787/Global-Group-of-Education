@@ -824,3 +824,57 @@ function show_enquire_modal(course_id = null){
     }
 })();
 /* === GGE FOOTER MODE & REWIND CONTROLLER END === */
+
+
+
+/* ========================================================================== */
+/* GGE VIEW CONTROLLER (MOCKUP VS CLASSIC WITH REWIND SUPPORT)                */
+/* ========================================================================== */
+function toggleGGEView(targetView) {
+    var mockupEl = document.getElementById('ggeMockupHomepage');
+    var classicEl = document.getElementById('ggeClassicHomepage');
+    if (!mockupEl || !classicEl) return;
+
+    if (!targetView) {
+        targetView = (mockupEl.style.display === 'none') ? 'mockup' : 'classic';
+    }
+
+    if (targetView === 'classic') {
+        mockupEl.style.display = 'none';
+        classicEl.style.display = 'block';
+        localStorage.setItem('gge_homepage_mode', 'classic');
+        console.log('GGE View toggled to: CLASSIC');
+    } else {
+        mockupEl.style.display = 'block';
+        classicEl.style.display = 'none';
+        localStorage.setItem('gge_homepage_mode', 'mockup');
+        console.log('GGE View toggled to: MOCKUP');
+    }
+}
+
+function handleConsultationSubmit(event) {
+    event.preventDefault();
+    var successMsg = document.getElementById('ggeFormSuccessMsg');
+    if (successMsg) {
+        successMsg.style.display = 'block';
+    }
+    var form = event.target;
+    var dest = document.getElementById('ggeFormDest') ? document.getElementById('ggeFormDest').value : '';
+    var course = document.getElementById('ggeFormCourse') ? document.getElementById('ggeFormCourse').value : '';
+    var email = document.getElementById('ggeFormEmail') ? document.getElementById('ggeFormEmail').value : '';
+    var phone = document.getElementById('ggeFormPhone') ? document.getElementById('ggeFormPhone').value : '';
+
+    console.log('Consultation Request Submitted:', { dest: dest, course: course, email: email, phone: phone });
+    setTimeout(function() {
+        alert('Thank you ' + email + '! Your consultation request for ' + dest + ' (' + course + ') has been received. Our counselor will contact you at ' + phone + ' shortly.');
+    }, 200);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var savedMode = localStorage.getItem('gge_homepage_mode');
+    if (savedMode === 'classic') {
+        toggleGGEView('classic');
+    } else {
+        toggleGGEView('mockup');
+    }
+});

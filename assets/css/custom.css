@@ -7732,3 +7732,1167 @@ a.btn-circle:hover {
     }
 }
 /* === GGE SLIDE 1 HQ UPGRADE END === */
+
+
+
+/* ========================================================================== */
+/* GGE MOCKUP HOMEPAGE REDESIGN (BASED ON 8 USER MOCKUPS)                      */
+/* ========================================================================== */
+:root {
+    --gge-navy: #0d2552;
+    --gge-navy-dark: #071735;
+    --gge-gold: #fbb019;
+    --gge-gold-dark: #d99308;
+    --gge-text-dark: #1b2a4e;
+    --gge-text-muted: #5a6a85;
+    --gge-bg-light: #f5f8fc;
+    --gge-border-light: #e4ecf7;
+    --gge-radius-lg: 20px;
+    --gge-radius-md: 14px;
+    --gge-radius-pill: 50px;
+}
+
+#ggeMockupHomepage {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    color: var(--gge-text-dark);
+    background: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Quick View Switcher Bar */
+.gge-view-switcher-bar {
+    background: #071735;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(251, 176, 25, 0.3);
+    z-index: 9999;
+    position: relative;
+}
+.gge-view-switcher-bar a, .gge-view-switcher-bar button {
+    background: #fbb019;
+    color: #0d2552;
+    border: none;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+.gge-view-switcher-bar a:hover, .gge-view-switcher-bar button:hover {
+    background: #ffffff;
+    color: #0d2552;
+    transform: translateY(-1px);
+}
+
+/* 1. CURVED WHITE HEADER */
+.gge-mk-header-wrap {
+    padding: 18px 24px 10px 24px;
+    position: relative;
+    z-index: 1000;
+    background: #ffffff;
+}
+.gge-mk-header {
+    background: #ffffff;
+    border: 2px solid rgba(251, 176, 25, 0.45);
+    border-radius: var(--gge-radius-pill);
+    box-shadow: 0 10px 35px rgba(13, 37, 82, 0.08);
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.gge-mk-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.gge-mk-logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+}
+.gge-mk-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.gge-mk-nav-item {
+    position: relative;
+}
+.gge-mk-nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1b2a4e;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.gge-mk-nav-link:hover, .gge-mk-nav-link.active {
+    background: #1b2a4e;
+    color: #ffffff;
+}
+.gge-mk-nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    padding: 10px 0;
+    list-style: none;
+    z-index: 1010;
+    margin-top: 6px;
+    border-top: 3px solid var(--gge-gold);
+}
+.gge-mk-nav-item:hover .gge-mk-nav-dropdown {
+    display: block;
+}
+.gge-mk-nav-dropdown li a {
+    display: block;
+    padding: 8px 18px;
+    color: #1b2a4e;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+.gge-mk-nav-dropdown li a:hover {
+    background: #f0f4fa;
+    color: var(--gge-navy);
+}
+.gge-mk-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.gge-mk-whatsapp-btn {
+    background: #044b3c;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+.gge-mk-whatsapp-btn:hover {
+    background: #026b55;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+.gge-mk-login-btn {
+    background: var(--gge-gold);
+    color: #1b2a4e;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.25s ease;
+}
+.gge-mk-login-btn:hover {
+    background: var(--gge-gold-dark);
+    color: #ffffff;
+}
+
+/* 2. HERO SECTION */
+.gge-mk-hero-section {
+    background: linear-gradient(135deg, #091c3e 0%, #102e68 55%, #0b224d 100%);
+    color: #ffffff;
+    position: relative;
+    padding: 60px 0 90px 0;
+    overflow: hidden;
+}
+.gge-mk-hero-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('/assets/images/destinations/uk.jpg') no-repeat center right / cover;
+    opacity: 0.16;
+    pointer-events: none;
+}
+.gge-mk-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.gge-mk-hero-tag {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 6px;
+}
+.gge-mk-hero-tag::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--gge-gold);
+    border-radius: 2px;
+}
+.gge-mk-hero-title {
+    font-size: 48px;
+    line-height: 1.18;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 18px 0;
+    letter-spacing: -0.5px;
+}
+.gge-mk-hero-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #d1dced;
+    margin-bottom: 28px;
+    max-width: 540px;
+}
+.gge-mk-hero-btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.gge-mk-btn-primary {
+    background: var(--gge-gold);
+    color: #102e68;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 13px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 25px rgba(251, 176, 25, 0.4);
+    transition: all 0.25s ease;
+}
+.gge-mk-btn-primary:hover {
+    background: #ffffff;
+    color: #102e68;
+    transform: translateY(-2px);
+}
+.gge-mk-btn-secondary {
+    background: #ffffff;
+    color: #102e68;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 13px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all 0.25s ease;
+}
+.gge-mk-btn-secondary:hover {
+    background: var(--gge-gold);
+    color: #102e68;
+    transform: translateY(-2px);
+}
+.gge-mk-hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 24px;
+    flex-wrap: wrap;
+}
+.gge-mk-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #e2eaf7;
+    font-weight: 500;
+}
+.gge-mk-trust-icon {
+    font-size: 20px;
+    color: var(--gge-gold);
+}
+
+/* Floating Consultation Form Card */
+.gge-mk-form-card {
+    background: #ffffff;
+    color: #1b2a4e;
+    border-radius: var(--gge-radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    padding: 32px 28px;
+    position: relative;
+    border: 2px solid rgba(251, 176, 25, 0.4);
+}
+.gge-mk-form-header {
+    margin-bottom: 20px;
+}
+.gge-mk-form-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0d2552;
+    margin: 0 0 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.gge-mk-form-header p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+}
+.gge-mk-form-group {
+    margin-bottom: 14px;
+    position: relative;
+}
+.gge-mk-form-group select, .gge-mk-form-group input {
+    width: 100%;
+    height: 46px;
+    padding: 0 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1b2a4e;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+.gge-mk-form-group select:focus, .gge-mk-form-group input:focus {
+    border-color: #0d2552;
+    background: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 37, 82, 0.1);
+}
+.gge-mk-form-submit {
+    width: 100%;
+    height: 48px;
+    background: #0d2552;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+}
+.gge-mk-form-submit:hover {
+    background: var(--gge-gold);
+    color: #0d2552;
+}
+.gge-mk-form-success {
+    display: none;
+    background: #dcfce7;
+    color: #15803d;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* 3. FLOATING FEATURES PILL BAR */
+.gge-mk-features-bar-wrap {
+    margin-top: -35px;
+    position: relative;
+    z-index: 30;
+    padding: 0 20px;
+}
+.gge-mk-features-bar {
+    max-width: 1240px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: var(--gge-radius-pill);
+    box-shadow: 0 12px 40px rgba(13, 37, 82, 0.12);
+    padding: 16px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.gge-mk-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0d2552;
+}
+.gge-mk-feature-icon {
+    font-size: 18px;
+    color: var(--gge-gold);
+}
+.gge-mk-feature-divider {
+    width: 1px;
+    height: 24px;
+    background: #e2e8f0;
+}
+
+/* 4. WHAT GGE OFFERS SECTION */
+.gge-mk-offers-section {
+    padding: 85px 20px 60px 20px;
+    background: #ffffff;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.gge-mk-offers-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+.gge-mk-offers-left h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0d2552;
+    line-height: 1.25;
+    margin: 0 0 14px 0;
+}
+.gge-mk-offers-left p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+}
+.gge-mk-services-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+.gge-mk-service-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gge-mk-service-card:hover {
+    background: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(13, 37, 82, 0.1);
+    border-color: var(--gge-gold);
+}
+.gge-mk-service-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: #eaf1fc;
+    color: #0d2552;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 14px;
+    transition: all 0.3s ease;
+}
+.gge-mk-service-card:hover .gge-mk-service-icon {
+    background: #0d2552;
+    color: var(--gge-gold);
+}
+.gge-mk-service-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0d2552;
+    line-height: 1.35;
+    margin: 0;
+}
+
+/* 5. TWO COLUMN ROW: DESTINATIONS & UNIVERSITIES */
+.gge-mk-dual-section {
+    padding: 30px 20px 70px 20px;
+    background: #ffffff;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.gge-mk-dual-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+}
+.gge-mk-box-card {
+    background: #fbfcfe;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 30px 28px;
+}
+.gge-mk-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 22px;
+}
+.gge-mk-box-header h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0d2552;
+    margin: 0 0 6px 0;
+}
+.gge-mk-box-header p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+}
+.gge-mk-view-btn {
+    background: var(--gge-gold);
+    color: #0d2552;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+.gge-mk-view-btn:hover {
+    background: #0d2552;
+    color: #ffffff;
+}
+
+/* Destinations 6-Card Grid */
+.gge-mk-dest-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+.gge-mk-dest-item {
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    background-size: cover;
+    background-position: center;
+}
+.gge-mk-dest-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.gge-mk-dest-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(13, 37, 82, 0.9) 100%);
+}
+.gge-mk-dest-badge {
+    position: relative;
+    z-index: 5;
+    background: #0d2552;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Universities 4-Card Logo Grid */
+.gge-mk-unis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+.gge-mk-uni-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    height: 75px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.gge-mk-uni-card:hover {
+    border-color: var(--gge-gold);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+.gge-mk-uni-card img {
+    max-height: 48px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* 6. EXPLORE THE WORLD OF OUR GRADUATES */
+.gge-mk-graduates-section {
+    padding: 40px 20px 60px 20px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.gge-mk-graduates-banner {
+    background: linear-gradient(90deg, #f8fafc 0%, #eef3fb 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 40px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.gge-mk-graduates-left {
+    max-width: 550px;
+    z-index: 5;
+}
+.gge-mk-graduates-tag {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gge-gold-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    display: block;
+}
+.gge-mk-graduates-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0d2552;
+    margin: 0 0 14px 0;
+    line-height: 1.2;
+}
+.gge-mk-graduates-desc {
+    font-size: 15px;
+    color: #5a6a85;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+.gge-mk-graduates-right img {
+    max-height: 260px;
+    width: auto;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(13, 37, 82, 0.15);
+}
+
+/* 7. WHY CHOOSE US STATS BANNER */
+.gge-mk-why-section {
+    background: linear-gradient(180deg, #f4f8fd 0%, #e8f0fa 100%);
+    position: relative;
+    padding: 70px 20px 90px 20px;
+    overflow: hidden;
+    text-align: center;
+}
+.gge-mk-why-header {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    z-index: 10;
+}
+.gge-mk-why-tag {
+    font-size: 12px;
+    font-weight: 800;
+    color: #0d2552;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 0 30px;
+    margin-bottom: 10px;
+}
+.gge-mk-why-tag::before, .gge-mk-why-tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background: var(--gge-gold);
+}
+.gge-mk-why-tag::before { left: 0; }
+.gge-mk-why-tag::after { right: 0; }
+.gge-mk-why-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0d2552;
+    margin: 0 0 12px 0;
+}
+.gge-mk-why-title span {
+    color: var(--gge-gold);
+}
+.gge-mk-why-desc {
+    font-size: 15px;
+    color: #5a6a85;
+    margin: 0;
+}
+.gge-mk-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+.gge-mk-stat-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(13, 37, 82, 0.08);
+    padding: 30px 20px 26px 20px;
+    border-top: 4px solid var(--gge-gold);
+    transition: all 0.3s ease;
+}
+.gge-mk-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(13, 37, 82, 0.15);
+}
+.gge-mk-stat-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #0d2552;
+    border: 3px solid var(--gge-gold);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+    font-size: 22px;
+}
+.gge-mk-stat-num {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0d2552;
+    line-height: 1;
+    margin: 0 0 8px 0;
+}
+.gge-mk-stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #5a6a85;
+    margin: 0;
+}
+
+/* 8. TESTIMONIALS SECTION (REAL STORIES, GLOBAL DREAMS) */
+.gge-mk-testi-section {
+    padding: 80px 20px 70px 20px;
+    background: #ffffff;
+    max-width: 1320px;
+    margin: 0 auto;
+    position: relative;
+}
+.gge-mk-testi-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+}
+.gge-mk-testi-badge {
+    background: #eef4fe;
+    color: #0d2552;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+.gge-mk-testi-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0d2552;
+    margin: 0 0 10px 0;
+}
+.gge-mk-testi-title span {
+    color: var(--gge-gold);
+}
+.gge-mk-testi-desc {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+.gge-mk-testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+.gge-mk-testi-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 30px 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+.gge-mk-testi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(13, 37, 82, 0.12);
+}
+.gge-mk-testi-card.featured {
+    border: 2px solid var(--gge-gold);
+    box-shadow: 0 15px 40px rgba(251, 176, 25, 0.2);
+}
+.gge-mk-verified-badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: #0d2552;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.gge-mk-quote-mark {
+    font-size: 36px;
+    color: var(--gge-gold);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+.gge-mk-quote-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1b2a4e;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+.gge-mk-student-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+}
+.gge-mk-student-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.gge-mk-student-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gge-gold);
+}
+.gge-mk-student-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0d2552;
+    margin: 0;
+}
+.gge-mk-student-sub {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+}
+.gge-mk-stars {
+    color: var(--gge-gold);
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* 9. MODERN MOCKUP FOOTER */
+.gge-mk-footer {
+    background: linear-gradient(180deg, #071735 0%, #030c1d 100%);
+    color: #cbd5e1;
+    padding: 70px 20px 25px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.gge-mk-footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr 1fr 1fr 1.3fr;
+    gap: 36px;
+    max-width: 1320px;
+    margin: 0 auto 50px auto;
+    position: relative;
+    z-index: 10;
+}
+.gge-mk-footer-col h4 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.gge-mk-footer-col h4 i {
+    color: var(--gge-gold);
+}
+.gge-mk-footer-brand p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 14px 0 20px 0;
+}
+.gge-mk-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.gge-mk-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #e2e8f0;
+}
+.gge-mk-contact-list li i {
+    color: var(--gge-gold);
+    width: 16px;
+}
+.gge-mk-social-row {
+    display: flex;
+    gap: 10px;
+}
+.gge-mk-social-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+.gge-mk-social-btn:hover {
+    background: var(--gge-gold);
+    color: #071735;
+    transform: translateY(-2px);
+}
+.gge-mk-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.gge-mk-footer-links li {
+    margin-bottom: 10px;
+}
+.gge-mk-footer-links li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.gge-mk-footer-links li a:hover {
+    color: var(--gge-gold);
+}
+.gge-mk-dest-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.gge-mk-dest-links li {
+    margin-bottom: 10px;
+}
+.gge-mk-dest-links li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
+}
+.gge-mk-dest-links li a:hover {
+    color: var(--gge-gold);
+}
+
+/* Glassmorphism Subscribe Card */
+.gge-mk-subscribe-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+.gge-mk-subscribe-card h5 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.gge-mk-subscribe-card p {
+    font-size: 12px;
+    color: #94a3b8;
+    margin: 0 0 16px 0;
+}
+.gge-mk-sub-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.gge-mk-sub-input {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+.gge-mk-sub-btn {
+    height: 42px;
+    background: var(--gge-gold);
+    color: #071735;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.gge-mk-sub-btn:hover {
+    background: #ffffff;
+    color: #071735;
+}
+
+/* Sub-footer with Rewind Button */
+.gge-mk-subfooter {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #64748b;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.gge-mk-subfooter-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.gge-mk-badges-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.gge-mk-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+.gge-mk-rewind-btn {
+    background: rgba(251, 176, 25, 0.15);
+    border: 1px solid var(--gge-gold);
+    color: var(--gge-gold);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.25s ease;
+}
+.gge-mk-rewind-btn:hover {
+    background: var(--gge-gold);
+    color: #071735;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 1199px) {
+    .gge-mk-dest-grid { grid-template-columns: repeat(3, 1fr); }
+    .gge-mk-services-row { grid-template-columns: repeat(3, 1fr); }
+    .gge-mk-footer-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 991px) {
+    .gge-mk-hero-grid { grid-template-columns: 1fr; }
+    .gge-mk-offers-grid { grid-template-columns: 1fr; }
+    .gge-mk-dual-grid { grid-template-columns: 1fr; }
+    .gge-mk-services-row { grid-template-columns: repeat(2, 1fr); }
+    .gge-mk-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .gge-mk-testi-grid { grid-template-columns: 1fr; }
+    .gge-mk-graduates-banner { flex-direction: column; text-align: center; }
+    .gge-mk-footer-grid { grid-template-columns: 1fr 1fr; }
+    .gge-mk-nav { display: none; }
+}
+
+@media (max-width: 767px) {
+    .gge-mk-header { border-radius: 25px; padding: 10px 16px; }
+    .gge-mk-whatsapp-btn { padding: 6px 12px; font-size: 11px; }
+    .gge-mk-hero-title { font-size: 32px; }
+    .gge-mk-services-row { grid-template-columns: 1fr; }
+    .gge-mk-stats-grid { grid-template-columns: 1fr; }
+    .gge-mk-dest-grid { grid-template-columns: repeat(2, 1fr); }
+    .gge-mk-footer-grid { grid-template-columns: 1fr; }
+    .gge-mk-subfooter { flex-direction: column; text-align: center; }
+}

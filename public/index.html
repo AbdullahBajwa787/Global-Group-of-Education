@@ -29,7 +29,7 @@
 <!-- Animate -->
 <link href="/assets/css/animate.css" rel="stylesheet"/>
 <!-- Custom Style -->
-<link href="/assets/css/custom.css?v=20261111_v4" rel="stylesheet"/>
+<link href="/assets/css/custom.css?v=20261112_v1" rel="stylesheet"/>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
@@ -786,23 +786,40 @@
 }
 
 
-/* Banner Slides Clean Display (Valid root paths & HQ typography overlay) */
-.banner-outer .slide1 {
-    background: url(/assets/images/banner1.jpg?v=20261111_v4) no-repeat center center / cover !important;
-}
-.banner-outer .slide2 {
-    background: url(/assets/images/banner2.jpg) no-repeat center center / cover !important;
-}
-.banner-outer .slide3 {
-    background: url(/assets/images/banner3.jpg) no-repeat center center / cover !important;
-}
-.banner-outer .slide1 .container,
-.banner-outer .slide2 .container,
-.banner-outer .slide3 .container {
-    height: 100% !important;
-    display: table !important;
-    position: relative !important;
-    z-index: 2 !important;
+/* Banner Slides Clean Display (Valid root paths & HQ typography overlay) */
+
+.banner-outer .slide1 {
+
+    background: url(/assets/images/banner1.jpg?v=20261111_v4) no-repeat center center / cover !important;
+
+}
+
+.banner-outer .slide2 {
+
+    background: url(/assets/images/banner2.jpg) no-repeat center center / cover !important;
+
+}
+
+.banner-outer .slide3 {
+
+    background: url(/assets/images/banner3.jpg) no-repeat center center / cover !important;
+
+}
+
+.banner-outer .slide1 .container,
+
+.banner-outer .slide2 .container,
+
+.banner-outer .slide3 .container {
+
+    height: 100% !important;
+
+    display: table !important;
+
+    position: relative !important;
+
+    z-index: 2 !important;
+
 }
 
 /* Left-align Apply for Free in Video Hero matching Image 1 */
@@ -1116,6 +1133,524 @@
 <!-- ======================================================== -->
 <!-- MODERN NAVIGATION HEADER (MATCHING IMAGE 1)              -->
 <!-- ======================================================== -->
+
+<!-- ======================================================================= -->
+<!-- GGE MODERN MOCKUP HOMEPAGE (ACTIVE DEFAULT VIEW)                        -->
+<!-- ======================================================================= -->
+<div id="ggeMockupHomepage" class="gge-homepage-view" style="display: block;">
+
+    <!-- TOP VIEW SWITCHER NOTICE -->
+    <div class="gge-view-switcher-bar">
+        <span><i class="fa fa-sparkles"></i> <strong>New Mockup Layout Active</strong> — All sections updated per your design specifications.</span>
+        <button type="button" class="gge-view-toggle-trigger" onclick="toggleGGEView('classic')" title="Switch to previous layout">
+            <i class="fa fa-history"></i> ↺ Rewind to Classic Layout
+        </button>
+    </div>
+
+    <!-- 1. CURVED WHITE HEADER -->
+    <header class="gge-mk-header-wrap">
+        <div class="gge-mk-header">
+            <a href="/" class="gge-mk-logo-link">
+                <img src="/assets/images/round-logo.png" alt="Global Group of Education" class="gge-mk-logo-img">
+            </a>
+            
+            <nav>
+                <ul class="gge-mk-nav">
+                    <li class="gge-mk-nav-item">
+                        <a href="/" class="gge-mk-nav-link active"><i class="fa fa-home"></i> Home</a>
+                    </li>
+                    <li class="gge-mk-nav-item">
+                        <a href="#destinations" class="gge-mk-nav-link"><i class="fa fa-globe"></i> Study Destinations <i class="fa fa-angle-down"></i></a>
+                        <ul class="gge-mk-nav-dropdown">
+                            <li><a href="/study-in-uk"><i class="fa fa-flag"></i> Study in UK</a></li>
+                            <li><a href="/study-in-usa"><i class="fa fa-flag"></i> Study in USA</a></li>
+                            <li><a href="/study-in-canada"><i class="fa fa-flag"></i> Study in Canada</a></li>
+                            <li><a href="/study-in-australia"><i class="fa fa-flag"></i> Study in Australia</a></li>
+                            <li><a href="/study-in-europe"><i class="fa fa-flag"></i> Study in Europe</a></li>
+                            <li><a href="/study-in-new-zealand"><i class="fa fa-flag"></i> Study in New Zealand</a></li>
+                        </ul>
+                    </li>
+                    <li class="gge-mk-nav-item">
+                        <a href="/courses" class="gge-mk-nav-link"><i class="fa fa-graduation-cap"></i> Courses <i class="fa fa-angle-down"></i></a>
+                        <ul class="gge-mk-nav-dropdown">
+                            <li><a href="/courses?cat=business">Business & Management</a></li>
+                            <li><a href="/courses?cat=it">Computer Science & IT</a></li>
+                            <li><a href="/courses?cat=engineering">Engineering</a></li>
+                            <li><a href="/courses?cat=health">Medicine & Health</a></li>
+                            <li><a href="/courses?cat=law">Law & Humanities</a></li>
+                        </ul>
+                    </li>
+                    <li class="gge-mk-nav-item">
+                        <a href="/our-services" class="gge-mk-nav-link"><i class="fa fa-briefcase"></i> Our Services</a>
+                    </li>
+                    <li class="gge-mk-nav-item">
+                        <a href="/about-us" class="gge-mk-nav-link"><i class="fa fa-institution"></i> About Us</a>
+                    </li>
+                    <li class="gge-mk-nav-item">
+                        <a href="/contact-us" class="gge-mk-nav-link"><i class="fa fa-phone"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="gge-mk-header-actions">
+                <a href="https://wa.me/447586589659" target="_blank" rel="noopener" class="gge-mk-whatsapp-btn">
+                    <i class="fa fa-whatsapp"></i> +44 7586589659
+                </a>
+                <a href="/login" class="gge-mk-login-btn">
+                    <i class="fa fa-user"></i> Student Login
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION WITH LONDON BACKDROP & CONSULTATION CARD -->
+    <section class="gge-mk-hero-section">
+        <div class="gge-mk-hero-bg-overlay"></div>
+        <div class="gge-mk-hero-grid">
+            <!-- Left Hero Content -->
+            <div class="gge-mk-hero-left">
+                <span class="gge-mk-hero-tag">Welcome and Join Us for Success</span>
+                <h1 class="gge-mk-hero-title">Your Gateway to Studying Abroad</h1>
+                <p class="gge-mk-hero-desc">
+                    Global Group of Education offers complete admission services for Australia, Canada, Europe, UK, USA and other countries.
+                </p>
+                
+                <div class="gge-mk-hero-btns">
+                    <a href="/contact-us" class="gge-mk-btn-primary">
+                        <i class="fa fa-user"></i> Be a Partner &rarr;
+                    </a>
+                    <a href="#ggeConsultationForm" class="gge-mk-btn-secondary">
+                        <i class="fa fa-graduation-cap"></i> Be a Student &rarr;
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="gge-mk-hero-trust">
+                    <div class="gge-mk-trust-item">
+                        <i class="fa fa-shield gge-mk-trust-icon"></i>
+                        <span>British Council Certified Consultants</span>
+                    </div>
+                    <div class="gge-mk-trust-item">
+                        <i class="fa fa-institution gge-mk-trust-icon"></i>
+                        <span>Official Representatives of Top Universities</span>
+                    </div>
+                    <div class="gge-mk-trust-item">
+                        <i class="fa fa-users gge-mk-trust-icon"></i>
+                        <span>Trusted by Students Worldwide</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Floating Consultation Card -->
+            <div class="gge-mk-hero-right">
+                <div class="gge-mk-form-card" id="ggeConsultationForm">
+                    <div class="gge-mk-form-header">
+                        <h3><i class="fa fa-paper-plane" style="color: #fbb019;"></i> Start Your Study Journey</h3>
+                        <p>Get expert guidance and personalized advice today!</p>
+                    </div>
+
+                    <form id="ggeHeroConsultForm" onsubmit="handleConsultationSubmit(event)">
+                        <div class="gge-mk-form-group">
+                            <select id="ggeFormDest" required>
+                                <option value="" disabled selected>Select Destination</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="USA">United States</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Europe">Europe</option>
+                                <option value="New Zealand">New Zealand</option>
+                            </select>
+                        </div>
+                        <div class="gge-mk-form-group">
+                            <select id="ggeFormCourse" required>
+                                <option value="" disabled selected>Select Course</option>
+                                <option value="Business">Business & Management</option>
+                                <option value="IT">Computer Science & IT</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Health">Medicine & Health Sciences</option>
+                                <option value="Law">Law & Humanities</option>
+                                <option value="Other">Other Degree</option>
+                            </select>
+                        </div>
+                        <div class="gge-mk-form-group">
+                            <input type="email" id="ggeFormEmail" placeholder="Your Email Address" required>
+                        </div>
+                        <div class="gge-mk-form-group">
+                            <input type="tel" id="ggeFormPhone" placeholder="Your Phone Number" required>
+                        </div>
+                        <button type="submit" class="gge-mk-form-submit">
+                            Get Free Consultation &rarr;
+                        </button>
+                        <div id="ggeFormSuccessMsg" class="gge-mk-form-success">
+                            <i class="fa fa-check-circle"></i> Thank you! Our senior advisor will reach out to you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FLOATING FEATURES PILL BAR -->
+    <div class="gge-mk-features-bar-wrap">
+        <div class="gge-mk-features-bar">
+            <div class="gge-mk-feature-item">
+                <i class="fa fa-globe gge-mk-feature-icon"></i>
+                <span>Top Study Destinations</span>
+            </div>
+            <div class="gge-mk-feature-divider"></div>
+            <div class="gge-mk-feature-item">
+                <i class="fa fa-institution gge-mk-feature-icon"></i>
+                <span>World-Class Universities</span>
+            </div>
+            <div class="gge-mk-feature-divider"></div>
+            <div class="gge-mk-feature-item">
+                <i class="fa fa-book gge-mk-feature-icon"></i>
+                <span>Expert Counselling</span>
+            </div>
+            <div class="gge-mk-feature-divider"></div>
+            <div class="gge-mk-feature-item">
+                <i class="fa fa-file-text-o gge-mk-feature-icon"></i>
+                <span>Visa Guidance</span>
+            </div>
+            <div class="gge-mk-feature-divider"></div>
+            <div class="gge-mk-feature-item">
+                <i class="fa fa-headphones gge-mk-feature-icon"></i>
+                <span>Ongoing Support</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. WHAT GLOBAL GROUP OF EDUCATION OFFERS? -->
+    <section class="gge-mk-offers-section">
+        <div class="gge-mk-offers-grid">
+            <div class="gge-mk-offers-left">
+                <h2>What Global Group of Education Offers?</h2>
+                <p>From university selection to visa support, we're with you at every step of your international academic journey.</p>
+                <a href="/our-services" class="gge-mk-btn-primary" style="padding: 10px 24px; font-size: 14px;">
+                    Explore Our Services &rarr;
+                </a>
+            </div>
+
+            <div class="gge-mk-services-row">
+                <div class="gge-mk-service-card">
+                    <div class="gge-mk-service-icon"><i class="fa fa-graduation-cap"></i></div>
+                    <h4 class="gge-mk-service-title">Admission Guidance</h4>
+                </div>
+                <div class="gge-mk-service-card">
+                    <div class="gge-mk-service-icon"><i class="fa fa-institution"></i></div>
+                    <h4 class="gge-mk-service-title">University Selection</h4>
+                </div>
+                <div class="gge-mk-service-card">
+                    <div class="gge-mk-service-icon"><i class="fa fa-file-text"></i></div>
+                    <h4 class="gge-mk-service-title">Application Processing</h4>
+                </div>
+                <div class="gge-mk-service-card">
+                    <div class="gge-mk-service-icon"><i class="fa fa-id-card"></i></div>
+                    <h4 class="gge-mk-service-title">Visa Guidance</h4>
+                </div>
+                <div class="gge-mk-service-card">
+                    <div class="gge-mk-service-icon"><i class="fa fa-plane"></i></div>
+                    <h4 class="gge-mk-service-title">Pre-Departure Support</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DUAL ROW: DESTINATIONS & UNIVERSITIES -->
+    <section class="gge-mk-dual-section">
+        <div class="gge-mk-dual-grid">
+            <!-- Left: Top Study Destinations (6 Cards) -->
+            <div class="gge-mk-box-card">
+                <div class="gge-mk-box-header">
+                    <div>
+                        <h3>Top Study Destinations</h3>
+                        <p>Explore world-class education in your dream country.</p>
+                    </div>
+                    <a href="#destinations" class="gge-mk-view-btn">View All Destinations &rarr;</a>
+                </div>
+
+                <div class="gge-mk-dest-grid">
+                    <a href="/study-in-uk" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/uk.jpg');">
+                        <div class="gge-mk-dest-badge"><span>🇬🇧 UK</span> <span>&rarr;</span></div>
+                    </a>
+                    <a href="/study-in-europe" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/europe.jpg');">
+                        <div class="gge-mk-dest-badge"><span>🇪🇺 Europe</span> <span>&rarr;</span></div>
+                    </a>
+                    <a href="/study-in-australia" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/australia.jpg');">
+                        <div class="gge-mk-dest-badge"><span>🇦🇺 Australia</span> <span>&rarr;</span></div>
+                    </a>
+                    <a href="/study-in-canada" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/canada.jpg');">
+                        <div class="gge-mk-dest-badge"><span>🇨🇦 Canada</span> <span>&rarr;</span></div>
+                    </a>
+                    <a href="/study-in-new-zealand" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/newzealand.jpg');">
+                        <div class="gge-mk-dest-badge"><span>🇳🇿 New Zealand</span> <span>&rarr;</span></div>
+                    </a>
+                    <a href="#destinations" class="gge-mk-dest-item" style="background: linear-gradient(135deg, #102e68 0%, #071735 100%); justify-content: center; align-items: center; text-align: center;">
+                        <i class="fa fa-globe" style="font-size: 28px; color: #fbb019; margin-bottom: 8px;"></i>
+                        <span style="color: #ffffff; font-size: 12px; font-weight: 700;">&amp; More...</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: World-Class Universities (4 Logos) -->
+            <div class="gge-mk-box-card">
+                <div class="gge-mk-box-header">
+                    <div>
+                        <h3>World-Class Universities</h3>
+                        <p>Get admission to prestigious institutions across the globe.</p>
+                    </div>
+                    <a href="/courses" class="gge-mk-view-btn">View Our Partners &rarr;</a>
+                </div>
+
+                <div class="gge-mk-unis-grid">
+                    <div class="gge-mk-uni-card">
+                        <img src="/assets/images/mockup/portsmouth.png" alt="University of Portsmouth">
+                    </div>
+                    <div class="gge-mk-uni-card">
+                        <img src="/assets/images/mockup/abertay.png" alt="Abertay University">
+                    </div>
+                    <div class="gge-mk-uni-card">
+                        <img src="/assets/images/mockup/queens_belfast.png" alt="Queen's University Belfast">
+                    </div>
+                    <div class="gge-mk-uni-card">
+                        <img src="/assets/images/mockup/heriot_watt.png" alt="Heriot-Watt University">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. EXPLORE THE WORLD OF OUR GRADUATES -->
+    <section class="gge-mk-graduates-section">
+        <div class="gge-mk-graduates-banner">
+            <div class="gge-mk-graduates-left">
+                <span class="gge-mk-graduates-tag">Explore the World of</span>
+                <h2 class="gge-mk-graduates-title">OUR GRADUATES</h2>
+                <p class="gge-mk-graduates-desc">
+                    Join thousands of successful students who chose to study abroad with us and built rewarding global careers across the UK, Europe, Australia, and North America.
+                </p>
+                <a href="/about-us" class="gge-mk-btn-primary">
+                    Read Success Stories &rarr;
+                </a>
+            </div>
+            <div class="gge-mk-graduates-right">
+                <img src="/assets/images/user-graduates-banner.jpg" alt="Successful International Students">
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. WHY CHOOSE US STATS BANNER -->
+    <section class="gge-mk-why-section">
+        <div class="gge-mk-why-header">
+            <span class="gge-mk-why-tag">GLOBAL GROUP OF EDUCATION</span>
+            <h2 class="gge-mk-why-title">Why <span>Choose Us</span></h2>
+            <p class="gge-mk-why-desc">Your ambitions deserve the right guidance, the right university and the right opportunities.</p>
+        </div>
+
+        <div class="gge-mk-stats-grid">
+            <div class="gge-mk-stat-card">
+                <div class="gge-mk-stat-icon-wrap"><i class="fa fa-book"></i></div>
+                <h3 class="gge-mk-stat-num">691+</h3>
+                <p class="gge-mk-stat-label">Courses Available</p>
+            </div>
+            <div class="gge-mk-stat-card">
+                <div class="gge-mk-stat-icon-wrap"><i class="fa fa-users"></i></div>
+                <h3 class="gge-mk-stat-num">3,935+</h3>
+                <p class="gge-mk-stat-label">Students Enrolled</p>
+            </div>
+            <div class="gge-mk-stat-card">
+                <div class="gge-mk-stat-icon-wrap"><i class="fa fa-institution"></i></div>
+                <h3 class="gge-mk-stat-num">100%</h3>
+                <p class="gge-mk-stat-label">University Application Support</p>
+            </div>
+            <div class="gge-mk-stat-card">
+                <div class="gge-mk-stat-icon-wrap"><i class="fa fa-handshake-o"></i></div>
+                <h3 class="gge-mk-stat-num">99.9%</h3>
+                <p class="gge-mk-stat-label">Student &amp; Parent Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. REAL STORIES, GLOBAL DREAMS (TESTIMONIALS) -->
+    <section class="gge-mk-testi-section">
+        <div class="gge-mk-testi-header">
+            <span class="gge-mk-testi-badge"><i class="fa fa-star" style="color: #fbb019;"></i> Student Experiences</span>
+            <h2 class="gge-mk-testi-title">Real Stories, <span>Global Dreams</span></h2>
+            <p class="gge-mk-testi-desc">Hear from our students who made their study abroad dreams a reality with GGE.</p>
+        </div>
+
+        <div class="gge-mk-testi-grid">
+            <!-- Testimonial 1 -->
+            <div class="gge-mk-testi-card">
+                <div>
+                    <div class="gge-mk-quote-mark">&ldquo;</div>
+                    <p class="gge-mk-quote-text">
+                        GGE made my study abroad journey smooth and stress-free. Their guidance and support were exceptional!
+                    </p>
+                </div>
+                <div class="gge-mk-student-footer">
+                    <div class="gge-mk-student-info">
+                        <img src="/assets/images/testimonials/student1.jpg" alt="Ayesha Khan" class="gge-mk-student-avatar">
+                        <div>
+                            <h5 class="gge-mk-student-name">Ayesha Khan</h5>
+                            <p class="gge-mk-student-sub">🇬🇧 UK &bull; University of Portsmouth</p>
+                        </div>
+                    </div>
+                    <div class="gge-mk-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 (Featured with Verified Badge) -->
+            <div class="gge-mk-testi-card featured">
+                <div class="gge-mk-verified-badge"><i class="fa fa-shield"></i> Verified Student</div>
+                <div>
+                    <div class="gge-mk-quote-mark">&ldquo;</div>
+                    <p class="gge-mk-quote-text">
+                        Professional, reliable and truly supportive! I got admission to my dream university with their help.
+                    </p>
+                </div>
+                <div class="gge-mk-student-footer">
+                    <div class="gge-mk-student-info">
+                        <img src="/assets/images/testimonials/student2.jpg" alt="Muhammad Ali" class="gge-mk-student-avatar">
+                        <div>
+                            <h5 class="gge-mk-student-name">Muhammad Ali</h5>
+                            <p class="gge-mk-student-sub">🇬🇧 UK &bull; University of Hertfordshire</p>
+                        </div>
+                    </div>
+                    <div class="gge-mk-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="gge-mk-testi-card">
+                <div>
+                    <div class="gge-mk-quote-mark">&ldquo;</div>
+                    <p class="gge-mk-quote-text">
+                        A great experience with GGE. Their team is always there to guide and support at every step.
+                    </p>
+                </div>
+                <div class="gge-mk-student-footer">
+                    <div class="gge-mk-student-info">
+                        <img src="/assets/images/testimonials/student3.jpg" alt="Sara Ahmed" class="gge-mk-student-avatar">
+                        <div>
+                            <h5 class="gge-mk-student-name">Sara Ahmed</h5>
+                            <p class="gge-mk-student-sub">🇦🇺 Australia &bull; Macquarie University</p>
+                        </div>
+                    </div>
+                    <div class="gge-mk-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. MODERN MOCKUP FOOTER WITH 5 COLUMNS & REWIND OPTION -->
+    <footer class="gge-mk-footer">
+        <div class="gge-mk-footer-grid">
+            <!-- Col 1: Brand & Contacts -->
+            <div class="gge-mk-footer-col gge-mk-footer-brand">
+                <img src="/assets/images/round-logo.png" alt="Global Group of Education" style="height: 52px; width: auto; margin-bottom: 8px;">
+                <h4 style="margin: 0; color: #ffffff; font-size: 15px;">GLOBAL GROUP OF EDUCATION</h4>
+                <span style="font-size: 12px; color: #fbb019; font-weight: 600;">Your Study Abroad Partner</span>
+                <p>Guiding you towards a brighter future with world-class education, expert consultancy and personalized support.</p>
+                
+                <ul class="gge-mk-contact-list">
+                    <li><i class="fa fa-phone"></i> +44 7586589659</li>
+                    <li><i class="fa fa-envelope"></i> london@globalgroupofeducation.com</li>
+                    <li><i class="fa fa-map-marker"></i> Canary Wharf, London, UK</li>
+                </ul>
+
+                <div class="gge-mk-social-row">
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="gge-mk-social-btn"><i class="fa fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="gge-mk-social-btn"><i class="fa fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="gge-mk-social-btn"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" class="gge-mk-social-btn"><i class="fa fa-youtube"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="gge-mk-social-btn"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="gge-mk-footer-col">
+                <h4><i class="fa fa-graduation-cap"></i> Quick Links</h4>
+                <ul class="gge-mk-footer-links">
+                    <li><a href="/our-services">&rsaquo; Our Services</a></li>
+                    <li><a href="#destinations">&rsaquo; Study Destinations</a></li>
+                    <li><a href="/courses">&rsaquo; Universities</a></li>
+                    <li><a href="/about-us">&rsaquo; Application Process</a></li>
+                    <li><a href="/our-services">&rsaquo; Visa Guidance</a></li>
+                    <li><a href="/contact-us">&rsaquo; FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Popular Destinations -->
+            <div class="gge-mk-footer-col">
+                <h4><i class="fa fa-star"></i> Popular Destinations</h4>
+                <ul class="gge-mk-dest-links">
+                    <li><a href="/study-in-uk"><span>🇬🇧</span> UK</a></li>
+                    <li><a href="/study-in-europe"><span>🇪🇺</span> Europe</a></li>
+                    <li><a href="/study-in-australia"><span>🇦🇺</span> Australia</a></li>
+                    <li><a href="/study-in-canada"><span>🇨🇦</span> Canada</a></li>
+                    <li><a href="/study-in-new-zealand"><span>🇳🇿</span> New Zealand</a></li>
+                    <li><a href="/study-in-usa"><span>🇺🇸</span> USA</a></li>
+                    <li><a href="/contact-us"><span>🇦🇪</span> Dubai</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Useful Resources -->
+            <div class="gge-mk-footer-col">
+                <h4><i class="fa fa-handshake-o"></i> Useful Resources</h4>
+                <ul class="gge-mk-footer-links">
+                    <li><a href="/about-us">&rsaquo; Student Resources</a></li>
+                    <li><a href="/courses">&rsaquo; Scholarships</a></li>
+                    <li><a href="/contact-us">&rsaquo; Upcoming Intakes</a></li>
+                    <li><a href="/contact-us">&rsaquo; Events &amp; Webinars</a></li>
+                    <li><a href="/contact-us">&rsaquo; Become Our Partner</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 5: Stay Connected Card -->
+            <div class="gge-mk-footer-col">
+                <div class="gge-mk-subscribe-card">
+                    <h5><i class="fa fa-paper-plane" style="color: #fbb019;"></i> Stay Connected</h5>
+                    <p>Get the latest updates, study tips and exclusive opportunities.</p>
+                    <form class="gge-mk-sub-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to GGE updates!');">
+                        <input type="email" placeholder="Your Email Address" required class="gge-mk-sub-input">
+                        <button type="submit" class="gge-mk-sub-btn">Subscribe &rarr;</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub-footer with Rewind Button -->
+        <div class="gge-mk-subfooter">
+            <div class="gge-mk-subfooter-left">
+                <span>&copy; 2026 Global Group of Education. All Rights Reserved. | Study Abroad. Build a Global Career.</span>
+                <button type="button" class="gge-mk-rewind-btn" onclick="toggleGGEView('classic')" title="Rewind back to the previous layout">
+                    <i class="fa fa-history"></i> ↺ Rewind to Classic Layout
+                </button>
+            </div>
+            
+            <div class="gge-mk-badges-row">
+                <span class="gge-mk-badge-item"><i class="fa fa-shield" style="color: #fbb019;"></i> Trusted Consultant</span>
+                <span class="gge-mk-badge-item"><i class="fa fa-cc-visa"></i> VISA</span>
+                <span class="gge-mk-badge-item"><i class="fa fa-cc-mastercard"></i> Mastercard</span>
+                <span class="gge-mk-badge-item"><i class="fa fa-lock"></i> Secured by SSL</span>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- END GGE MODERN MOCKUP HOMEPAGE -->
+
+
+<!-- ======================================================================= -->
+<!-- GGE CLASSIC HOMEPAGE (PRESERVED FOR REWIND OPTION)                      -->
+<!-- ======================================================================= -->
+<div id="ggeClassicHomepage" class="gge-homepage-view" style="display: none;">
+    <div class="gge-view-switcher-bar" style="background: #102e68;">
+        <span><i class="fa fa-history"></i> <strong>Classic Layout Active</strong> — You are viewing the previous version.</span>
+        <button type="button" class="gge-view-toggle-trigger" onclick="toggleGGEView('mockup')" title="Switch to new modern design">
+            <i class="fa fa-sparkles"></i> Switch to New Mockup Design &rarr;
+        </button>
+    </div>
 <header class="modern-site-header" id="mainHeader">
 <div class="container modern-header-container">
 <!-- Round Circular Logo -->
@@ -2796,6 +3331,9 @@
 <!-- End Footer Bottom -->
 </div>
 </footer>
+</div>
+<!-- END GGE CLASSIC HOMEPAGE -->
+
 <!-- End Footer -->
 <!-- Scroll to top -->
 <a class="scroll-top" href="#"><i aria-hidden="true" class="fa fa-chevron-up"></i></a> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
