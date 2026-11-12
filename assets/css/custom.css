@@ -9009,3 +9009,72 @@ a.btn-circle:hover {
         margin: 0 auto !important;
     }
 }
+
+
+
+/* ======================================================== */
+/* WORLD-CLASS UNIVERSITIES 8-CARD PATTERN (IMAGE 1 & 2)    */
+/* ======================================================== */
+.gge-mk-unis-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px !important;
+}
+
+.gge-mk-uni-item {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    padding: 10px 6px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.25s ease !important;
+    min-height: 98px !important;
+    box-sizing: border-box !important;
+}
+
+.gge-mk-uni-item:hover {
+    border-color: #fbb019 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(13, 37, 82, 0.12) !important;
+    text-decoration: none !important;
+}
+
+.gge-mk-uni-logo-box {
+    height: 48px !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 6px !important;
+}
+
+.gge-mk-uni-logo-box img {
+    max-height: 44px !important;
+    max-width: 90% !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.gge-mk-uni-name {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #1b2a4e !important;
+    line-height: 1.25 !important;
+    display: block !important;
+    margin: 0 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+}
+
+@media (max-width: 575px) {
+    .gge-mk-unis-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
