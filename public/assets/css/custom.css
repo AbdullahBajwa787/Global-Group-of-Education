@@ -9078,3 +9078,445 @@ a.btn-circle:hover {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
+
+
+
+/* ========================================================================== */
+/* GGE ULTRA-MODERN PREMIUM ENHANCEMENTS (EXECUTIVE LEVEL)                    */
+/* ========================================================================== */
+
+/* 1. Executive Announcement Bar */
+.gge-top-announcement-bar {
+    background: linear-gradient(90deg, #071735 0%, #0d2552 60%, #0a1e42 100%);
+    color: #ffffff;
+    font-size: 12.5px;
+    padding: 7px 20px;
+    border-bottom: 1px solid rgba(251, 176, 25, 0.35);
+    position: relative;
+    z-index: 1001;
+}
+.gge-announcement-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.gge-announcement-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.gge-badge-live {
+    background: #e11d48;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    animation: ggePulseBadge 2s infinite;
+}
+.gge-badge-live i {
+    font-size: 6px;
+}
+@keyframes ggePulseBadge {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(0.96); }
+}
+.gge-announcement-text {
+    color: #e2e8f0;
+    font-weight: 400;
+}
+.gge-announcement-text strong {
+    color: #fbb019;
+}
+.gge-announcement-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.gge-top-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+.gge-top-link:hover {
+    color: #fbb019;
+    text-decoration: none;
+}
+.gge-top-sep {
+    color: rgba(255, 255, 255, 0.2);
+}
+.gge-rewind-mini-btn {
+    background: rgba(251, 176, 25, 0.15);
+    border: 1px solid rgba(251, 176, 25, 0.6);
+    color: #fbb019;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.gge-rewind-mini-btn:hover {
+    background: #fbb019;
+    color: #071735;
+}
+
+/* 2. Mobile Menu Hamburger & Drawer */
+.gge-mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+.gge-mobile-nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #0d2552;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.gge-mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 300px;
+    height: 100%;
+    background: #ffffff;
+    z-index: 10000;
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.2);
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    box-sizing: border-box;
+}
+.gge-mobile-drawer.active {
+    right: 0;
+}
+.gge-drawer-backdrop {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(7, 23, 53, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.gge-drawer-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.gge-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+.gge-drawer-close {
+    background: #f1f5f9;
+    border: none;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #0d2552;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+.gge-drawer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+.gge-drawer-nav li {
+    margin-bottom: 8px;
+}
+.gge-drawer-nav li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1b2a4e;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.gge-drawer-nav li a i {
+    width: 18px;
+    color: #fbb019;
+}
+.gge-drawer-nav li a:hover, .gge-drawer-nav li a.active {
+    background: #f0f4fa;
+    color: #0d2552;
+}
+
+/* 3. Consultation Form Field Icons */
+.gge-has-icon {
+    position: relative !important;
+}
+.gge-field-icon {
+    position: absolute !important;
+    left: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #0d2552 !important;
+    font-size: 14px !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+}
+.gge-has-icon select, .gge-has-icon input {
+    padding-left: 36px !important;
+    font-weight: 500 !important;
+}
+
+/* 4. Enriched Destination Cards (Luxury Styling) */
+.gge-mk-dest-item {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.gge-dest-overlay {
+    position: absolute !important;
+    top: 0; left: 0; width: 100% !important; height: 100% !important;
+    background: linear-gradient(180deg, rgba(0,0,0,0.05) 30%, rgba(9, 28, 62, 0.92) 100%) !important;
+    transition: background 0.3s ease !important;
+    z-index: 2 !important;
+}
+.gge-dest-top-tag {
+    position: absolute !important;
+    top: 10px !important;
+    left: 8px !important;
+    background: rgba(7, 23, 53, 0.85) !important;
+    color: #fbb019 !important;
+    font-size: 9.5px !important;
+    font-weight: 700 !important;
+    padding: 3px 7px !important;
+    border-radius: 5px !important;
+    letter-spacing: 0.3px !important;
+    z-index: 4 !important;
+    border: 1px solid rgba(251, 176, 25, 0.3) !important;
+}
+.gge-mk-dest-badge {
+    position: relative !important;
+    z-index: 5 !important;
+    background: rgba(13, 37, 82, 0.9) !important;
+    backdrop-filter: blur(4px) !important;
+    padding: 6px 10px !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+.gge-dest-name {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+}
+.gge-dest-more-card {
+    background: linear-gradient(135deg, #102e68 0%, #071735 100%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 16px 8px !important;
+    border: 2px dashed rgba(251, 176, 25, 0.5) !important;
+}
+.gge-dest-more-inner i {
+    font-size: 26px !important;
+    color: #fbb019 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+.gge-dest-more-inner strong {
+    font-size: 11px !important;
+    color: #ffffff !important;
+    display: block !important;
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+}
+.gge-view-pill {
+    background: #fbb019 !important;
+    color: #071735 !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    padding: 4px 10px !important;
+    border-radius: 12px !important;
+    display: inline-block !important;
+}
+
+/* 5. Smooth Continuous Marquee Ticker */
+.gge-partner-marquee-wrap {
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 1320px;
+    margin: 0 auto 30px auto;
+}
+.gge-marquee-label {
+    background: #0d2552;
+    color: #fbb019;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    border-radius: 0 20px 20px 0;
+    white-space: nowrap;
+    z-index: 5;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.08);
+}
+.gge-partner-track-scroll {
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
+    position: relative;
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.gge-partner-track {
+    display: inline-flex;
+    gap: 16px;
+    animation: ggeMarqueeScroll 35s linear infinite;
+}
+.gge-partner-track:hover {
+    animation-play-state: paused;
+}
+.gge-partner-tag {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #1b2a4e;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+.gge-partner-tag i {
+    color: #fbb019;
+}
+.gge-partner-tag:hover {
+    border-color: #fbb019;
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+@keyframes ggeMarqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* 6. Animated Stats Counter Sub-labels */
+.gge-stat-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    display: block;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* 7. Pulsing Floating WhatsApp Widget */
+.gge-floating-whatsapp-wrap {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 9998;
+}
+.gge-floating-wa-btn {
+    width: 58px;
+    height: 58px;
+    background: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    position: relative;
+    transition: all 0.3s ease;
+}
+.gge-floating-wa-btn:hover {
+    background: #1ebc59;
+    color: #ffffff;
+    transform: scale(1.08);
+}
+.gge-wa-pulse-ring {
+    position: absolute;
+    top: -5px; left: -5px; right: -5px; bottom: -5px;
+    border: 2px solid #25d366;
+    border-radius: 50%;
+    animation: ggeWaPulse 2s infinite;
+}
+@keyframes ggeWaPulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    100% { transform: scale(1.4); opacity: 0; }
+}
+.gge-wa-tooltip {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0d2552;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    white-space: nowrap;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+.gge-wa-tooltip strong {
+    display: block;
+    font-size: 12px;
+    color: #fbb019;
+}
+.gge-wa-tooltip span {
+    font-size: 10.5px;
+    color: #cbd5e1;
+}
+.gge-floating-whatsapp-wrap:hover .gge-wa-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(4px);
+}
+
+@media (max-width: 991px) {
+    .gge-mobile-nav-toggle {
+        display: flex !important;
+    }
+    .gge-top-announcement-bar {
+        display: none;
+    }
+}

@@ -878,3 +878,80 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleGGEView('mockup');
     }
 });
+
+
+
+/* ========================================================================== */
+/* GGE INTERACTIVE CONTROLLERS (COUNTERS, MOBILE DRAWER, FORM)                */
+/* ========================================================================== */
+
+// 1. Mobile Menu Drawer Controller
+document.addEventListener('DOMContentLoaded', function() {
+    var menuBtn = document.getElementById('ggeMobileMenuBtn');
+    var drawer = document.getElementById('ggeMobileDrawer');
+    var closeBtn = document.getElementById('ggeDrawerCloseBtn');
+    var backdrop = document.getElementById('ggeDrawerBackdrop');
+
+    function openDrawer() {
+        if (drawer) drawer.classList.add('active');
+        if (backdrop) backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+        if (drawer) drawer.classList.remove('active');
+        if (backdrop) backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+    // Close on any drawer link click
+    var drawerLinks = document.querySelectorAll('.gge-drawer-nav a');
+    drawerLinks.forEach(function(link) {
+        link.addEventListener('click', closeDrawer);
+    });
+});
+
+// 2. Animated Stats Counter (Scroll Triggered)
+document.addEventListener('DOMContentLoaded', function() {
+    var counters = document.querySelectorAll('.gge-counter');
+    if (!counters.length) return;
+
+    var animated = false;
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && !animated) {
+                animated = true;
+                counters.forEach(function(counter) {
+                    var target = parseFloat(counter.getAttribute('data-target'));
+                    var isDecimal = counter.getAttribute('data-decimal') === '1';
+                    var duration = 1500;
+                    var startTime = null;
+
+                    function animateCount(timestamp) {
+                        if (!startTime) startTime = timestamp;
+                        var progress = Math.min((timestamp - startTime) / duration, 1);
+                        var current = progress * target;
+                        if (isDecimal) {
+                            counter.innerText = current.toFixed(1);
+                        } else {
+                            counter.innerText = Math.floor(current).toLocaleString();
+                        }
+                        if (progress < 1) {
+                            requestAnimationFrame(animateCount);
+                        } else {
+                            counter.innerText = isDecimal ? target.toFixed(1) : target.toLocaleString();
+                        }
+                    }
+                    requestAnimationFrame(animateCount);
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+
+    var statsContainer = document.getElementById('ggeStatsContainer');
+    if (statsContainer) observer.observe(statsContainer);
+});

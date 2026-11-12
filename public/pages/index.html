@@ -1139,12 +1139,25 @@
 <!-- ======================================================================= -->
 <div id="ggeMockupHomepage" class="gge-homepage-view" style="display: block;">
 
-    <!-- TOP VIEW SWITCHER NOTICE -->
-    <div class="gge-view-switcher-bar">
-        <span><i class="fa fa-sparkles"></i> <strong>New Mockup Layout Active</strong> — All sections updated per your design specifications.</span>
-        <button type="button" class="gge-view-toggle-trigger" onclick="toggleGGEView('classic')" title="Switch to previous layout">
-            <i class="fa fa-history"></i> ↺ Rewind to Classic Layout
-        </button>
+    <!-- EXECUTIVE TOP ANNOUNCEMENT BAR -->
+    <div class="gge-top-announcement-bar">
+        <div class="gge-announcement-container">
+            <div class="gge-announcement-left">
+                <span class="gge-badge-live"><i class="fa fa-circle"></i> ADMISSIONS OPEN</span>
+                <span class="gge-announcement-text">
+                    Applications Open for <strong>2026 / 2027 Intakes</strong> — UK, Canada, Australia, Europe &amp; USA. Free Visa &amp; Scholarship Assessment!
+                </span>
+            </div>
+            <div class="gge-announcement-right">
+                <a href="tel:+447586589659" class="gge-top-link"><i class="fa fa-phone"></i> +44 7586589659</a>
+                <span class="gge-top-sep">|</span>
+                <a href="mailto:london@globalgroupofeducation.com" class="gge-top-link"><i class="fa fa-envelope"></i> london@globalgroupofeducation.com</a>
+                <span class="gge-top-sep">|</span>
+                <button type="button" class="gge-rewind-mini-btn" onclick="toggleGGEView('classic')" title="Switch to previous layout">
+                    <i class="fa fa-history"></i> ↺ Classic View
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- 1. CURVED WHITE HEADER -->
@@ -1199,9 +1212,38 @@
                 <a href="/login" class="gge-mk-login-btn">
                     <i class="fa fa-user"></i> Student Login
                 </a>
+                <!-- Mobile Menu Hamburger Trigger -->
+                <button type="button" class="gge-mobile-nav-toggle" id="ggeMobileMenuBtn" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div class="gge-mobile-drawer" id="ggeMobileDrawer">
+        <div class="gge-drawer-header">
+            <img src="/assets/images/round-logo.png" alt="GGE Logo" style="height: 44px;">
+            <button type="button" class="gge-drawer-close" id="ggeDrawerCloseBtn">&times;</button>
+        </div>
+        <ul class="gge-drawer-nav">
+            <li><a href="/" class="active"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#destinations"><i class="fa fa-globe"></i> Study Destinations</a></li>
+            <li><a href="/courses"><i class="fa fa-graduation-cap"></i> Courses</a></li>
+            <li><a href="/our-services"><i class="fa fa-briefcase"></i> Our Services</a></li>
+            <li><a href="/about-us"><i class="fa fa-institution"></i> About Us</a></li>
+            <li><a href="/contact-us"><i class="fa fa-phone"></i> Contact Us</a></li>
+        </ul>
+        <div class="gge-drawer-cta">
+            <a href="/login" class="gge-mk-login-btn" style="width: 100%; justify-content: center; margin-bottom: 10px;">
+                <i class="fa fa-user"></i> Student Login
+            </a>
+            <a href="https://wa.me/447586589659" target="_blank" rel="noopener" class="gge-mk-whatsapp-btn" style="width: 100%; justify-content: center;">
+                <i class="fa fa-whatsapp"></i> WhatsApp UK Counsellor
+            </a>
+        </div>
+    </div>
+    <div class="gge-drawer-backdrop" id="ggeDrawerBackdrop"></div>
+
 
     <!-- 2. HERO SECTION WITH BACKGROUND VIDEO & COMPACT CONSULTATION CARD -->
     <section class="gge-mk-hero-section">
@@ -1256,39 +1298,43 @@
                     </div>
 
                     <form id="ggeHeroConsultForm" onsubmit="handleConsultationSubmit(event)">
-                        <div class="gge-mk-form-group">
+                        <div class="gge-mk-form-group gge-has-icon">
+                            <i class="fa fa-globe gge-field-icon"></i>
                             <select id="ggeFormDest" required>
-                                <option value="" disabled selected>Select Destination</option>
-                                <option value="UK">United Kingdom</option>
-                                <option value="USA">United States</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Europe">Europe</option>
-                                <option value="New Zealand">New Zealand</option>
+                                <option value="" disabled selected>Select Preferred Country</option>
+                                <option value="UK">🇬🇧 United Kingdom</option>
+                                <option value="USA">🇺🇸 United States</option>
+                                <option value="Canada">🇨🇦 Canada</option>
+                                <option value="Australia">🇦🇺 Australia</option>
+                                <option value="Europe">🇪🇺 Europe</option>
+                                <option value="New Zealand">🇳🇿 New Zealand</option>
                             </select>
                         </div>
-                        <div class="gge-mk-form-group">
+                        <div class="gge-mk-form-group gge-has-icon">
+                            <i class="fa fa-graduation-cap gge-field-icon"></i>
                             <select id="ggeFormCourse" required>
-                                <option value="" disabled selected>Select Course</option>
-                                <option value="Business">Business & Management</option>
-                                <option value="IT">Computer Science & IT</option>
-                                <option value="Engineering">Engineering</option>
-                                <option value="Health">Medicine & Health Sciences</option>
-                                <option value="Law">Law & Humanities</option>
-                                <option value="Other">Other Degree</option>
+                                <option value="" disabled selected>Select Level &amp; Subject</option>
+                                <option value="Business">Business &amp; Management</option>
+                                <option value="IT">Computer Science, AI &amp; IT</option>
+                                <option value="Engineering">Engineering &amp; Robotics</option>
+                                <option value="Health">Medicine &amp; Health Sciences</option>
+                                <option value="Law">Law, Humanities &amp; Arts</option>
+                                <option value="Other">Other Specialized Program</option>
                             </select>
                         </div>
-                        <div class="gge-mk-form-group">
+                        <div class="gge-mk-form-group gge-has-icon">
+                            <i class="fa fa-envelope-o gge-field-icon"></i>
                             <input type="email" id="ggeFormEmail" placeholder="Your Email Address" required>
                         </div>
-                        <div class="gge-mk-form-group">
-                            <input type="tel" id="ggeFormPhone" placeholder="Your Phone Number" required>
+                        <div class="gge-mk-form-group gge-has-icon">
+                            <i class="fa fa-phone gge-field-icon"></i>
+                            <input type="tel" id="ggeFormPhone" placeholder="WhatsApp / Phone Number" required>
                         </div>
                         <button type="submit" class="gge-mk-form-submit">
-                            Get Free Consultation &rarr;
+                            <span>Get Free Consultation</span> <i class="fa fa-arrow-right"></i>
                         </button>
                         <div id="ggeFormSuccessMsg" class="gge-mk-form-success">
-                            <i class="fa fa-check-circle"></i> Thank you! Our senior advisor will reach out to you within 24 hours.
+                            <i class="fa fa-check-circle"></i> Thank you! Our senior UK admission advisor will contact you within 24 hours.
                         </div>
                     </form>
                 </div>
@@ -1377,23 +1423,51 @@
 
                 <div class="gge-mk-dest-grid">
                     <a href="/study-in-uk" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/uk.jpg');">
-                        <div class="gge-mk-dest-badge"><span>🇬🇧 UK</span> <span>&rarr;</span></div>
+                        <div class="gge-dest-overlay"></div>
+                        <span class="gge-dest-top-tag">400+ Universities</span>
+                        <div class="gge-mk-dest-badge">
+                            <span class="gge-dest-name">🇬🇧 United Kingdom</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
                     </a>
                     <a href="/study-in-europe" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/europe.jpg');">
-                        <div class="gge-mk-dest-badge"><span>🇪🇺 Europe</span> <span>&rarr;</span></div>
+                        <div class="gge-dest-overlay"></div>
+                        <span class="gge-dest-top-tag">Schengen Route</span>
+                        <div class="gge-mk-dest-badge">
+                            <span class="gge-dest-name">🇪🇺 Europe</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
                     </a>
                     <a href="/study-in-australia" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/australia.jpg');">
-                        <div class="gge-mk-dest-badge"><span>🇦🇺 Australia</span> <span>&rarr;</span></div>
+                        <div class="gge-dest-overlay"></div>
+                        <span class="gge-dest-top-tag">Post-Study Work</span>
+                        <div class="gge-mk-dest-badge">
+                            <span class="gge-dest-name">🇦🇺 Australia</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
                     </a>
                     <a href="/study-in-canada" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/canada.jpg');">
-                        <div class="gge-mk-dest-badge"><span>🇨🇦 Canada</span> <span>&rarr;</span></div>
+                        <div class="gge-dest-overlay"></div>
+                        <span class="gge-dest-top-tag">PGWP &amp; PR Route</span>
+                        <div class="gge-mk-dest-badge">
+                            <span class="gge-dest-name">🇨🇦 Canada</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
                     </a>
                     <a href="/study-in-new-zealand" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/newzealand.jpg');">
-                        <div class="gge-mk-dest-badge"><span>🇳🇿 New Zealand</span> <span>&rarr;</span></div>
+                        <div class="gge-dest-overlay"></div>
+                        <span class="gge-dest-top-tag">High Visa Ratio</span>
+                        <div class="gge-mk-dest-badge">
+                            <span class="gge-dest-name">🇳🇿 New Zealand</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
                     </a>
-                    <a href="#destinations" class="gge-mk-dest-item" style="background: linear-gradient(135deg, #102e68 0%, #071735 100%); justify-content: center; align-items: center; text-align: center;">
-                        <i class="fa fa-globe" style="font-size: 28px; color: #fbb019; margin-bottom: 8px;"></i>
-                        <span style="color: #ffffff; font-size: 12px; font-weight: 700;">&amp; More...</span>
+                    <a href="#destinations" class="gge-mk-dest-item gge-dest-more-card">
+                        <div class="gge-dest-more-inner">
+                            <i class="fa fa-globe"></i>
+                            <strong>Explore All 10+ Destinations</strong>
+                            <span class="gge-view-pill">View All &rarr;</span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -1470,6 +1544,43 @@
         </div>
     </section>
 
+    <!-- SMOOTH CONTINUOUS UNIVERSITY PARTNER MARQUEE TICKER -->
+    <div class="gge-partner-marquee-wrap">
+        <div class="gge-marquee-label">
+            <span>OFFICIAL PARTNER NETWORK</span>
+        </div>
+        <div class="gge-partner-track-scroll">
+            <div class="gge-partner-track">
+                <!-- Group A -->
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Portsmouth</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Abertay University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Queen's University Belfast</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Heriot-Watt University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Northwood University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Winchester</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> St. George's University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Falmouth University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Strathclyde</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Sunderland</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Bolton</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Surrey</span>
+                <!-- Group B (Duplicate for seamless loop) -->
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Portsmouth</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Abertay University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Queen's University Belfast</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Heriot-Watt University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Northwood University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Winchester</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> St. George's University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Falmouth University</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Strathclyde</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Sunderland</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Bolton</span>
+                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Surrey</span>
+            </div>
+        </div>
+    </div>
+
     <!-- 6. EXPLORE THE WORLD OF OUR GRADUATES -->
     <section class="gge-mk-graduates-section">
         <div class="gge-mk-graduates-banner">
@@ -1497,26 +1608,30 @@
             <p class="gge-mk-why-desc">Your ambitions deserve the right guidance, the right university and the right opportunities.</p>
         </div>
 
-        <div class="gge-mk-stats-grid">
+        <div class="gge-mk-stats-grid" id="ggeStatsContainer">
             <div class="gge-mk-stat-card">
                 <div class="gge-mk-stat-icon-wrap"><i class="fa fa-book"></i></div>
-                <h3 class="gge-mk-stat-num">691+</h3>
+                <h3 class="gge-mk-stat-num"><span class="gge-counter" data-target="691">691</span>+</h3>
                 <p class="gge-mk-stat-label">Courses Available</p>
+                <span class="gge-stat-sub">Undergrad &amp; Postgrad</span>
             </div>
             <div class="gge-mk-stat-card">
                 <div class="gge-mk-stat-icon-wrap"><i class="fa fa-users"></i></div>
-                <h3 class="gge-mk-stat-num">3,935+</h3>
+                <h3 class="gge-mk-stat-num"><span class="gge-counter" data-target="3935">3,935</span>+</h3>
                 <p class="gge-mk-stat-label">Students Enrolled</p>
+                <span class="gge-stat-sub">Across 6 Countries</span>
             </div>
             <div class="gge-mk-stat-card">
                 <div class="gge-mk-stat-icon-wrap"><i class="fa fa-institution"></i></div>
-                <h3 class="gge-mk-stat-num">100%</h3>
+                <h3 class="gge-mk-stat-num"><span class="gge-counter" data-target="100">100</span>%</h3>
                 <p class="gge-mk-stat-label">University Application Support</p>
+                <span class="gge-stat-sub">From Offer to CAS / I-20</span>
             </div>
             <div class="gge-mk-stat-card">
                 <div class="gge-mk-stat-icon-wrap"><i class="fa fa-handshake-o"></i></div>
-                <h3 class="gge-mk-stat-num">99.9%</h3>
+                <h3 class="gge-mk-stat-num"><span class="gge-counter" data-target="99.9" data-decimal="1">99.9</span>%</h3>
                 <p class="gge-mk-stat-label">Student &amp; Parent Satisfaction</p>
+                <span class="gge-stat-sub">British Council Certified</span>
             </div>
         </div>
     </section>
@@ -1776,6 +1891,31 @@
 </div>
 </div>
 </header>
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div class="gge-mobile-drawer" id="ggeMobileDrawer">
+        <div class="gge-drawer-header">
+            <img src="/assets/images/round-logo.png" alt="GGE Logo" style="height: 44px;">
+            <button type="button" class="gge-drawer-close" id="ggeDrawerCloseBtn">&times;</button>
+        </div>
+        <ul class="gge-drawer-nav">
+            <li><a href="/" class="active"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#destinations"><i class="fa fa-globe"></i> Study Destinations</a></li>
+            <li><a href="/courses"><i class="fa fa-graduation-cap"></i> Courses</a></li>
+            <li><a href="/our-services"><i class="fa fa-briefcase"></i> Our Services</a></li>
+            <li><a href="/about-us"><i class="fa fa-institution"></i> About Us</a></li>
+            <li><a href="/contact-us"><i class="fa fa-phone"></i> Contact Us</a></li>
+        </ul>
+        <div class="gge-drawer-cta">
+            <a href="/login" class="gge-mk-login-btn" style="width: 100%; justify-content: center; margin-bottom: 10px;">
+                <i class="fa fa-user"></i> Student Login
+            </a>
+            <a href="https://wa.me/447586589659" target="_blank" rel="noopener" class="gge-mk-whatsapp-btn" style="width: 100%; justify-content: center;">
+                <i class="fa fa-whatsapp"></i> WhatsApp UK Counsellor
+            </a>
+        </div>
+    </div>
+    <div class="gge-drawer-backdrop" id="ggeDrawerBackdrop"></div>
+
 <!-- Start Preloader -->
 <!-- loading removed -->
 <!-- End Preloader -->
@@ -3659,6 +3799,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 350);
 });
 </script>
+
+
+<!-- PULSING FLOATING WHATSAPP CTA WIDGET -->
+<div class="gge-floating-whatsapp-wrap" id="ggeFloatingWhatsapp">
+    <a href="https://wa.me/447586589659?text=Hello%20Global%20Group%20of%20Education,%20I%20would%20like%20to%20get%20free%20admission%20guidance." target="_blank" rel="noopener" class="gge-floating-wa-btn" title="Chat on WhatsApp">
+        <span class="gge-wa-pulse-ring"></span>
+        <i class="fa fa-whatsapp"></i>
+        <div class="gge-wa-tooltip">
+            <strong>Chat with Senior UK Advisor</strong>
+            <span>Online now &bull; Instant Reply</span>
+        </div>
+    </a>
+</div>
 
 </body>
 </html>
