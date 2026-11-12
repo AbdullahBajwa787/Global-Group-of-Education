@@ -9699,3 +9699,392 @@ a.btn-circle:hover {
         max-height: 38px !important;
     }
 }
+
+
+
+/* ======================================================== */
+/* 5. FULL-WIDTH TOP STUDY DESTINATIONS (LINE / CAROUSEL)  */
+/* ======================================================== */
+.gge-dest-line-section {
+    padding: 60px 0 35px 0 !important;
+    background: #ffffff !important;
+    position: relative !important;
+}
+
+.gge-line-container {
+    max-width: 1320px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.gge-line-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    margin-bottom: 24px !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+}
+
+.gge-line-eyebrow {
+    display: block !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    color: #fbb019 !important;
+    letter-spacing: 1.2px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 4px !important;
+}
+
+.gge-line-title {
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    color: #0d2552 !important;
+    letter-spacing: -0.5px !important;
+    margin: 0 !important;
+}
+
+.gge-line-subtitle {
+    font-size: 14.5px !important;
+    color: #64748b !important;
+    margin: 6px 0 0 0 !important;
+}
+
+.gge-line-header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.gge-dest-nav-btns {
+    display: flex !important;
+    gap: 8px !important;
+}
+
+.gge-dest-nav-btn {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    border: 1.5px solid #e2e8f0 !important;
+    background: #ffffff !important;
+    color: #0d2552 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    font-size: 13px !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
+}
+
+.gge-dest-nav-btn:hover {
+    background: #0d2552 !important;
+    color: #ffffff !important;
+    border-color: #0d2552 !important;
+    transform: scale(1.05) !important;
+}
+
+.gge-line-view-all {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 9px 20px !important;
+    background: #0d2552 !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 4px 12px rgba(13,37,82,0.15) !important;
+}
+
+.gge-line-view-all:hover {
+    background: #fbb019 !important;
+    color: #0d2552 !important;
+    text-decoration: none !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(251,176,25,0.35) !important;
+}
+
+/* Destinations Horizontal Track */
+.gge-dest-line-scroll-wrap {
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+    padding: 10px 4px 20px 4px !important;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+
+.gge-dest-line-scroll-wrap::-webkit-scrollbar {
+    display: none !important;
+}
+
+.gge-dest-line-track {
+    display: flex !important;
+    gap: 18px !important;
+    width: max-content !important;
+}
+
+.gge-dest-card-item {
+    flex: 0 0 250px !important;
+    height: 175px !important;
+    border-radius: 18px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 16px !important;
+    text-decoration: none !important;
+    box-shadow: 0 6px 20px rgba(13, 37, 82, 0.1) !important;
+    transition: all 0.32s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-sizing: border-box !important;
+}
+
+.gge-dest-card-overlay {
+    position: absolute !important;
+    top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+    background: linear-gradient(180deg, rgba(13,37,82,0.25) 0%, rgba(13,37,82,0.85) 100%) !important;
+    transition: opacity 0.3s ease !important;
+    z-index: 1 !important;
+}
+
+.gge-dest-card-item:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    box-shadow: 0 16px 36px rgba(13, 37, 82, 0.22) !important;
+    text-decoration: none !important;
+}
+
+.gge-dest-card-item:hover .gge-dest-card-overlay {
+    background: linear-gradient(180deg, rgba(13,37,82,0.15) 0%, rgba(13,37,82,0.92) 100%) !important;
+}
+
+.gge-dest-card-tag {
+    position: relative !important;
+    z-index: 2 !important;
+    align-self: flex-start !important;
+    background: rgba(13, 37, 82, 0.88) !important;
+    backdrop-filter: blur(4px) !important;
+    color: #fbb019 !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 50px !important;
+    border: 1px solid rgba(251, 176, 25, 0.4) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+}
+
+.gge-dest-card-bottom {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.gge-dest-card-info {
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+}
+
+.gge-dest-card-flag {
+    font-size: 18px !important;
+}
+
+.gge-dest-card-name {
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    letter-spacing: -0.2px !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+}
+
+.gge-dest-card-arrow {
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.22) !important;
+    backdrop-filter: blur(4px) !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 11px !important;
+    transition: all 0.2s ease !important;
+}
+
+.gge-dest-card-item:hover .gge-dest-card-arrow {
+    background: #fbb019 !important;
+    color: #0d2552 !important;
+    transform: translateX(3px) !important;
+}
+
+/* Explore More Card */
+.gge-dest-card-more {
+    background: linear-gradient(135deg, #0d2552 0%, #173d82 100%) !important;
+    border: 2px dashed rgba(251, 176, 25, 0.5) !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.gge-dest-more-content {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.gge-dest-more-icon-wrap {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background: rgba(251, 176, 25, 0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #fbb019 !important;
+    font-size: 20px !important;
+}
+
+.gge-dest-more-content strong {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+}
+
+.gge-dest-more-content span {
+    font-size: 11.5px !important;
+    color: #fbb019 !important;
+    font-weight: 700 !important;
+}
+
+
+/* ======================================================== */
+/* 6. FULL-WIDTH WORLD-CLASS UNIVERSITIES (RUNNING MARQUEE) */
+/* ======================================================== */
+.gge-uni-line-section {
+    padding: 40px 0 50px 0 !important;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
+    border-top: 1px solid #f1f5f9 !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.gge-uni-marquee-viewport {
+    width: 100% !important;
+    overflow: hidden !important;
+    position: relative !important;
+    padding: 16px 0 !important;
+    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%) !important;
+}
+
+.gge-uni-marquee-track {
+    display: flex !important;
+    gap: 20px !important;
+    width: max-content !important;
+    animation: ggeUniLineMarquee 34s linear infinite !important;
+}
+
+.gge-uni-marquee-track:hover {
+    animation-play-state: paused !important;
+}
+
+@keyframes ggeUniLineMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.gge-uni-marquee-tile {
+    flex: 0 0 175px !important;
+    height: 86px !important;
+    background: #ffffff !important;
+    border: 1.5px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 12px 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(13, 37, 82, 0.05) !important;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-sizing: border-box !important;
+}
+
+.gge-uni-marquee-tile:hover {
+    border-color: #fbb019 !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 30px rgba(13, 37, 82, 0.15) !important;
+    text-decoration: none !important;
+    background: #ffffff !important;
+}
+
+.gge-uni-marquee-tile img {
+    max-height: 54px !important;
+    max-width: 90% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.03)) !important;
+    transition: transform 0.25s ease !important;
+}
+
+.gge-uni-marquee-tile:hover img {
+    transform: scale(1.06) !important;
+}
+
+.gge-uni-trust-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 32px !important;
+    margin-top: 24px !important;
+    padding-top: 18px !important;
+    border-top: 1px solid #e2e8f0 !important;
+    font-size: 13px !important;
+    color: #5a6a85 !important;
+    font-weight: 600 !important;
+    flex-wrap: wrap !important;
+}
+
+.gge-uni-trust-bar span {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.gge-uni-trust-bar span i {
+    color: #10b981 !important;
+    font-size: 13px !important;
+}
+
+@media (max-width: 768px) {
+    .gge-dest-card-item {
+        flex: 0 0 210px !important;
+        height: 150px !important;
+    }
+    .gge-line-title {
+        font-size: 24px !important;
+    }
+    .gge-uni-marquee-tile {
+        flex: 0 0 145px !important;
+        height: 74px !important;
+    }
+    .gge-uni-marquee-tile img {
+        max-height: 44px !important;
+    }
+    .gge-uni-trust-bar {
+        gap: 16px !important;
+        font-size: 12px !important;
+    }
+}

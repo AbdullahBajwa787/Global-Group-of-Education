@@ -1408,151 +1408,195 @@
         </div>
     </section>
 
-    <!-- 5. DUAL ROW: DESTINATIONS & UNIVERSITIES -->
-    <section class="gge-mk-dual-section">
-        <div class="gge-mk-dual-grid">
-            <!-- Left: Top Study Destinations (6 Cards) -->
-            <div class="gge-mk-box-card">
-                <div class="gge-mk-box-header">
-                    <div>
-                        <h3>Top Study Destinations</h3>
-                        <p>Explore world-class education in your dream country.</p>
-                    </div>
-                    <a href="#destinations" class="gge-mk-view-btn">View All Destinations &rarr;</a>
+        <!-- 5. TOP STUDY DESTINATIONS (FULL-WIDTH HORIZONTAL LINE / CAROUSEL) -->
+    <section class="gge-dest-line-section" id="destinations">
+        <div class="gge-line-container">
+            <div class="gge-line-header">
+                <div class="gge-line-header-left">
+                    <span class="gge-line-eyebrow">GLOBAL CAMPUSES</span>
+                    <h2 class="gge-line-title">Top Study Destinations</h2>
+                    <p class="gge-line-subtitle">Explore world-class education and high visa success in your dream country.</p>
                 </div>
-
-                <div class="gge-mk-dest-grid">
-                    <a href="/study-in-uk" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/uk.jpg');">
-                        <div class="gge-dest-overlay"></div>
-                        <span class="gge-dest-top-tag">400+ Universities</span>
-                        <div class="gge-mk-dest-badge">
-                            <span class="gge-dest-name">🇬🇧 United Kingdom</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    <a href="/study-in-europe" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/europe.jpg');">
-                        <div class="gge-dest-overlay"></div>
-                        <span class="gge-dest-top-tag">Schengen Route</span>
-                        <div class="gge-mk-dest-badge">
-                            <span class="gge-dest-name">🇪🇺 Europe</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    <a href="/study-in-australia" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/australia.jpg');">
-                        <div class="gge-dest-overlay"></div>
-                        <span class="gge-dest-top-tag">Post-Study Work</span>
-                        <div class="gge-mk-dest-badge">
-                            <span class="gge-dest-name">🇦🇺 Australia</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    <a href="/study-in-canada" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/canada.jpg');">
-                        <div class="gge-dest-overlay"></div>
-                        <span class="gge-dest-top-tag">PGWP &amp; PR Route</span>
-                        <div class="gge-mk-dest-badge">
-                            <span class="gge-dest-name">🇨🇦 Canada</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    <a href="/study-in-new-zealand" class="gge-mk-dest-item" style="background-image: url('/assets/images/destinations/newzealand.jpg');">
-                        <div class="gge-dest-overlay"></div>
-                        <span class="gge-dest-top-tag">High Visa Ratio</span>
-                        <div class="gge-mk-dest-badge">
-                            <span class="gge-dest-name">🇳🇿 New Zealand</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    <a href="#destinations" class="gge-mk-dest-item gge-dest-more-card">
-                        <div class="gge-dest-more-inner">
-                            <i class="fa fa-globe"></i>
-                            <strong>Explore All 10+ Destinations</strong>
-                            <span class="gge-view-pill">View All &rarr;</span>
-                        </div>
-                    </a>
+                <div class="gge-line-header-right">
+                    <div class="gge-dest-nav-btns">
+                        <button type="button" class="gge-dest-nav-btn prev" onclick="scrollDestLine(-1)" aria-label="Previous Destinations">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button type="button" class="gge-dest-nav-btn next" onclick="scrollDestLine(1)" aria-label="Next Destinations">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <a href="#destinations" class="gge-line-view-all">View All Destinations &rarr;</a>
                 </div>
             </div>
 
-            <!-- Right: World-Class Universities (4 Logos) -->
-            <div class="gge-mk-box-card">
-                <div class="gge-mk-box-header">
-                    <div>
-                        <h3>World-Class Universities</h3>
-                        <p>Get admission to prestigious institutions across the globe.</p>
-                    </div>
-                    <a href="/courses" class="gge-mk-view-btn">View Our Partners &rarr;</a>
-                </div>
+            <div class="gge-dest-line-scroll-wrap" id="ggeDestScrollWrap">
+                <div class="gge-dest-line-track">
+                    <a href="/study-in-uk" class="gge-dest-card-item" style="background-image: url('/assets/images/destinations/uk.jpg');">
+                        <div class="gge-dest-card-overlay"></div>
+                        <span class="gge-dest-card-tag">400+ Universities</span>
+                        <div class="gge-dest-card-bottom">
+                            <div class="gge-dest-card-info">
+                                <span class="gge-dest-card-flag">🇬🇧</span>
+                                <strong class="gge-dest-card-name">United Kingdom</strong>
+                            </div>
+                            <span class="gge-dest-card-arrow"><i class="fa fa-arrow-right"></i></span>
+                        </div>
+                    </a>
 
-                                <div class="gge-mk-unis-grid">
-                    <a href="/universities/northwood-university" class="gge-mk-uni-tile" title="Northwood University">
-                        <img src="/assets/images/mockup/unis/northwood.png" alt="Northwood University">
+                    <a href="/study-in-europe" class="gge-dest-card-item" style="background-image: url('/assets/images/destinations/europe.jpg');">
+                        <div class="gge-dest-card-overlay"></div>
+                        <span class="gge-dest-card-tag">Schengen Route</span>
+                        <div class="gge-dest-card-bottom">
+                            <div class="gge-dest-card-info">
+                                <span class="gge-dest-card-flag">🇪🇺</span>
+                                <strong class="gge-dest-card-name">Europe</strong>
+                            </div>
+                            <span class="gge-dest-card-arrow"><i class="fa fa-arrow-right"></i></span>
+                        </div>
                     </a>
-                    <a href="/universities/the-university-of-winchester" class="gge-mk-uni-tile" title="University of Winchester">
-                        <img src="/assets/images/mockup/unis/winchester.png" alt="University of Winchester">
+
+                    <a href="/study-in-australia" class="gge-dest-card-item" style="background-image: url('/assets/images/destinations/australia.jpg');">
+                        <div class="gge-dest-card-overlay"></div>
+                        <span class="gge-dest-card-tag">Post-Study Work</span>
+                        <div class="gge-dest-card-bottom">
+                            <div class="gge-dest-card-info">
+                                <span class="gge-dest-card-flag">🇦🇺</span>
+                                <strong class="gge-dest-card-name">Australia</strong>
+                            </div>
+                            <span class="gge-dest-card-arrow"><i class="fa fa-arrow-right"></i></span>
+                        </div>
                     </a>
-                    <a href="/universities/heriot-watt-university" class="gge-mk-uni-tile" title="Heriot-Watt University">
-                        <img src="/assets/images/mockup/unis/heriot_watt.png" alt="Heriot-Watt University">
+
+                    <a href="/study-in-canada" class="gge-dest-card-item" style="background-image: url('/assets/images/destinations/canada.jpg');">
+                        <div class="gge-dest-card-overlay"></div>
+                        <span class="gge-dest-card-tag">PGWP &amp; PR Route</span>
+                        <div class="gge-dest-card-bottom">
+                            <div class="gge-dest-card-info">
+                                <span class="gge-dest-card-flag">🇨🇦</span>
+                                <strong class="gge-dest-card-name">Canada</strong>
+                            </div>
+                            <span class="gge-dest-card-arrow"><i class="fa fa-arrow-right"></i></span>
+                        </div>
                     </a>
-                    <a href="/universities/st_-george-university" class="gge-mk-uni-tile" title="St. George's University">
-                        <img src="/assets/images/mockup/unis/st_georges.png" alt="St. George's University">
+
+                    <a href="/study-in-new-zealand" class="gge-dest-card-item" style="background-image: url('/assets/images/destinations/newzealand.jpg');">
+                        <div class="gge-dest-card-overlay"></div>
+                        <span class="gge-dest-card-tag">High Visa Ratio</span>
+                        <div class="gge-dest-card-bottom">
+                            <div class="gge-dest-card-info">
+                                <span class="gge-dest-card-flag">🇳🇿</span>
+                                <strong class="gge-dest-card-name">New Zealand</strong>
+                            </div>
+                            <span class="gge-dest-card-arrow"><i class="fa fa-arrow-right"></i></span>
+                        </div>
                     </a>
-                    <a href="/universities/queens-university-belfast" class="gge-mk-uni-tile" title="Queen's University Belfast">
-                        <img src="/assets/images/mockup/unis/queens_belfast.png" alt="Queen's University Belfast">
+
+                    <a href="/study-in-usa" class="gge-dest-card-item" style="background-image: url('/assets/images/destinations/usa.jpg');">
+                        <div class="gge-dest-card-overlay"></div>
+                        <span class="gge-dest-card-tag">Ivy &amp; STEM Optics</span>
+                        <div class="gge-dest-card-bottom">
+                            <div class="gge-dest-card-info">
+                                <span class="gge-dest-card-flag">🇺🇸</span>
+                                <strong class="gge-dest-card-name">United States</strong>
+                            </div>
+                            <span class="gge-dest-card-arrow"><i class="fa fa-arrow-right"></i></span>
+                        </div>
                     </a>
-                    <a href="/courses" class="gge-mk-uni-tile" title="LanguageCert Official Partner">
-                        <img src="/assets/images/mockup/unis/language_cert.png" alt="LanguageCert">
+
+                    <a href="#destinations" class="gge-dest-card-item gge-dest-card-more">
+                        <div class="gge-dest-more-content">
+                            <div class="gge-dest-more-icon-wrap"><i class="fa fa-globe"></i></div>
+                            <strong>Explore All 10+ Destinations</strong>
+                            <span>View All Countries &rarr;</span>
+                        </div>
                     </a>
-                    <a href="/universities/falmouth-university" class="gge-mk-uni-tile" title="Falmouth University">
-                        <img src="/assets/images/mockup/unis/falmouth.png" alt="Falmouth University">
-                    </a>
-                    <a href="/courses" class="gge-mk-uni-tile" title="University of Strathclyde">
-                        <img src="/assets/images/mockup/unis/strathclyde.png" alt="University of Strathclyde">
-                    </a>
-                </div>
-                <div class="gge-mk-unis-trust-bar">
-                    <span><i class="fa fa-check-circle"></i> 200+ Global Partners</span>
-                    <span><i class="fa fa-check-circle"></i> Direct Fast-Track Admissions</span>
-                    <span><i class="fa fa-check-circle"></i> British Council Certified</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SMOOTH CONTINUOUS UNIVERSITY PARTNER MARQUEE TICKER -->
-    <div class="gge-partner-marquee-wrap">
-        <div class="gge-marquee-label">
-            <span>OFFICIAL PARTNER NETWORK</span>
-        </div>
-        <div class="gge-partner-track-scroll">
-            <div class="gge-partner-track">
-                <!-- Group A -->
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Portsmouth</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Abertay University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Queen's University Belfast</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Heriot-Watt University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Northwood University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Winchester</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> St. George's University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Falmouth University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Strathclyde</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Sunderland</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Bolton</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Surrey</span>
-                <!-- Group B (Duplicate for seamless loop) -->
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Portsmouth</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Abertay University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Queen's University Belfast</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Heriot-Watt University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Northwood University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Winchester</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> St. George's University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> Falmouth University</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Strathclyde</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Sunderland</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Bolton</span>
-                <span class="gge-partner-tag"><i class="fa fa-check-circle"></i> University of Surrey</span>
+    <!-- 6. WORLD-CLASS UNIVERSITIES (FULL-WIDTH CONTINUOUS RUNNING LINE / MARQUEE) -->
+    <section class="gge-uni-line-section">
+        <div class="gge-line-container">
+            <div class="gge-line-header">
+                <div class="gge-line-header-left">
+                    <span class="gge-line-eyebrow">PRESTIGIOUS INSTITUTIONS</span>
+                    <h2 class="gge-line-title">World-Class Universities</h2>
+                    <p class="gge-line-subtitle">Direct fast-track admissions to accredited universities across the globe.</p>
+                </div>
+                <div class="gge-line-header-right">
+                    <a href="/courses" class="gge-line-view-all">View All Partners &rarr;</a>
+                </div>
             </div>
         </div>
-    </div>
+
+        <!-- Infinite Running Marquee Track -->
+        <div class="gge-uni-marquee-viewport">
+            <div class="gge-uni-marquee-track">
+                <!-- Set 1 -->
+                <a href="/universities/northwood-university" class="gge-uni-marquee-tile" title="Northwood University">
+                    <img src="/assets/images/mockup/unis/northwood.png" alt="Northwood University">
+                </a>
+                <a href="/universities/the-university-of-winchester" class="gge-uni-marquee-tile" title="University of Winchester">
+                    <img src="/assets/images/mockup/unis/winchester.png" alt="University of Winchester">
+                </a>
+                <a href="/universities/heriot-watt-university" class="gge-uni-marquee-tile" title="Heriot-Watt University">
+                    <img src="/assets/images/mockup/unis/heriot_watt.png" alt="Heriot-Watt University">
+                </a>
+                <a href="/universities/st_-george-university" class="gge-uni-marquee-tile" title="St. George's University">
+                    <img src="/assets/images/mockup/unis/st_georges.png" alt="St. George's University">
+                </a>
+                <a href="/universities/queens-university-belfast" class="gge-uni-marquee-tile" title="Queen's University Belfast">
+                    <img src="/assets/images/mockup/unis/queens_belfast.png" alt="Queen's University Belfast">
+                </a>
+                <a href="/courses" class="gge-uni-marquee-tile" title="LanguageCert Official Partner">
+                    <img src="/assets/images/mockup/unis/language_cert.png" alt="LanguageCert">
+                </a>
+                <a href="/universities/falmouth-university" class="gge-uni-marquee-tile" title="Falmouth University">
+                    <img src="/assets/images/mockup/unis/falmouth.png" alt="Falmouth University">
+                </a>
+                <a href="/courses" class="gge-uni-marquee-tile" title="University of Strathclyde">
+                    <img src="/assets/images/mockup/unis/strathclyde.png" alt="University of Strathclyde">
+                </a>
+
+                <!-- Set 2 (Duplicate for seamless infinite loop) -->
+                <a href="/universities/northwood-university" class="gge-uni-marquee-tile" title="Northwood University">
+                    <img src="/assets/images/mockup/unis/northwood.png" alt="Northwood University">
+                </a>
+                <a href="/universities/the-university-of-winchester" class="gge-uni-marquee-tile" title="University of Winchester">
+                    <img src="/assets/images/mockup/unis/winchester.png" alt="University of Winchester">
+                </a>
+                <a href="/universities/heriot-watt-university" class="gge-uni-marquee-tile" title="Heriot-Watt University">
+                    <img src="/assets/images/mockup/unis/heriot_watt.png" alt="Heriot-Watt University">
+                </a>
+                <a href="/universities/st_-george-university" class="gge-uni-marquee-tile" title="St. George's University">
+                    <img src="/assets/images/mockup/unis/st_georges.png" alt="St. George's University">
+                </a>
+                <a href="/universities/queens-university-belfast" class="gge-uni-marquee-tile" title="Queen's University Belfast">
+                    <img src="/assets/images/mockup/unis/queens_belfast.png" alt="Queen's University Belfast">
+                </a>
+                <a href="/courses" class="gge-uni-marquee-tile" title="LanguageCert Official Partner">
+                    <img src="/assets/images/mockup/unis/language_cert.png" alt="LanguageCert">
+                </a>
+                <a href="/universities/falmouth-university" class="gge-uni-marquee-tile" title="Falmouth University">
+                    <img src="/assets/images/mockup/unis/falmouth.png" alt="Falmouth University">
+                </a>
+                <a href="/courses" class="gge-uni-marquee-tile" title="University of Strathclyde">
+                    <img src="/assets/images/mockup/unis/strathclyde.png" alt="University of Strathclyde">
+                </a>
+            </div>
+        </div>
+
+        <div class="gge-line-container">
+            <div class="gge-uni-trust-bar">
+                <span><i class="fa fa-check-circle"></i> 200+ Global Partner Universities</span>
+                <span><i class="fa fa-check-circle"></i> Direct Fast-Track Admissions</span>
+                <span><i class="fa fa-check-circle"></i> British Council Certified Counsellors</span>
+                <span><i class="fa fa-check-circle"></i> 100% Free Consultation</span>
+            </div>
+        </div>
+    </section>
 
     <!-- 6. EXPLORE THE WORLD OF OUR GRADUATES -->
     <section class="gge-mk-graduates-section">

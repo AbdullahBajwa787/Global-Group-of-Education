@@ -955,3 +955,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var statsContainer = document.getElementById('ggeStatsContainer');
     if (statsContainer) observer.observe(statsContainer);
 });
+
+
+
+function scrollDestLine(dir) {
+    var wrap = document.getElementById('ggeDestScrollWrap');
+    if (wrap) {
+        wrap.scrollBy({ left: dir * 300, behavior: 'smooth' });
+    }
+}
