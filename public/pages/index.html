@@ -29,7 +29,7 @@
 <!-- Animate -->
 <link href="/assets/css/animate.css" rel="stylesheet"/>
 <!-- Custom Style -->
-<link href="/assets/css/custom.css?v=6.1" rel="stylesheet"/>
+<link href="/assets/css/custom.css?v=6.2" rel="stylesheet"/>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
@@ -1851,10 +1851,22 @@
     <div class="GGEBrandedBorderHD" style="background: url('/assets/images/GGEBrandedBorderHD.png') repeat-x center !important; width: 100% !important; height: 42px !important; background-size: contain !important; display: block !important; clear: both !important; position: relative !important; z-index: 9999 !important;"></div>
     
 
-    <!-- 11. FLOATING WHATSAPP BUTTON (BOTTOM-RIGHT ITEM 13) -->
-    <a href="https://wa.me/447586589659" target="_blank" rel="noopener" class="gge-floating-whatsapp" aria-label="Chat on WhatsApp">
-        <i class="fa fa-whatsapp"></i>
-    </a>
+    <!-- 11. FLOATING WHATSAPP BUTTON WITH GLOW & CHAT BUBBLE -->
+    <div class="gge-floating-whatsapp-wrap">
+        <a href="https://wa.me/447586589659" target="_blank" rel="noopener" class="gge-wa-chat-bubble" aria-label="Need help? Chat on WhatsApp">
+            <div class="gge-wa-bubble-header">
+                <span class="gge-wa-online-dot"></span>
+                <span class="gge-wa-status">Online now</span>
+            </div>
+            <div class="gge-wa-bubble-msg">
+                Need help? <strong>Chat on WhatsApp</strong>
+            </div>
+            <div class="gge-wa-bubble-tail"></div>
+        </a>
+        <a href="https://wa.me/447586589659" target="_blank" rel="noopener" class="gge-floating-whatsapp" aria-label="Chat on WhatsApp">
+            <i class="fa fa-whatsapp"></i>
+        </a>
+    </div>
 
 </div>
 <!-- ======================================================================= -->
