@@ -11634,8 +11634,7 @@ body {
     border: 1px solid rgba(13, 37, 82, 0.08) !important;
 }
 
-/* ========================================================================== */
-/* ABOUT US: SINGLE GRADUATE IMAGE ALIGNMENT (WITHOUT CONSULTANT PHOTO)       */
+
 /* ========================================================================== */
 .gge-about-single-image-wrap {
     position: relative !important;
@@ -11738,4 +11737,247 @@ body {
     clear: both !important;
     position: relative !important;
     z-index: 9999 !important;
+}
+
+/* ========================================================================== */
+/* CRM DARK BLUE TOP BAR (EXACT MATCH TO media_1794672553824_1330cc03.png)    */
+/* ========================================================================== */
+.top-header-bar {
+    background-color: #071536 !important;
+    padding: 8px 0 !important;
+    position: relative !important;
+    z-index: 1002 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.top-header-bar .info-list {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0 !important;
+}
+
+.top-header-bar .info-list li {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-right: 18px !important;
+    padding-right: 18px !important;
+}
+
+.top-header-bar .info-list li:after {
+    position: absolute !important;
+    content: '' !important;
+    display: block !important;
+    width: 1px !important;
+    height: 16px !important;
+    background-color: rgba(233, 234, 239, 0.35) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 0 !important;
+}
+
+.top-header-bar .info-list li:last-child:after {
+    display: none !important;
+}
+
+.top-header-bar .info-list li a {
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: color 0.2s ease !important;
+}
+
+.top-header-bar .info-list li a:hover {
+    color: #fbb019 !important;
+}
+
+.top-header-bar .info-list li .icon,
+.top-header-bar .info-list li i {
+    color: #fbb019 !important;
+    font-size: 13px !important;
+}
+
+.top-header-bar .social-box ul {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: right !important;
+    list-style: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 6px !important;
+}
+
+.top-header-bar .social-box ul li {
+    position: relative !important;
+    display: inline-block !important;
+    width: 25px !important;
+    height: 25px !important;
+    background-color: #132973 !important;
+    text-align: center !important;
+    box-shadow: 0 4px 6px rgba(15, 15, 28, 0.4) !important;
+    line-height: 25px !important;
+    border-radius: 4px !important;
+    transition: background 0.2s ease !important;
+}
+
+.top-header-bar .social-box ul li:hover {
+    background-color: #fbb019 !important;
+}
+
+.top-header-bar .social-box ul li a {
+    color: #ffffff !important;
+    font-size: 12px !important;
+    display: block !important;
+    line-height: 25px !important;
+}
+
+.top-header-bar .social-box ul li:hover a {
+    color: #071536 !important;
+}
+
+@media (max-width: 991px) {
+    .top-header-bar {
+        padding: 6px 12px !important;
+    }
+    .top-header-bar .info-list li {
+        margin-right: 12px !important;
+        padding-right: 12px !important;
+        font-size: 11.5px !important;
+    }
+    .top-header-bar .info-list li a {
+        font-size: 11.5px !important;
+    }
+}
+
+/* ========================================================================== */
+/* ABOUT US: EXACT COMPOSITE LAYOUT (MATCHING media_1794673194872_0bd57bcd.png) */
+/* ========================================================================== */
+.about-section-ten .image-column .inner-column.gge-about-composite-images {
+    position: relative !important;
+    display: block !important;
+    min-height: 480px !important;
+    width: 100% !important;
+}
+
+.about-section-ten .image-column .inner-column.gge-about-composite-images .image-1 {
+    position: relative !important;
+    display: inline-block !important;
+    width: 52% !important;
+    max-width: 295px !important;
+    vertical-align: top !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.about-section-ten .image-column .inner-column.gge-about-composite-images .image-1 img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.about-section-ten .image-column .inner-column.gge-about-composite-images .image-2 {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 48% !important;
+    max-width: 270px !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: block !important;
+}
+
+.about-section-ten .image-column .inner-column.gge-about-composite-images .image-2 img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.about-section-ten .image-column .inner-column.gge-about-composite-images .experience {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 48% !important;
+    max-width: 270px !important;
+    height: 190px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.about-section-ten .image-column .inner-column.gge-about-composite-images .experience:before {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url(/assets/images/about/map.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    content: "" !important;
+    opacity: 0.8 !important;
+}
+
+.about-section-ten .image-column .inner-column.gge-about-composite-images .experience .inner {
+    position: relative !important;
+    z-index: 2 !important;
+    text-align: center !important;
+}
+
+.about-section-ten .image-column .inner-column.gge-about-composite-images .experience .text {
+    color: #484750 !important;
+    font-size: 15px !important;
+    line-height: 22px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.about-section-ten .image-column .inner-column.gge-about-composite-images .experience strong {
+    color: #102771 !important;
+    display: block !important;
+    font-size: 65px !important;
+    line-height: 1 !important;
+    margin-bottom: 4px !important;
+    font-weight: 800 !important;
+}
+
+@media (max-width: 767px) {
+    .about-section-ten .image-column .inner-column.gge-about-composite-images {
+        min-height: auto !important;
+    }
+    .about-section-ten .image-column .inner-column.gge-about-composite-images .image-1,
+    .about-section-ten .image-column .inner-column.gge-about-composite-images .image-2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+    }
+    .about-section-ten .image-column .inner-column.gge-about-composite-images .experience {
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 20px !important;
+    }
 }
