@@ -7863,8 +7863,33 @@ a.btn-circle:hover {
     margin-top: 6px;
     border-top: 3px solid var(--gge-gold);
 }
-.gge-mk-nav-item:hover .gge-mk-nav-dropdown {
-    display: block;
+/* DROPDOWN OPENS ONLY ON CLICK (.open), NEVER ON HOVER */
+.gge-mk-nav-item:hover:not(.open) .gge-mk-nav-dropdown {
+    display: none !important;
+}
+.gge-mk-nav-item.open .gge-mk-nav-dropdown {
+    display: block !important;
+    animation: ggeNavFadeIn 0.2s ease-out;
+}
+@keyframes ggeNavFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.gge-mk-nav-link .fa-angle-down {
+    transition: transform 0.25s ease;
+}
+.gge-mk-nav-item.open > .gge-mk-nav-link .fa-angle-down {
+    transform: rotate(180deg);
+}
+.gge-mk-nav-item.open > .gge-mk-nav-link {
+    background: #1b2a4e !important;
+    color: #ffffff !important;
 }
 .gge-mk-nav-dropdown li a {
     display: block;
