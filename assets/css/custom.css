@@ -11946,7 +11946,7 @@ body {
 
 
 /* ========================================================================== */
-/* FLOATING WHATSAPP BUTTON (THEME RELEVANT NAVY BLUE)                        */
+/* FLOATING WHATSAPP BUTTON (OFFICIAL WHATSAPP GREEN)                         */
 /* ========================================================================== */
 .gge-floating-whatsapp,
 .gge-floating-wa-btn {
@@ -11955,15 +11955,16 @@ body {
     right: 24px !important;
     width: 60px !important;
     height: 60px !important;
-    background: #102771 !important;
-    background: linear-gradient(135deg, #132973 0%, #071536 100%) !important;
+    background: #25d366 !important;
     color: #ffffff !important;
+    border: none !important;
+    outline: none !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 30px !important;
-    box-shadow: 0 8px 25px rgba(7, 21, 54, 0.45), 0 0 0 2px rgba(251, 176, 25, 0.35) !important;
+    font-size: 32px !important;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45) !important;
     z-index: 99999 !important;
     text-decoration: none !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -11974,26 +11975,25 @@ body {
 .gge-floating-wa-btn i,
 .gge-floating-wa-btn .fa {
     color: #ffffff !important;
+    font-size: 32px !important;
     transition: color 0.3s ease !important;
 }
 
 .gge-floating-whatsapp:hover,
 .gge-floating-wa-btn:hover {
     transform: scale(1.1) translateY(-2px) !important;
-    background: #071536 !important;
-    background: linear-gradient(135deg, #071536 0%, #102771 100%) !important;
-    color: #fbb019 !important;
-    box-shadow: 0 12px 30px rgba(7, 21, 54, 0.6), 0 0 0 3px #fbb019 !important;
+    background: #20ba5a !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.65) !important;
 }
 
 .gge-floating-whatsapp:hover i,
 .gge-floating-whatsapp:hover .fa,
 .gge-floating-wa-btn:hover i,
 .gge-floating-wa-btn:hover .fa {
-    color: #fbb019 !important;
+    color: #ffffff !important;
 }
 
 .gge-wa-pulse-ring {
-    border-color: #102771 !important;
+    border-color: #25d366 !important;
 }
-
