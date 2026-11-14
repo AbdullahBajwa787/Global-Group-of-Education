@@ -11497,7 +11497,6 @@ a[href*="classic"],
     animation: ggeDestMarqueeAlt 40s linear infinite !important;
     -webkit-backface-visibility: hidden !important;
     backface-visibility: hidden !important;
-    transform: translate3d(0, 0, 0) !important;
     will-change: transform !important;
 }
 
@@ -11556,7 +11555,6 @@ a[href*="classic"],
     animation: ggeUniLineMarquee 34s linear infinite !important;
     -webkit-backface-visibility: hidden !important;
     backface-visibility: hidden !important;
-    transform: translate3d(0, 0, 0) !important;
     will-change: transform !important;
 }
 
