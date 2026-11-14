@@ -2,6 +2,43 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/courses",
+      "destination": "https://www.globalgroupofeducation.com/undergraduate-courses",
+      "permanent": false
+    },
+    {
+      "source": "/doctorate-courses",
+      "destination": "https://www.globalgroupofeducation.com/doctorate-courses",
+      "permanent": false
+    },
+    {
+      "source": "/postgraduate-courses",
+      "destination": "https://www.globalgroupofeducation.com/postgraduate-courses",
+      "permanent": false
+    },
+    {
+      "source": "/undergraduate-courses",
+      "destination": "https://www.globalgroupofeducation.com/undergraduate-courses",
+      "permanent": false
+    },
+    {
+      "source": "/pre-master-courses",
+      "destination": "https://www.globalgroupofeducation.com/pre-master-courses",
+      "permanent": false
+    },
+    {
+      "source": "/foundation-courses",
+      "destination": "https://www.globalgroupofeducation.com/foundation-courses",
+      "permanent": false
+    },
+    {
+      "source": "/english-language-courses",
+      "destination": "https://www.globalgroupofeducation.com/english-language-courses",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/student-registration",
@@ -10,10 +47,6 @@
     {
       "source": "/student-registration/(.*)",
       "destination": "/contact-us.html"
-    },
-    {
-      "source": "/courses",
-      "destination": "/undergraduate-courses.html"
     }
   ]
 }

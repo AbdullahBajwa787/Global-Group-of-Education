@@ -11074,3 +11074,27 @@ a.btn-circle:hover {
     .service-header h2 { font-size: 28px !important; }
     .gge-bottom-cta-title { font-size: 28px !important; }
 }
+
+
+/* Permanently remove Classic View, Rewind buttons, and Top announcement bar */
+.gge-rewind-btn,
+.gge-rewind-mini-btn,
+.gge-footer-switch-btn,
+.gge-top-announcement-bar,
+.gge-crm-top-hdr,
+.gge-mf-actions-wrap,
+[data-gge-footer-toggle],
+button[onclick*="toggleGGEView"],
+a[href*="classic"],
+.banner-slider {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+}
