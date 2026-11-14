@@ -37,6 +37,56 @@
       "source": "/english-language-courses",
       "destination": "https://www.globalgroupofeducation.com/english-language-courses",
       "permanent": false
+    },
+    {
+      "source": "/study-in-uk",
+      "destination": "https://www.globalgroupofeducation.com/study-in-uk",
+      "permanent": false
+    },
+    {
+      "source": "/study-in-usa",
+      "destination": "https://www.globalgroupofeducation.com/study-in-usa",
+      "permanent": false
+    },
+    {
+      "source": "/study-in-canada",
+      "destination": "https://www.globalgroupofeducation.com/study-in-canada",
+      "permanent": false
+    },
+    {
+      "source": "/study-in-australia",
+      "destination": "https://www.globalgroupofeducation.com/study-in-australia",
+      "permanent": false
+    },
+    {
+      "source": "/study-in-hungary",
+      "destination": "https://www.globalgroupofeducation.com/study-in-hungary",
+      "permanent": false
+    },
+    {
+      "source": "/study-in-uae",
+      "destination": "https://www.globalgroupofeducation.com/study-in-uae",
+      "permanent": false
+    },
+    {
+      "source": "/study-in-europe",
+      "destination": "https://www.globalgroupofeducation.com/study-in-europe",
+      "permanent": false
+    },
+    {
+      "source": "/study-in-new-zealand",
+      "destination": "https://www.globalgroupofeducation.com/study-in-new-zealand",
+      "permanent": false
+    },
+    {
+      "source": "/study-in-(.*)",
+      "destination": "https://www.globalgroupofeducation.com/study-in-$1",
+      "permanent": false
+    },
+    {
+      "source": "/destinations",
+      "destination": "https://www.globalgroupofeducation.com/study-in-uk",
+      "permanent": false
     }
   ],
   "rewrites": [
