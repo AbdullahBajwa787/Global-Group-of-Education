@@ -11946,7 +11946,7 @@ body {
 
 
 /* ========================================================================== */
-/* FLOATING WHATSAPP BUTTON (OFFICIAL WHATSAPP GREEN)                         */
+/* FLOATING WHATSAPP BUTTON (PULSING & GLOWING EFFECT)                        */
 /* ========================================================================== */
 .gge-floating-whatsapp,
 .gge-floating-wa-btn {
@@ -11964,10 +11964,68 @@ body {
     align-items: center !important;
     justify-content: center !important;
     font-size: 32px !important;
-    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45) !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5), 0 0 20px rgba(37, 211, 102, 0.4) !important;
     z-index: 99999 !important;
     text-decoration: none !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    animation: ggeWaGlowPulse 2s infinite ease-in-out !important;
+}
+
+.gge-floating-whatsapp::before,
+.gge-floating-wa-btn::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -5px !important;
+    left: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    border-radius: 50% !important;
+    border: 2px solid #25d366 !important;
+    animation: ggeWaRadarPulse 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+}
+
+.gge-floating-whatsapp::after,
+.gge-floating-wa-btn::after {
+    content: '' !important;
+    position: absolute !important;
+    top: -5px !important;
+    left: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    border-radius: 50% !important;
+    border: 2px solid #25d366 !important;
+    animation: ggeWaRadarPulse 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    animation-delay: 0.8s !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+}
+
+@keyframes ggeWaGlowPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7), 0 0 15px rgba(37, 211, 102, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0), 0 0 25px rgba(37, 211, 102, 0.6);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 0 15px rgba(37, 211, 102, 0.4);
+        transform: scale(1);
+    }
+}
+
+@keyframes ggeWaRadarPulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
 }
 
 .gge-floating-whatsapp i,
@@ -11981,10 +12039,10 @@ body {
 
 .gge-floating-whatsapp:hover,
 .gge-floating-wa-btn:hover {
-    transform: scale(1.1) translateY(-2px) !important;
+    transform: scale(1.12) translateY(-2px) !important;
     background: #20ba5a !important;
     color: #ffffff !important;
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.65) !important;
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.9) !important;
 }
 
 .gge-floating-whatsapp:hover i,
