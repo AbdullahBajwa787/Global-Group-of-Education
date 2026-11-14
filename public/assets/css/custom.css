@@ -10667,20 +10667,15 @@ a.btn-circle:hover {
 }
 
 .about-img-1 {
-    width: 82% !important;
+    width: 100% !important;
+    max-width: 480px !important;
     border-radius: 12px !important;
     box-shadow: 0 15px 40px rgba(16, 39, 113, 0.12) !important;
     display: block !important;
 }
 
 .about-img-2 {
-    position: absolute !important;
-    right: 0 !important;
-    top: 15% !important;
-    width: 48% !important;
-    border-radius: 10px !important;
-    border: 6px solid #ffffff !important;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18) !important;
+    display: none !important;
 }
 
 .about-experience-badge {
