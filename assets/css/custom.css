@@ -11118,3 +11118,195 @@ a[href*="classic"],
     border: none !important;
     overflow: hidden !important;
 }
+
+/* ========================================================================== */
+/* EXACT CRM ABOUT US SECTION (MATCHING REFERENCE SCREENSHOT)                */
+/* ========================================================================== */
+.about-section-ten {
+    width: 100% !important;
+    position: relative !important;
+    padding: 75px 40px !important;
+    background: #ffffff !important;
+}
+.about-section-ten .container-fluid {
+    max-width: 1320px !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+}
+.about-section-ten .content-column {
+    position: relative !important;
+}
+.about-section-ten .content-column .inner-column {
+    position: relative !important;
+    padding-left: 20px !important;
+}
+@media (max-width: 991px) {
+    .about-section-ten .content-column .inner-column {
+        padding-left: 0 !important;
+        margin-top: 40px !important;
+    }
+}
+.about-section-ten .sec-title .sub-title {
+    display: inline-block !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #eca411 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 8px !important;
+}
+.about-section-ten .sec-title h2 {
+    font-size: 34px !important;
+    font-weight: 800 !important;
+    color: #102771 !important;
+    margin-bottom: 20px !important;
+    line-height: 1.25 !important;
+}
+.about-section-ten .sec-title .text {
+    font-size: 15px !important;
+    line-height: 26px !important;
+    color: #555555 !important;
+    margin-bottom: 20px !important;
+}
+.about-section-ten .abt-txt h6 {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #102771 !important;
+    margin-top: 18px !important;
+    margin-bottom: 6px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+.about-section-ten .image-column {
+    position: relative !important;
+    margin-bottom: 0 !important;
+}
+.about-section-ten .image-column .inner-column {
+    position: relative !important;
+    max-width: 570px !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+.about-section-ten .image-column .image-1 {
+    position: relative !important;
+    margin-bottom: 0 !important;
+    display: inline-block !important;
+    width: 52% !important;
+    max-width: 299px !important;
+    vertical-align: top !important;
+}
+.about-section-ten .image-column .image-1 img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+.about-section-ten .image-column .image-2 {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    margin-bottom: 0 !important;
+    width: 48% !important;
+    max-width: 270px !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: block !important;
+}
+.about-section-ten .image-column .image-2 img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+.about-section-ten .experience {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 48% !important;
+    max-width: 270px !important;
+    height: 190px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+.about-section-ten .experience:before {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url(/assets/images/map.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    content: "" !important;
+    opacity: 0.9 !important;
+}
+.about-section-ten .experience .inner {
+    position: relative !important;
+    z-index: 2 !important;
+}
+.about-section-ten .experience .text {
+    color: #484750 !important;
+    font-size: 15px !important;
+    line-height: 22px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+.about-section-ten .experience strong {
+    color: #102771 !important;
+    display: block !important;
+    font-size: 65px !important;
+    line-height: 1 !important;
+    margin-bottom: 4px !important;
+    font-weight: 800 !important;
+}
+.about-section-ten .content-bottom {
+    margin-top: 45px !important;
+    width: 100% !important;
+}
+.about-section-ten .content-bottom .call-info-box-outer {
+    background-color: #f7f7f7 !important;
+    border: 1.5px solid #102771 !important;
+    padding: 10px 14px 10px 28px !important;
+    align-items: center !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    border-radius: 6px !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+    max-width: 100% !important;
+}
+.about-section-ten .content-bottom .call-info-box-outer .call-info-box-text {
+    font-size: 16px !important;
+    color: #222222 !important;
+    font-weight: 500 !important;
+}
+.about-section-ten .content-bottom .call-info-box-outer .call-info-box-text span {
+    color: #102771 !important;
+    font-weight: 700 !important;
+    margin-left: 20px !important;
+}
+.about-section-ten .content-bottom .call-info-box {
+    background-color: #102771 !important;
+    position: relative !important;
+    padding: 10px 24px !important;
+    border-radius: 4px !important;
+    transition: 0.3s ease !important;
+}
+.about-section-ten .content-bottom .call-info-box:hover {
+    background-color: #eca411 !important;
+}
+.about-section-ten .content-bottom .call-info-box a {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
