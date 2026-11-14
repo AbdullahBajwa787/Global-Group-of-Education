@@ -11704,7 +11704,9 @@ body {
 /* ========================================================================== */
 .top-header-bar {
     background-color: #071536 !important;
-    padding: 8px 0 !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    padding: 0 !important;
     position: relative !important;
     z-index: 1002 !important;
     width: 100% !important;
