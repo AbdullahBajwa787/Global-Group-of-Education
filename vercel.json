@@ -10,6 +10,10 @@
     {
       "source": "/student-registration/(.*)",
       "destination": "/contact-us.html"
+    },
+    {
+      "source": "/courses",
+      "destination": "/undergraduate-courses.html"
     }
   ]
 }
