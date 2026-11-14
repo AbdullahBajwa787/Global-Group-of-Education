@@ -7981,16 +7981,7 @@ a.btn-circle:hover {
     position: relative;
     padding-bottom: 6px;
 }
-.gge-mk-hero-tag::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--gge-gold);
-    border-radius: 2px;
-}
+.gge-mk-hero-tag::after { display: none !important; }
 .gge-mk-hero-title {
     font-size: 48px;
     line-height: 1.18;
@@ -11705,4 +11696,46 @@ body {
     display: block !important;
     position: relative !important;
     z-index: 10 !important;
+}
+
+/* ========================================================================== */
+/* REMOVE ALL TOP YELLOW LINES & BORDERS                                      */
+/* ========================================================================== */
+.gge-mk-hero-tag::after,
+.gge-mk-hero-title::after,
+.smll-txt::after,
+.bnnr-tag::after {
+    display: none !important;
+    content: none !important;
+    border: none !important;
+}
+
+.gge-mk-header {
+    border: none !important;
+    box-shadow: 0 10px 35px rgba(13, 37, 82, 0.08) !important;
+}
+
+.gge-mk-header-wrap {
+    border: none !important;
+}
+
+.top-header-bar,
+.gge-announcement-bar,
+.gge-view-switcher-bar {
+    border: none !important;
+    border-bottom: none !important;
+}
+
+/* ========================================================================== */
+/* CRM BRANDED MOSAIC BORDER STRIP                                            */
+/* ========================================================================== */
+.GGEBrandedBorderHD {
+    background: url('/assets/images/GGEBrandedBorderHD.png') repeat-x center !important;
+    width: 100% !important;
+    height: 42px !important;
+    background-size: contain !important;
+    display: block !important;
+    clear: both !important;
+    position: relative !important;
+    z-index: 9999 !important;
 }
