@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/login",
+      "destination": "https://globalgroupofeducationportal.com/login",
+      "permanent": false
+    },
+    {
       "source": "/courses",
       "destination": "https://www.globalgroupofeducation.com/undergraduate-courses",
       "permanent": false
