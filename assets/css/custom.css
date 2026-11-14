@@ -11940,29 +11940,17 @@ body {
 
 
 /* ========================================================================== */
-/* FLOATING WHATSAPP BUTTON (PULSING & GLOWING EFFECT WITH CHAT BUBBLE)       */
+/* FLOATING WHATSAPP BUTTON (PULSING & GLOWING EFFECT - BUTTON ONLY)          */
 /* ========================================================================== */
-.gge-floating-whatsapp-wrap {
-    position: fixed !important;
-    bottom: 24px !important;
-    right: 24px !important;
-    left: auto !important;
-    width: auto !important;
-    height: auto !important;
-    z-index: 99999 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    pointer-events: none !important;
-}
-
-.gge-floating-whatsapp-wrap a {
-    pointer-events: auto !important;
+.gge-wa-chat-bubble {
+    display: none !important;
 }
 
 .gge-floating-whatsapp,
 .gge-floating-wa-btn {
-    position: relative !important;
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 24px !important;
     width: 60px !important;
     height: 60px !important;
     background: #25d366 !important;
@@ -11975,10 +11963,10 @@ body {
     justify-content: center !important;
     font-size: 32px !important;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5), 0 0 25px rgba(37, 211, 102, 0.45) !important;
+    z-index: 99999 !important;
     text-decoration: none !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
     animation: ggeWaGlowPulse 2s infinite ease-in-out !important;
-    z-index: 2 !important;
 }
 
 .gge-floating-whatsapp::before,
@@ -12060,93 +12048,4 @@ body {
 .gge-floating-wa-btn:hover i,
 .gge-floating-wa-btn:hover .fa {
     color: #ffffff !important;
-}
-
-/* Chat Bubble Tooltip */
-.gge-wa-chat-bubble {
-    position: relative !important;
-    margin-right: 14px !important;
-    background: #ffffff !important;
-    color: #071536 !important;
-    padding: 10px 16px !important;
-    border-radius: 14px !important;
-    box-shadow: 0 10px 30px rgba(7, 21, 54, 0.18), 0 2px 8px rgba(37, 211, 102, 0.25) !important;
-    border: 1px solid rgba(37, 211, 102, 0.35) !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 2px !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    animation: ggeBubbleFloat 3s infinite ease-in-out !important;
-    white-space: nowrap !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-}
-
-.gge-wa-chat-bubble:hover {
-    transform: translateY(-3px) !important;
-    box-shadow: 0 14px 35px rgba(7, 21, 54, 0.22), 0 4px 12px rgba(37, 211, 102, 0.35) !important;
-}
-
-.gge-wa-bubble-header {
-    display: flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-}
-
-.gge-wa-online-dot {
-    width: 8px !important;
-    height: 8px !important;
-    background: #25d366 !important;
-    border-radius: 50% !important;
-    display: inline-block !important;
-    box-shadow: 0 0 6px #25d366 !important;
-    animation: ggeDotPulse 1.5s infinite !important;
-}
-
-.gge-wa-status {
-    font-size: 11px !important;
-    color: #16a34a !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-}
-
-.gge-wa-bubble-msg {
-    font-size: 13px !important;
-    color: #0f172a !important;
-    line-height: 1.3 !important;
-}
-
-.gge-wa-bubble-msg strong {
-    color: #071536 !important;
-    font-weight: 700 !important;
-}
-
-.gge-wa-bubble-tail {
-    position: absolute !important;
-    right: -7px !important;
-    top: 50% !important;
-    transform: translateY(-50%) rotate(45deg) !important;
-    width: 12px !important;
-    height: 12px !important;
-    background: #ffffff !important;
-    border-top: 1px solid rgba(37, 211, 102, 0.35) !important;
-    border-right: 1px solid rgba(37, 211, 102, 0.35) !important;
-}
-
-@keyframes ggeBubbleFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
-}
-
-@keyframes ggeDotPulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.85); }
-}
-
-@media (max-width: 576px) {
-    .gge-wa-chat-bubble {
-        display: none !important;
-    }
 }
