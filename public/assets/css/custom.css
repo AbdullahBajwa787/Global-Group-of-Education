@@ -7801,7 +7801,7 @@ a.btn-circle:hover {
 }
 .gge-mk-header {
     background: #ffffff;
-    border: 2px solid rgba(251, 176, 25, 0.45);
+    border: 1px solid rgba(13, 37, 82, 0.08);
     border-radius: var(--gge-radius-pill);
     box-shadow: 0 10px 35px rgba(13, 37, 82, 0.08);
     padding: 10px 24px;
@@ -11634,4 +11634,75 @@ body {
     .gge-fl-col {
         margin-bottom: 35px !important;
     }
+}
+
+/* ========================================================================== */
+/* TOP NAVBAR: REMOVE YELLOW BORDER                                           */
+/* ========================================================================== */
+.gge-mk-header {
+    border: 1px solid rgba(13, 37, 82, 0.08) !important;
+}
+
+/* ========================================================================== */
+/* ABOUT US: SINGLE GRADUATE IMAGE ALIGNMENT (WITHOUT CONSULTANT PHOTO)       */
+/* ========================================================================== */
+.gge-about-single-image-wrap {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 420px !important;
+}
+.about-section-ten .image-column .inner-column.gge-about-single-image-wrap .image-2 {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 16px 40px rgba(16, 39, 113, 0.12) !important;
+    display: block !important;
+}
+.about-section-ten .image-column .inner-column.gge-about-single-image-wrap .image-2 img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border-radius: 20px !important;
+}
+.about-section-ten .image-column .inner-column.gge-about-single-image-wrap .experience {
+    position: absolute !important;
+    bottom: -15px !important;
+    right: 20px !important;
+    width: auto !important;
+    min-width: 200px !important;
+    height: auto !important;
+    padding: 16px 24px !important;
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 12px 32px rgba(16, 39, 113, 0.16) !important;
+    border: 1px solid #e2e8f0 !important;
+}
+@media (max-width: 767px) {
+    .about-section-ten .image-column .inner-column.gge-about-single-image-wrap .experience {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        margin-top: 20px !important;
+    }
+}
+
+/* ========================================================================== */
+/* CRM BRANDED MOSAIC BORDER STRIP (FULL WIDTH REPEATING BOTTOM BORDER)       */
+/* ========================================================================== */
+.GGEBrandedBorderHD {
+    background: url('/assets/images/GGEBrandedBorderHD.png') repeat-x center !important;
+    width: 100% !important;
+    height: 40px !important;
+    background-size: contain !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 10 !important;
 }
