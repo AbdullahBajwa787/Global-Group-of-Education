@@ -6407,7 +6407,6 @@ a.btn-circle:hover {
 		padding-bottom:30px;
 	}
 }
-}
 
 
 /* Landscape phones and down */
@@ -8899,7 +8898,127 @@ a.btn-circle:hover {
     .gge-mk-testi-grid { grid-template-columns: 1fr; }
     .gge-mk-graduates-banner { flex-direction: column; text-align: center; }
     .gge-mk-footer-grid { grid-template-columns: 1fr 1fr; }
-    .gge-mk-nav { display: none; }
+
+    /* Responsive Header & Navigation on Mobile Screens */
+    .gge-mk-header-wrap {
+        padding: 10px 14px 6px 14px !important;
+    }
+    .gge-mk-header {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        border-radius: 24px !important;
+        padding: 12px 14px 10px 14px !important;
+        box-shadow: 0 10px 30px rgba(7, 21, 54, 0.1) !important;
+    }
+    .gge-mk-logo-link {
+        order: 1 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        flex: 0 0 auto !important;
+    }
+    .gge-mk-logo-img {
+        height: 42px !important;
+        width: auto !important;
+    }
+    .gge-mk-header-actions {
+        order: 2 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        flex: 0 0 auto !important;
+        margin-left: auto !important;
+    }
+    .gge-mk-login-btn {
+        padding: 7px 16px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        border-radius: 20px !important;
+    }
+    .gge-mobile-menu-toggle {
+        width: 36px !important;
+        height: 36px !important;
+        padding: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+        background: #f1f5f9 !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #071536 !important;
+        font-size: 16px !important;
+        cursor: pointer !important;
+    }
+    .gge-mk-header nav {
+        order: 3 !important;
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-top: 10px !important;
+        padding-top: 10px !important;
+        border-top: 1px solid rgba(13, 37, 82, 0.08) !important;
+        display: block !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+    }
+    .gge-mk-header nav::-webkit-scrollbar {
+        display: none !important;
+    }
+    .gge-mk-nav {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin: 0 !important;
+        padding: 2px 2px 4px 2px !important;
+        list-style: none !important;
+        width: max-content !important;
+    }
+    .gge-mk-nav-item {
+        flex-shrink: 0 !important;
+        display: inline-block !important;
+        position: relative !important;
+    }
+    .gge-mk-nav-link {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        padding: 7px 14px !important;
+        border-radius: 20px !important;
+        white-space: nowrap !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        background: #f1f5f9 !important;
+        color: #1b2a4e !important;
+        text-decoration: none !important;
+        transition: all 0.2s ease !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important;
+    }
+    .gge-mk-nav-link.active,
+    .gge-mk-nav-link:hover {
+        background: #071536 !important;
+        color: #ffffff !important;
+    }
+    .gge-mk-nav-dropdown {
+        display: none !important;
+    }
+    .gge-mk-nav-item.open .gge-mk-nav-dropdown {
+        display: block !important;
+        position: fixed !important;
+        top: 125px !important;
+        left: 14px !important;
+        right: 14px !important;
+        max-width: calc(100vw - 28px) !important;
+        z-index: 100000 !important;
+        box-shadow: 0 15px 45px rgba(7, 21, 54, 0.28) !important;
+        border-radius: 14px !important;
+        border: 1px solid #e2e8f0 !important;
+        background: #ffffff !important;
+        padding: 10px 0 !important;
+        animation: ggeNavFadeIn 0.2s ease-out !important;
+    }
 }
 
 @media (max-width: 767px) {
