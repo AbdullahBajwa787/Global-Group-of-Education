@@ -10,37 +10,37 @@
     },
     {
       "source": "/courses",
-      "destination": "https://www.globalgroupofeducation.com/undergraduate-courses",
+      "destination": "https://globalgroupofeducationportal.com/courseFinder/index?access=pass",
       "permanent": false
     },
     {
       "source": "/doctorate-courses",
-      "destination": "https://www.globalgroupofeducation.com/doctorate-courses",
+      "destination": "https://globalgroupofeducationportal.com/courseFinder/index?access=pass",
       "permanent": false
     },
     {
       "source": "/postgraduate-courses",
-      "destination": "https://www.globalgroupofeducation.com/postgraduate-courses",
+      "destination": "https://globalgroupofeducationportal.com/courseFinder/index?access=pass",
       "permanent": false
     },
     {
       "source": "/undergraduate-courses",
-      "destination": "https://www.globalgroupofeducation.com/undergraduate-courses",
+      "destination": "https://globalgroupofeducationportal.com/courseFinder/index?access=pass",
       "permanent": false
     },
     {
       "source": "/pre-master-courses",
-      "destination": "https://www.globalgroupofeducation.com/pre-master-courses",
+      "destination": "https://globalgroupofeducationportal.com/courseFinder/index?access=pass",
       "permanent": false
     },
     {
       "source": "/foundation-courses",
-      "destination": "https://www.globalgroupofeducation.com/foundation-courses",
+      "destination": "https://globalgroupofeducationportal.com/courseFinder/index?access=pass",
       "permanent": false
     },
     {
       "source": "/english-language-courses",
-      "destination": "https://www.globalgroupofeducation.com/english-language-courses",
+      "destination": "https://globalgroupofeducationportal.com/courseFinder/index?access=pass",
       "permanent": false
     },
     {
