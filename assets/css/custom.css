@@ -8899,125 +8899,214 @@ a.btn-circle:hover {
     .gge-mk-graduates-banner { flex-direction: column; text-align: center; }
     .gge-mk-footer-grid { grid-template-columns: 1fr 1fr; }
 
-    /* Responsive Header & Navigation on Mobile Screens */
-    .gge-mk-header-wrap {
-        padding: 10px 14px 6px 14px !important;
-    }
-    .gge-mk-header {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        border-radius: 24px !important;
-        padding: 12px 14px 10px 14px !important;
-        box-shadow: 0 10px 30px rgba(7, 21, 54, 0.1) !important;
-    }
-    .gge-mk-logo-link {
-        order: 1 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        flex: 0 0 auto !important;
-    }
-    .gge-mk-logo-img {
-        height: 42px !important;
-        width: auto !important;
-    }
-    .gge-mk-header-actions {
-        order: 2 !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-        flex: 0 0 auto !important;
-        margin-left: auto !important;
-    }
-    .gge-mk-login-btn {
-        padding: 7px 16px !important;
-        font-size: 13px !important;
-        font-weight: 700 !important;
-        border-radius: 20px !important;
-    }
+    /* 1. Desktop: HIDE hamburger button & drawer on PC / Laptop (>= 992px) */
     .gge-mobile-menu-toggle {
-        width: 36px !important;
-        height: 36px !important;
-        padding: 0 !important;
+        display: none !important;
+    }
+    @media (min-width: 992px) {
+        .gge-mobile-drawer,
+        .gge-drawer-backdrop {
+            display: none !important;
+        }
+    }
+
+    /* 2. Mobile (<= 991px): Clean single-row header, HIDE row 2 nav */
+    @media (max-width: 991px) {
+        .gge-mk-header-wrap {
+            padding: 10px 16px 8px 16px !important;
+        }
+        .gge-mk-header {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            border-radius: 30px !important;
+            padding: 10px 18px !important;
+            box-shadow: 0 10px 30px rgba(7, 21, 54, 0.1) !important;
+        }
+        .gge-mk-logo-link {
+            display: inline-flex !important;
+            align-items: center !important;
+            flex: 0 0 auto !important;
+        }
+        .gge-mk-logo-img {
+            height: 44px !important;
+            width: auto !important;
+        }
+        .gge-mk-header-actions {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            flex: 0 0 auto !important;
+            margin-left: auto !important;
+        }
+        .gge-mk-login-btn {
+            padding: 8px 18px !important;
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            border-radius: 25px !important;
+            background: #071536 !important;
+            color: #ffffff !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .gge-mobile-menu-toggle {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 40px !important;
+            height: 40px !important;
+            padding: 0 !important;
+            border-radius: 10px !important;
+            background: #f1f5f9 !important;
+            border: 1px solid #e2e8f0 !important;
+            color: #071536 !important;
+            font-size: 18px !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+        }
+        .gge-mobile-menu-toggle:hover {
+            background: #e2e8f0 !important;
+        }
+        /* HIDE row 2 nav completely on phone */
+        .gge-mk-header nav,
+        .gge-mk-nav {
+            display: none !important;
+        }
+    }
+
+    /* 3. Mobile Drawer Styling & Open State */
+    .gge-mobile-drawer {
+        position: fixed !important;
+        top: 0 !important;
+        right: -340px !important;
+        width: 310px !important;
+        max-width: 85vw !important;
+        height: 100% !important;
+        background: #ffffff !important;
+        z-index: 100000 !important;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.25) !important;
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 22px 20px !important;
+        box-sizing: border-box !important;
+        overflow-y: auto !important;
+    }
+    .gge-mobile-drawer.open,
+    .gge-mobile-drawer.active {
+        right: 0 !important;
+    }
+    .gge-drawer-backdrop {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(7, 21, 54, 0.6) !important;
+        backdrop-filter: blur(4px) !important;
+        -webkit-backdrop-filter: blur(4px) !important;
+        z-index: 99999 !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transition: opacity 0.3s ease !important;
+    }
+    .gge-drawer-backdrop.open,
+    .gge-drawer-backdrop.active {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    /* Drawer Header */
+    .gge-drawer-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        padding-bottom: 16px !important;
+        margin-bottom: 18px !important;
+    }
+    .gge-drawer-close {
+        background: #f1f5f9 !important;
+        border: none !important;
+        font-size: 24px !important;
+        width: 38px !important;
+        height: 38px !important;
+        border-radius: 50% !important;
+        color: #071536 !important;
+        cursor: pointer !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
-        border-radius: 50% !important;
-        background: #f1f5f9 !important;
-        border: 1px solid #e2e8f0 !important;
-        color: #071536 !important;
-        font-size: 16px !important;
-        cursor: pointer !important;
+        line-height: 1 !important;
     }
-    .gge-mk-header nav {
-        order: 3 !important;
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        margin-top: 10px !important;
-        padding-top: 10px !important;
-        border-top: 1px solid rgba(13, 37, 82, 0.08) !important;
-        display: block !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        -webkit-overflow-scrolling: touch !important;
-        scrollbar-width: none !important;
-    }
-    .gge-mk-header nav::-webkit-scrollbar {
-        display: none !important;
-    }
-    .gge-mk-nav {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        align-items: center !important;
-        gap: 8px !important;
-        margin: 0 !important;
-        padding: 2px 2px 4px 2px !important;
+
+    /* Drawer Navigation Links */
+    .gge-drawer-nav {
         list-style: none !important;
-        width: max-content !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        flex: 1 !important;
     }
-    .gge-mk-nav-item {
-        flex-shrink: 0 !important;
-        display: inline-block !important;
-        position: relative !important;
+    .gge-drawer-nav li {
+        margin-bottom: 6px !important;
     }
-    .gge-mk-nav-link {
-        font-size: 13px !important;
-        font-weight: 600 !important;
-        padding: 7px 14px !important;
-        border-radius: 20px !important;
-        white-space: nowrap !important;
-        display: inline-flex !important;
+    .gge-drawer-nav li a {
+        display: flex !important;
         align-items: center !important;
-        gap: 6px !important;
-        background: #f1f5f9 !important;
+        gap: 12px !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
         color: #1b2a4e !important;
         text-decoration: none !important;
+        padding: 10px 14px !important;
+        border-radius: 12px !important;
         transition: all 0.2s ease !important;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important;
     }
-    .gge-mk-nav-link.active,
-    .gge-mk-nav-link:hover {
-        background: #071536 !important;
-        color: #ffffff !important;
+    .gge-drawer-nav li a:hover,
+    .gge-drawer-nav li a.active {
+        background: #f0f4fa !important;
+        color: #071536 !important;
     }
-    .gge-mk-nav-dropdown {
+    .gge-drawer-nav li a i {
+        width: 20px !important;
+        text-align: center !important;
+        color: #071536 !important;
+    }
+    .gge-drawer-sub-toggle {
+        justify-content: space-between !important;
+    }
+    .gge-drawer-sub-toggle .fa-angle-down {
+        transition: transform 0.25s ease !important;
+        margin-left: auto !important;
+    }
+    .gge-drawer-has-sub.open .gge-drawer-sub-toggle .fa-angle-down {
+        transform: rotate(180deg) !important;
+    }
+    .gge-drawer-sub {
         display: none !important;
+        list-style: none !important;
+        padding-left: 20px !important;
+        margin: 4px 0 10px 0 !important;
+        border-left: 2px solid #e2e8f0 !important;
     }
-    .gge-mk-nav-item.open .gge-mk-nav-dropdown {
+    .gge-drawer-has-sub.open .gge-drawer-sub {
         display: block !important;
-        position: fixed !important;
-        top: 125px !important;
-        left: 14px !important;
-        right: 14px !important;
-        max-width: calc(100vw - 28px) !important;
-        z-index: 100000 !important;
-        box-shadow: 0 15px 45px rgba(7, 21, 54, 0.28) !important;
-        border-radius: 14px !important;
-        border: 1px solid #e2e8f0 !important;
-        background: #ffffff !important;
-        padding: 10px 0 !important;
-        animation: ggeNavFadeIn 0.2s ease-out !important;
+    }
+    .gge-drawer-sub li a {
+        padding: 7px 10px !important;
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        color: #475569 !important;
+    }
+    .gge-drawer-sub li a:hover {
+        color: #071536 !important;
+    }
+    .gge-drawer-cta {
+        margin-top: 18px !important;
+        padding-top: 14px !important;
+        border-top: 1px solid #e2e8f0 !important;
     }
 }
 
