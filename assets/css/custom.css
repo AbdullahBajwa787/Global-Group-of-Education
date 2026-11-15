@@ -8889,6 +8889,18 @@ a.btn-circle:hover {
     .gge-mk-footer-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* Desktop Default (>= 992px): HIDE hamburger button & drawer on PC / Laptop */
+.gge-mobile-menu-toggle {
+    display: none !important;
+}
+@media (min-width: 992px) {
+    .gge-mobile-drawer,
+    .gge-drawer-backdrop {
+        display: none !important;
+    }
+}
+
+/* Mobile Screens (<= 991px) */
 @media (max-width: 991px) {
     .gge-mk-hero-grid { grid-template-columns: 1fr; }
     .gge-mk-offers-grid { grid-template-columns: 1fr; }
@@ -8899,85 +8911,74 @@ a.btn-circle:hover {
     .gge-mk-graduates-banner { flex-direction: column; text-align: center; }
     .gge-mk-footer-grid { grid-template-columns: 1fr 1fr; }
 
-    /* 1. Desktop: HIDE hamburger button & drawer on PC / Laptop (>= 992px) */
+    /* Clean Single-Row Curved Header on Mobile */
+    .gge-mk-header-wrap {
+        padding: 10px 16px 8px 16px !important;
+    }
+    .gge-mk-header {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        border-radius: 30px !important;
+        padding: 10px 18px !important;
+        box-shadow: 0 10px 30px rgba(7, 21, 54, 0.1) !important;
+    }
+    .gge-mk-logo-link {
+        display: inline-flex !important;
+        align-items: center !important;
+        flex: 0 0 auto !important;
+    }
+    .gge-mk-logo-img {
+        height: 44px !important;
+        width: auto !important;
+    }
+    .gge-mk-header-actions {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex: 0 0 auto !important;
+        margin-left: auto !important;
+    }
+    .gge-mk-login-btn {
+        padding: 8px 18px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        border-radius: 25px !important;
+        background: #071536 !important;
+        color: #ffffff !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+    }
+    /* Hamburger 3-line Button visible ONLY on mobile */
     .gge-mobile-menu-toggle {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        padding: 0 !important;
+        border-radius: 10px !important;
+        background: #f1f5f9 !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #071536 !important;
+        font-size: 18px !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+    }
+    .gge-mobile-menu-toggle:hover {
+        background: #e2e8f0 !important;
+    }
+    /* HIDE the menu underneath header on mobile */
+    .gge-mk-header nav,
+    .gge-mk-nav {
         display: none !important;
     }
-    @media (min-width: 992px) {
-        .gge-mobile-drawer,
-        .gge-drawer-backdrop {
-            display: none !important;
-        }
-    }
 
-    /* 2. Mobile (<= 991px): Clean single-row header, HIDE row 2 nav */
-    @media (max-width: 991px) {
-        .gge-mk-header-wrap {
-            padding: 10px 16px 8px 16px !important;
-        }
-        .gge-mk-header {
-            display: flex !important;
-            flex-wrap: nowrap !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            border-radius: 30px !important;
-            padding: 10px 18px !important;
-            box-shadow: 0 10px 30px rgba(7, 21, 54, 0.1) !important;
-        }
-        .gge-mk-logo-link {
-            display: inline-flex !important;
-            align-items: center !important;
-            flex: 0 0 auto !important;
-        }
-        .gge-mk-logo-img {
-            height: 44px !important;
-            width: auto !important;
-        }
-        .gge-mk-header-actions {
-            display: inline-flex !important;
-            align-items: center !important;
-            gap: 10px !important;
-            flex: 0 0 auto !important;
-            margin-left: auto !important;
-        }
-        .gge-mk-login-btn {
-            padding: 8px 18px !important;
-            font-size: 13px !important;
-            font-weight: 700 !important;
-            border-radius: 25px !important;
-            background: #071536 !important;
-            color: #ffffff !important;
-            display: inline-flex !important;
-            align-items: center !important;
-            gap: 6px !important;
-        }
-        .gge-mobile-menu-toggle {
-            display: inline-flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            width: 40px !important;
-            height: 40px !important;
-            padding: 0 !important;
-            border-radius: 10px !important;
-            background: #f1f5f9 !important;
-            border: 1px solid #e2e8f0 !important;
-            color: #071536 !important;
-            font-size: 18px !important;
-            cursor: pointer !important;
-            transition: all 0.2s ease !important;
-        }
-        .gge-mobile-menu-toggle:hover {
-            background: #e2e8f0 !important;
-        }
-        /* HIDE row 2 nav completely on phone */
-        .gge-mk-header nav,
-        .gge-mk-nav {
-            display: none !important;
-        }
-    }
-
-    /* 3. Mobile Drawer Styling & Open State */
+    /* Mobile Drawer enabled on mobile */
     .gge-mobile-drawer {
+        display: flex !important;
         position: fixed !important;
         top: 0 !important;
         right: -340px !important;
@@ -8988,7 +8989,6 @@ a.btn-circle:hover {
         z-index: 100000 !important;
         box-shadow: -10px 0 40px rgba(0, 0, 0, 0.25) !important;
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        display: flex !important;
         flex-direction: column !important;
         padding: 22px 20px !important;
         box-sizing: border-box !important;
@@ -8999,6 +8999,7 @@ a.btn-circle:hover {
         right: 0 !important;
     }
     .gge-drawer-backdrop {
+        display: block !important;
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
