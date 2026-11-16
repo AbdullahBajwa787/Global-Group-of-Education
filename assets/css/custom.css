@@ -7755,7 +7755,9 @@ a.btn-circle:hover {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     color: var(--gge-text-dark);
     background: #ffffff;
-    overflow-x: hidden;
+    overflow: visible !important;
+    overflow-x: clip !important;
+    overflow-y: visible !important;
     position: relative;
     width: 100%;
 }
@@ -11729,12 +11731,16 @@ a[href*="classic"],
 /* SMOOTH GPU SCROLL & ANTI-GLITCH REFRESH                                    */
 /* ========================================================================== */
 html {
-    scroll-behavior: smooth !important;
-    overflow-x: hidden !important;
+scroll-behavior: smooth !important;
+overflow: visible !important;
+overflow-x: clip !important;
+overflow-y: visible !important;
 }
 body {
-    overflow-x: hidden !important;
-    width: 100% !important;
+overflow: visible !important;
+overflow-x: clip !important;
+overflow-y: visible !important;
+width: 100% !important;
 }
 
 /* ========================================================================== */
@@ -12542,5 +12548,93 @@ body {
     height: 44px;
     padding: 0 20px;
     font-size: 13px;
+  }
+}
+
+
+/* ==========================================================================
+   PERFECT STACKING OVERRIDES (REFERENCE PORTFOLIO REPLICATION)
+   ========================================================================== */
+html, body {
+  overflow: visible !important;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+#ggeMockupHomepage,
+.gge-homepage-view {
+  overflow: visible !important;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+.gge-stack-intro-section {
+  padding: 30px 20px 15px !important;
+  text-align: center;
+  background: transparent !important;
+}
+.gge-stack-container {
+  background: #f8fafc !important;
+  padding: 10px 20px 80px !important;
+  overflow: visible !important;
+}
+.stack {
+  position: relative !important;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-bottom: 12vh !important;
+  overflow: visible !important;
+}
+.card {
+  position: sticky !important;
+  top: calc(var(--nav-h, 85px) + 16px + var(--i) * 8px) !important;
+  margin-bottom: 6vh !important;
+  border-radius: 28px !important;
+  background: #ffffff !important;
+  box-shadow: 0 20px 60px rgba(7, 21, 54, 0.1) !important;
+  border: 1px solid rgba(7, 21, 54, 0.08) !important;
+  transform-origin: 50% 0px !important;
+  will-change: transform !important;
+  overflow: hidden !important;
+  z-index: calc(10 + var(--i)) !important;
+}
+.card__in {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 32px 30px;
+  min-height: min(calc(100vh - var(--nav-h, 85px) - 100px), 640px);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 900px) {
+  .card__in {
+    grid-template-columns: minmax(0px, 5.2fr) minmax(0px, 6.8fr);
+    gap: 48px;
+    padding: 44px 54px;
+  }
+  .card.flip .card__in {
+    grid-template-columns: minmax(0px, 6.8fr) minmax(0px, 5.2fr);
+  }
+  .card.flip .card__info {
+    order: 2;
+  }
+}
+@media (max-width: 899.98px) {
+  .gge-stack-intro-section {
+    padding: 24px 16px 10px !important;
+  }
+  .gge-stack-container {
+    padding: 10px 12px 50px !important;
+  }
+  .card {
+    top: calc(var(--nav-h, 70px) + 10px + var(--i) * 5px) !important;
+    border-radius: 22px !important;
+    margin-bottom: 4vh !important;
+    z-index: calc(10 + var(--i)) !important;
+  }
+  .card__in {
+    padding: 22px 18px;
+    gap: 18px;
+    min-height: auto;
   }
 }
