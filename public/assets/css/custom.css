@@ -12553,7 +12553,7 @@ width: 100% !important;
 
 
 /* ==========================================================================
-   PERFECT STACKING OVERRIDES (REFERENCE PORTFOLIO REPLICATION)
+   PERFECT STACKING & VERTICAL CENTERING (NO CUTOFF ON ANY LAPTOP / SCREEN)
    ========================================================================== */
 html, body {
   overflow: visible !important;
@@ -12567,27 +12567,27 @@ html, body {
   overflow-y: visible !important;
 }
 .gge-stack-intro-section {
-  padding: 30px 20px 15px !important;
+  padding: 40px 20px 20px !important;
   text-align: center;
   background: transparent !important;
 }
 .gge-stack-container {
   background: #f8fafc !important;
-  padding: 10px 20px 80px !important;
+  padding: 10px 20px 100px !important;
   overflow: visible !important;
 }
 .stack {
   position: relative !important;
   max-width: 1240px;
   margin: 0 auto;
-  padding-bottom: 12vh !important;
+  padding-bottom: 15vh !important;
   overflow: visible !important;
 }
 .card {
   position: sticky !important;
-  top: calc(var(--nav-h, 85px) + 16px + var(--i) * 8px) !important;
-  margin-bottom: 6vh !important;
-  border-radius: 28px !important;
+  top: max(85px, calc(50vh - 240px)) !important;
+  margin-bottom: 75vh !important;
+  border-radius: 24px !important;
   background: #ffffff !important;
   box-shadow: 0 20px 60px rgba(7, 21, 54, 0.1) !important;
   border: 1px solid rgba(7, 21, 54, 0.08) !important;
@@ -12596,45 +12596,134 @@ html, body {
   overflow: hidden !important;
   z-index: calc(10 + var(--i)) !important;
 }
+.card:last-child {
+  margin-bottom: 12vh !important;
+}
 .card__in {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  padding: 32px 30px;
-  min-height: min(calc(100vh - var(--nav-h, 85px) - 100px), 640px);
-  align-items: center;
-  position: relative;
-  z-index: 2;
+  display: grid !important;
+  grid-template-columns: minmax(0px, 5.2fr) minmax(0px, 6.8fr) !important;
+  gap: 36px !important;
+  padding: 28px 36px !important;
+  min-height: auto !important;
+  max-height: calc(100vh - 110px) !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
-@media (min-width: 900px) {
-  .card__in {
-    grid-template-columns: minmax(0px, 5.2fr) minmax(0px, 6.8fr);
-    gap: 48px;
-    padding: 44px 54px;
-  }
-  .card.flip .card__in {
-    grid-template-columns: minmax(0px, 6.8fr) minmax(0px, 5.2fr);
-  }
-  .card.flip .card__info {
-    order: 2;
-  }
+.card.flip .card__in {
+  grid-template-columns: minmax(0px, 6.8fr) minmax(0px, 5.2fr) !important;
 }
+.card.flip .card__info {
+  order: 2 !important;
+}
+.card h2 {
+  font-size: clamp(22px, 2.2vw, 32px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.15 !important;
+  color: #071536 !important;
+  margin-bottom: 6px !important;
+}
+.card .sub {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #475569 !important;
+  margin-bottom: 12px !important;
+}
+.card .desc {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #334155 !important;
+  max-width: 48ch !important;
+  margin-bottom: 18px !important;
+}
+.tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin-bottom: 20px !important;
+  list-style: none !important;
+  padding: 0 !important;
+}
+.tags li {
+  padding: 4px 12px !important;
+  border-radius: 16px !important;
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+}
+.card-btn {
+  height: 44px !important;
+  padding: 0 22px !important;
+  font-size: 13px !important;
+  border-radius: 25px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+.stage-frame {
+  aspect-ratio: 16 / 10 !important;
+  max-height: 320px !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+}
+
 @media (max-width: 899.98px) {
   .gge-stack-intro-section {
     padding: 24px 16px 10px !important;
   }
   .gge-stack-container {
-    padding: 10px 12px 50px !important;
+    padding: 10px 12px 60px !important;
   }
   .card {
-    top: calc(var(--nav-h, 70px) + 10px + var(--i) * 5px) !important;
-    border-radius: 22px !important;
-    margin-bottom: 4vh !important;
+    top: max(75px, calc(50vh - 270px)) !important;
+    margin-bottom: 65vh !important;
+    border-radius: 20px !important;
     z-index: calc(10 + var(--i)) !important;
   }
   .card__in {
-    padding: 22px 18px;
-    gap: 18px;
-    min-height: auto;
+    grid-template-columns: 1fr !important;
+    padding: 20px 18px !important;
+    gap: 16px !important;
+    min-height: auto !important;
+  }
+  .stage {
+    order: -1 !important;
+  }
+  .stage-frame {
+    aspect-ratio: 16 / 9 !important;
+    max-height: 200px !important;
+  }
+  .card h2 {
+    font-size: 20px !important;
+  }
+  .card .sub {
+    font-size: 13px !important;
+    margin-bottom: 8px !important;
+  }
+  .card .desc {
+    font-size: 13px !important;
+    margin-bottom: 12px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+  .tags {
+    margin-bottom: 14px !important;
+    gap: 4px !important;
+  }
+  .tags li {
+    font-size: 11px !important;
+    padding: 3px 8px !important;
+  }
+  .card-btn {
+    height: 40px !important;
+    padding: 0 18px !important;
+    font-size: 12px !important;
   }
 }
