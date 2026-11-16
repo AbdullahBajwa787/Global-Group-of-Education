@@ -12559,3 +12559,19 @@ html, body {
     font-size: 13px !important;
   }
 }
+
+/* Footer Contact Centering */
+.foot-contct-dtl {
+    text-align: center !important;
+    width: 100% !important;
+}
+.foot-contct-dtl ul {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 32px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 auto 24px auto !important;
+    flex-wrap: wrap !important;
+}
