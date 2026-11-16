@@ -12329,13 +12329,13 @@ html, body {
   overflow-y: visible !important;
 }
 .gge-stack-intro-section {
-  padding: 60px 20px 30px !important;
+  padding: 40px 20px 20px !important;
   text-align: center;
   background: transparent !important;
 }
 .gge-stack-container {
   background: #f8fafc !important;
-  padding: 20px 20px 100px !important;
+  padding: 10px 20px 100px !important;
   position: relative !important;
   overflow: visible !important;
 }
@@ -12348,7 +12348,7 @@ html, body {
 }
 .card {
   position: sticky !important;
-  top: calc(var(--nav-h, 72px) + 16px + var(--i) * 14px) !important;
+  top: calc(24px + var(--i) * 12px) !important;
   margin-bottom: 6vh !important;
   border-radius: 28px !important;
   background: #ffffff !important;
@@ -12362,8 +12362,8 @@ html, body {
 .card__in {
   display: grid !important;
   gap: 28px !important;
-  padding: 28px !important;
-  min-height: min(calc(100vh - var(--nav-h, 72px) - 120px), 720px) !important;
+  padding: 32px 40px !important;
+  min-height: auto !important;
   align-items: center !important;
   position: relative !important;
   z-index: 2 !important;
@@ -12372,8 +12372,8 @@ html, body {
   .card__in {
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr) !important;
     align-items: center !important;
-    gap: 40px !important;
-    padding: 48px 52px !important;
+    gap: 36px !important;
+    padding: 36px 44px !important;
   }
   .card.flip .card__in {
     grid-template-columns: minmax(0, 7fr) minmax(0, 5fr) !important;
@@ -12396,7 +12396,7 @@ html, body {
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
-  margin-bottom: 22px !important;
+  margin-bottom: 16px !important;
   font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace !important;
   font-size: 12px !important;
   font-weight: 600 !important;
@@ -12414,37 +12414,37 @@ html, body {
   display: inline-block !important;
 }
 .card h2 {
-  font-size: clamp(30px, 3.4vw, 46px) !important;
+  font-size: clamp(26px, 2.8vw, 38px) !important;
   font-weight: 700 !important;
   letter-spacing: -.02em !important;
-  line-height: 1.08 !important;
-  margin-bottom: 10px !important;
+  line-height: 1.1 !important;
+  margin-bottom: 8px !important;
   color: #071536 !important;
 }
 .card .sub {
   font-size: 15px !important;
   font-weight: 500 !important;
   color: #475569 !important;
-  margin-bottom: 22px !important;
+  margin-bottom: 14px !important;
 }
 .card .desc {
-  font-size: 16px !important;
-  line-height: 1.6 !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
   color: #334155 !important;
-  max-width: 44ch !important;
-  margin-bottom: 26px !important;
+  max-width: 46ch !important;
+  margin-bottom: 18px !important;
 }
 .tags {
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 8px !important;
-  margin-bottom: 28px !important;
+  margin-bottom: 20px !important;
   list-style: none !important;
   padding: 0 !important;
 }
 .tags li {
   list-style: none !important;
-  padding: 7px 14px !important;
+  padding: 6px 14px !important;
   border-radius: 20px !important;
   background: #f1f5f9 !important;
   border: 1px solid #e2e8f0 !important;
@@ -12486,6 +12486,7 @@ html, body {
   box-shadow: 0 18px 45px rgba(7, 21, 54, 0.12) !important;
   background: #e2e8f0 !important;
   aspect-ratio: 16 / 10 !important;
+  max-height: 360px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -12505,13 +12506,13 @@ html, body {
 /* Phones & small tablets */
 @media (max-width: 899.98px) {
   .gge-stack-intro-section {
-    padding: 30px 16px 15px !important;
+    padding: 24px 16px 12px !important;
   }
   .gge-stack-container {
     padding: 10px 12px 60px !important;
   }
   .card {
-    top: calc(var(--nav-h, 64px) + 10px + var(--i) * 10px) !important;
+    top: calc(16px + var(--i) * 8px) !important;
     border-radius: 22px !important;
     margin-bottom: 4vh !important;
   }
