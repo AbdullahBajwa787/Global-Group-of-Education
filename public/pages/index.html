@@ -29,7 +29,7 @@
 <!-- Animate -->
 <link href="/assets/css/animate.css" rel="stylesheet"/>
 <!-- Custom Style -->
-<link href="/assets/css/custom.css?v=8.2" rel="stylesheet"/>
+<link href="/assets/css/custom.css?v=8.4" rel="stylesheet"/>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
@@ -1742,12 +1742,19 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Floating WhatsApp Widget (Bottom-Right Item 13) -->
 
 <script>
-// GGE Stacking Cards scroll interaction
+// GGE Stacking Cards scroll interaction (Exact 1:1 match with portfolio)
 (function() {
   const stack = document.getElementById('stack');
   if (!stack) return;
   const cards = [...stack.querySelectorAll('.card')];
   if (!cards.length) return;
+  
+  const updateNavH = () => {
+    const header = document.querySelector('.gge-mockup-header') || document.querySelector('header') || document.querySelector('.header-area');
+    const h = header ? header.offsetHeight : 80;
+    document.documentElement.style.setProperty('--nav-h', h + 'px');
+  };
+  updateNavH();
   
   let ticking = false;
   function stackFx() {
@@ -1765,12 +1772,17 @@ document.addEventListener('DOMContentLoaded', function() {
       if (dim) dim.style.opacity = (p * 0.28).toFixed(3);
     });
   }
+  
   window.addEventListener('scroll', () => {
     if (!ticking) {
       ticking = true;
       requestAnimationFrame(stackFx);
     }
   }, { passive: true });
+  window.addEventListener('resize', () => {
+    updateNavH();
+    stackFx();
+  });
   stackFx();
 })();
 </script>
