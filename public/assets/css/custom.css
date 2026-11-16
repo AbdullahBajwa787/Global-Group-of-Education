@@ -12624,9 +12624,151 @@ html, body {
     font-size: 16px !important;
 }
 
-/* Screen 75% Scale Adjustment for Desktop / Laptop Devices */
-@media (min-width: 992px) {
-    body {
-        zoom: 75% !important;
-    }
+/* ========================================================
+   EXACT 75% VIEWPORT & HERO SECTION SPECIFICATION
+   Matches user uploaded reference (media_1794836150857_dc2c09b0.png) 1:1
+   ======================================================== */
+.top-header-bar {
+    height: 18px !important;
+    min-height: 18px !important;
+    background-color: #071536 !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.gge-mk-header-wrap {
+    padding: 8px 24px !important;
+    background: #ffffff !important;
+    border: none !important;
+    position: relative !important;
+    z-index: 1000 !important;
+}
+
+.gge-mk-header {
+    padding: 6px 20px !important;
+    min-height: 48px !important;
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    border-radius: 40px !important;
+    box-shadow: 0 4px 20px rgba(7, 21, 54, 0.06) !important;
+    border: 1px solid rgba(7, 21, 54, 0.08) !important;
+}
+
+.gge-mk-hero-section {
+    min-height: 400px !important;
+    height: calc(100vh - 74px) !important;
+    max-height: 520px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: #071536 !important;
+}
+
+.gge-mk-video-wrapper {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+}
+
+.gge-mk-hero-video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.gge-mk-video-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(to right, rgba(7, 21, 54, 0.94) 0%, rgba(7, 21, 54, 0.85) 36%, rgba(7, 21, 54, 0.42) 64%, rgba(7, 21, 54, 0.12) 100%) !important;
+    z-index: 2 !important;
+}
+
+.gge-mk-hero-grid.gge-mk-hero-fullwidth {
+    padding: 24px 30px !important;
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    z-index: 5 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.gge-mk-hero-tag {
+    font-size: 14.5px !important;
+    margin-bottom: 6px !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+    text-transform: none !important;
+}
+
+.gge-tag-underline {
+    border-bottom: 2px solid #eca411 !important;
+    padding-bottom: 2px !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+.gge-mk-hero-title {
+    font-size: clamp(32px, 3.8vw, 42px) !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    line-height: 1.15 !important;
+    margin: 0 0 10px 0 !important;
+    letter-spacing: -0.02em !important;
+    text-transform: none !important;
+}
+
+.gge-mk-hero-desc {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    color: #cbd5e1 !important;
+    margin-bottom: 18px !important;
+    max-width: 520px !important;
+}
+
+.gge-hero-btn-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin: 0 !important;
+}
+
+.gge-hero-btn-row .innr-bnr-bttn {
+    padding: 8px 18px !important;
+    font-size: 13.5px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+}
+
+.colrd-bttn {
+    background: #eca411 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+.colrd-bttn:hover {
+    background: #d69107 !important;
+    color: #ffffff !important;
+}
+
+.whte-bttn {
+    background: #f1f5f9 !important;
+    color: #071536 !important;
+    border: none !important;
+}
+
+.whte-bttn:hover {
+    background: #e2e8f0 !important;
+    color: #071536 !important;
 }
