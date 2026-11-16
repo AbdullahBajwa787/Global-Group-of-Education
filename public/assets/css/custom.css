@@ -12626,7 +12626,7 @@ html, body {
 
 /* ========================================================
    EXACT 75% VIEWPORT & HERO SECTION SPECIFICATION
-   Matches user uploaded reference (media_1794836150857_dc2c09b0.png) 1:1
+   Matches user uploaded reference (Image 2) 1:1
    ======================================================== */
 .top-header-bar {
     height: 18px !important;
@@ -12637,7 +12637,7 @@ html, body {
 }
 
 .gge-mk-header-wrap {
-    padding: 8px 24px !important;
+    padding: 8px 30px !important;
     background: #ffffff !important;
     border: none !important;
     position: relative !important;
@@ -12647,7 +12647,8 @@ html, body {
 .gge-mk-header {
     padding: 6px 20px !important;
     min-height: 48px !important;
-    max-width: 1240px !important;
+    max-width: 100% !important;
+    width: 100% !important;
     margin: 0 auto !important;
     background: #ffffff !important;
     border-radius: 40px !important;
@@ -12656,9 +12657,9 @@ html, body {
 }
 
 .gge-mk-hero-section {
-    min-height: 400px !important;
-    height: calc(100vh - 74px) !important;
-    max-height: 520px !important;
+    height: calc(100vh - 66px) !important;
+    min-height: calc(100vh - 66px) !important;
+    max-height: none !important;
     padding: 0 !important;
     display: flex !important;
     align-items: center !important;
@@ -12690,9 +12691,10 @@ html, body {
 }
 
 .gge-mk-hero-grid.gge-mk-hero-fullwidth {
-    padding: 24px 30px !important;
-    max-width: 1240px !important;
-    margin: 0 auto !important;
+    padding: 0 35px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
     position: relative !important;
     z-index: 5 !important;
     display: flex !important;
@@ -12700,7 +12702,7 @@ html, body {
 }
 
 .gge-mk-hero-tag {
-    font-size: 14.5px !important;
+    font-size: 14px !important;
     margin-bottom: 6px !important;
     color: #ffffff !important;
     font-weight: 600 !important;
@@ -12716,7 +12718,7 @@ html, body {
 }
 
 .gge-mk-hero-title {
-    font-size: clamp(32px, 3.8vw, 42px) !important;
+    font-size: clamp(34px, 3.8vw, 44px) !important;
     font-weight: 800 !important;
     color: #ffffff !important;
     line-height: 1.15 !important;
@@ -12726,23 +12728,23 @@ html, body {
 }
 
 .gge-mk-hero-desc {
-    font-size: 13.5px !important;
+    font-size: 13px !important;
     line-height: 1.5 !important;
     color: #cbd5e1 !important;
-    margin-bottom: 18px !important;
-    max-width: 520px !important;
+    margin-bottom: 16px !important;
+    max-width: 500px !important;
 }
 
 .gge-hero-btn-row {
     display: flex !important;
     align-items: center !important;
-    gap: 14px !important;
+    gap: 12px !important;
     margin: 0 !important;
 }
 
 .gge-hero-btn-row .innr-bnr-bttn {
-    padding: 8px 18px !important;
-    font-size: 13.5px !important;
+    padding: 7px 16px !important;
+    font-size: 13px !important;
     border-radius: 6px !important;
     font-weight: 600 !important;
     display: inline-flex !important;
