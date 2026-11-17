@@ -12626,34 +12626,45 @@ html, body {
 
 /* ========================================================
    EXACT 75% VIEWPORT & HERO SECTION SPECIFICATION
-   Matches user uploaded reference (Image 2) 1:1
+   Adjusted sizing for 75% display (prevents elements from being too small)
    ======================================================== */
 .top-header-bar {
-    height: 18px !important;
-    min-height: 18px !important;
-    background-color: #071536 !important;
-    border: none !important;
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
     padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
 }
 
 .gge-mk-header-wrap {
-    padding: 8px 30px !important;
-    background: #ffffff !important;
+    padding: 0 !important;
+    background: transparent !important;
     border: none !important;
     position: relative !important;
     z-index: 1000 !important;
 }
 
 .gge-mk-header {
-    padding: 6px 20px !important;
-    min-height: 48px !important;
-    max-width: 100% !important;
-    width: 100% !important;
     margin: 0 auto !important;
     background: #ffffff !important;
-    border-radius: 40px !important;
-    box-shadow: 0 4px 20px rgba(7, 21, 54, 0.06) !important;
-    border: 1px solid rgba(7, 21, 54, 0.08) !important;
+    border: none !important;
+    border-radius: 0 0 24px 24px !important;
+    box-shadow: 0 4px 20px rgba(7, 21, 54, 0.08) !important;
+    padding: 10px 40px !important;
+    min-height: 56px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.gge-mk-nav-link {
+    font-size: 15px !important;
+    padding: 8px 16px !important;
+}
+
+.gge-mk-login-btn {
+    font-size: 14.5px !important;
+    padding: 8px 20px !important;
 }
 
 .gge-mk-hero-section {
@@ -12691,7 +12702,7 @@ html, body {
 }
 
 .gge-mk-hero-grid.gge-mk-hero-fullwidth {
-    padding: 0 35px !important;
+    padding: 0 50px !important;
     max-width: 100% !important;
     width: 100% !important;
     margin: 0 !important;
@@ -12702,8 +12713,8 @@ html, body {
 }
 
 .gge-mk-hero-tag {
-    font-size: 14px !important;
-    margin-bottom: 6px !important;
+    font-size: 17px !important;
+    margin-bottom: 10px !important;
     color: #ffffff !important;
     font-weight: 600 !important;
     letter-spacing: 0.3px !important;
@@ -12711,45 +12722,45 @@ html, body {
 }
 
 .gge-tag-underline {
-    border-bottom: 2px solid #eca411 !important;
-    padding-bottom: 2px !important;
+    border-bottom: 2.5px solid #eca411 !important;
+    padding-bottom: 3px !important;
     color: #ffffff !important;
     font-weight: 700 !important;
 }
 
 .gge-mk-hero-title {
-    font-size: clamp(34px, 3.8vw, 44px) !important;
+    font-size: clamp(44px, 4.4vw, 56px) !important;
     font-weight: 800 !important;
     color: #ffffff !important;
     line-height: 1.15 !important;
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 14px 0 !important;
     letter-spacing: -0.02em !important;
     text-transform: none !important;
 }
 
 .gge-mk-hero-desc {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
     color: #cbd5e1 !important;
-    margin-bottom: 16px !important;
-    max-width: 500px !important;
+    margin-bottom: 26px !important;
+    max-width: 580px !important;
 }
 
 .gge-hero-btn-row {
     display: flex !important;
     align-items: center !important;
-    gap: 12px !important;
+    gap: 16px !important;
     margin: 0 !important;
 }
 
 .gge-hero-btn-row .innr-bnr-bttn {
-    padding: 7px 16px !important;
-    font-size: 13px !important;
-    border-radius: 6px !important;
+    padding: 11px 24px !important;
+    font-size: 15.5px !important;
+    border-radius: 7px !important;
     font-weight: 600 !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 9px !important;
     text-decoration: none !important;
 }
 
