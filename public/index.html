@@ -29,7 +29,7 @@
 <!-- Animate -->
 <link href="/assets/css/animate.css" rel="stylesheet"/>
 <!-- Custom Style -->
-<link href="/assets/css/custom.css?v=9.4" rel="stylesheet"/>
+<link href="/assets/css/custom.css?v=9.5" rel="stylesheet"/>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
@@ -1181,7 +1181,7 @@
                         <a href="#services" class="gge-mk-nav-link"><i class="fa fa-briefcase"></i> Our Services</a>
                     </li>
                     <li class="gge-mk-nav-item">
-                        <a href="#about" class="gge-mk-nav-link"><i class="fa fa-institution"></i> About Us</a>
+                        <a href="https://www.globalgroupofeducation.com/about-us" class="gge-mk-nav-link"><i class="fa fa-institution"></i> About Us</a>
                     </li>
                     <li class="gge-mk-nav-item">
                         <a href="/contact-us" class="gge-mk-nav-link"><i class="fa fa-phone"></i> Contact Us</a>
@@ -1224,7 +1224,7 @@
             </li>
             <li><a href="https://globalgroupofeducationportal.com/courseFinder/index?access=pass"><i class="fa fa-graduation-cap"></i> Courses</a></li>
             <li><a href="#services"><i class="fa fa-briefcase"></i> Our Services</a></li>
-            <li><a href="#about"><i class="fa fa-institution"></i> About Us</a></li>
+            <li><a href="https://www.globalgroupofeducation.com/about-us"><i class="fa fa-institution"></i> About Us</a></li>
             <li><a href="/contact-us"><i class="fa fa-phone"></i> Contact Us</a></li>
         </ul>
         <div class="gge-drawer-cta">
@@ -1713,11 +1713,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
-    // Universal Courses & Course Finder link handler: 100% reliable across ALL devices (Desktop, Mobile, Tablet, iOS, Android)
+    // Universal Navigation handler: 100% reliable across ALL devices (Desktop, Mobile, Tablet, iOS, Android)
     document.addEventListener('click', function(e) {
         var link = e.target && e.target.closest ? e.target.closest('a, .card-btn') : null;
         if (!link) {
-            // Also check if clicked on card #courses
+            // Check if clicked inside #courses card
             var coursesCard = e.target && e.target.closest ? e.target.closest('#courses') : null;
             if (coursesCard && (e.target.closest('.card__info') || e.target.closest('.stage'))) {
                 window.location.href = "https://globalgroupofeducationportal.com/courseFinder/index?access=pass";
@@ -1725,13 +1725,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             return;
         }
-        var href = link.getAttribute('href') || "https://globalgroupofeducationportal.com/courseFinder/index?access=pass";
-        if (href.indexOf('courseFinder') !== -1 || (link.textContent && link.textContent.trim().toLowerCase() === 'courses') || link.classList.contains('card-btn')) {
-            if (link.closest('#courses') || href.indexOf('courseFinder') !== -1) {
-                e.preventDefault();
-                e.stopPropagation();
-                window.location.href = href;
-            }
+        var href = link.getAttribute('href') || "";
+        var linkText = link.textContent ? link.textContent.trim().toLowerCase() : '';
+
+        // Handle About Us links (Header, Drawer, or Anywhere)
+        if (href.indexOf('about-us') !== -1 || linkText === 'about us' || href === '#about') {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = "https://www.globalgroupofeducation.com/about-us";
+            return;
+        }
+
+        // Handle Courses & Course Finder links
+        if (href.indexOf('courseFinder') !== -1 || linkText === 'courses' || (link.classList.contains('card-btn') && link.closest('#courses'))) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = href || "https://globalgroupofeducationportal.com/courseFinder/index?access=pass";
+            return;
         }
     }, true);
 

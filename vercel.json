@@ -9,6 +9,16 @@
       "permanent": false
     },
     {
+      "source": "/about",
+      "destination": "https://www.globalgroupofeducation.com/about-us",
+      "permanent": false
+    },
+    {
+      "source": "/about-us",
+      "destination": "https://www.globalgroupofeducation.com/about-us",
+      "permanent": false
+    },
+    {
       "source": "/courses",
       "destination": "https://globalgroupofeducationportal.com/courseFinder/index?access=pass",
       "permanent": false
