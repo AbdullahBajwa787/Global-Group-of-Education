@@ -12349,7 +12349,7 @@ html, body {
 .card {
   position: sticky !important;
   top: calc(24px + var(--i) * 12px) !important;
-  margin-bottom: 6vh !important;
+  margin-bottom: 0 !important;
   border-radius: 28px !important;
   background: #ffffff !important;
   box-shadow: 0 20px 60px rgba(7, 21, 54, 0.09) !important;
