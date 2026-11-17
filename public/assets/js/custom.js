@@ -908,10 +908,18 @@ document.addEventListener('DOMContentLoaded', function() {
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     if (backdrop) backdrop.addEventListener('click', closeDrawer);
 
-    // Close on any drawer link click
+    // Close on any drawer link click (avoid dropping navigation on actual external / page links)
     var drawerLinks = document.querySelectorAll('.gge-drawer-nav a');
     drawerLinks.forEach(function(link) {
-        link.addEventListener('click', closeDrawer);
+        link.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (href && (href.startsWith('#') || href === 'javascript:void(0)')) {
+                closeDrawer();
+            } else if (href) {
+                // Ensure page navigates cleanly on mobile
+                window.location.href = href;
+            }
+        });
     });
 });
 

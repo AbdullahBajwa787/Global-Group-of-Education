@@ -12335,20 +12335,21 @@ html, body {
 }
 .gge-stack-container {
   background: #f8fafc !important;
-  padding: 10px 20px 100px !important;
+  padding: 10px clamp(16px, 2.5vw, 36px) 100px !important;
   position: relative !important;
   overflow: visible !important;
 }
 .stack {
   position: relative !important;
-  max-width: 1240px;
-  margin: 0 auto;
+  width: 95% !important;
+  max-width: 1540px !important;
+  margin: 0 auto !important;
   padding-bottom: 12vh !important;
   overflow: visible !important;
 }
 .card {
   position: sticky !important;
-  top: calc(24px + var(--i) * 12px) !important;
+  top: calc(20px + var(--i) * 10px) !important;
   margin-bottom: 0 !important;
   border-radius: 28px !important;
   background: #ffffff !important;
@@ -12358,6 +12359,9 @@ html, body {
   will-change: transform !important;
   overflow: hidden !important;
   z-index: calc(10 + var(--i)) !important;
+}
+.card + .card {
+  margin-top: -30px !important;
 }
 .card__in {
   display: grid !important;
@@ -12467,7 +12471,9 @@ html, body {
   transition: all 0.25s ease !important;
   width: fit-content !important;
   position: relative !important;
-  z-index: 5 !important;
+  z-index: 30 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
 }
 .card-btn:hover {
   background: #fbb019 !important;
@@ -12514,7 +12520,10 @@ html, body {
   .card {
     top: calc(16px + var(--i) * 8px) !important;
     border-radius: 22px !important;
-    margin-bottom: 4vh !important;
+    margin-bottom: 0 !important;
+  }
+  .card + .card {
+    margin-top: -24px !important;
   }
   .card__in {
     grid-template-columns: 1fr !important;

@@ -29,7 +29,7 @@
 <!-- Animate -->
 <link href="/assets/css/animate.css" rel="stylesheet"/>
 <!-- Custom Style -->
-<link href="/assets/css/custom.css?v=9.3" rel="stylesheet"/>
+<link href="/assets/css/custom.css?v=9.4" rel="stylesheet"/>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
@@ -1713,6 +1713,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
+    // Universal Courses & Course Finder link handler: 100% reliable across ALL devices (Desktop, Mobile, Tablet, iOS, Android)
+    document.addEventListener('click', function(e) {
+        var link = e.target && e.target.closest ? e.target.closest('a, .card-btn') : null;
+        if (!link) {
+            // Also check if clicked on card #courses
+            var coursesCard = e.target && e.target.closest ? e.target.closest('#courses') : null;
+            if (coursesCard && (e.target.closest('.card__info') || e.target.closest('.stage'))) {
+                window.location.href = "https://globalgroupofeducationportal.com/courseFinder/index?access=pass";
+                return;
+            }
+            return;
+        }
+        var href = link.getAttribute('href') || "https://globalgroupofeducationportal.com/courseFinder/index?access=pass";
+        if (href.indexOf('courseFinder') !== -1 || (link.textContent && link.textContent.trim().toLowerCase() === 'courses') || link.classList.contains('card-btn')) {
+            if (link.closest('#courses') || href.indexOf('courseFinder') !== -1) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = href;
+            }
+        }
+    }, true);
+
     // Direct redirect for all course cards, destination cards, and dropdown links
     var directActionLinks = document.querySelectorAll('.gge-mk-nav-dropdown a, .gge-course-card, .gge-line-view-all, .gge-dest-card-item, .gge-drawer-sub a');
     directActionLinks.forEach(function(el) {
